@@ -473,7 +473,13 @@ fundamental to the field of AI and which even Searle holds, that
 machines can think because ``we are precisely such machines,''\cite[p.
 83]{chineseSearle} and therefore it should be possible to create
 intelligent machines, this does not guarantee that symbol systems are
-the way to achieve intelligence. While we certainly may apply logic
+the way to achieve intelligence. It may well be that introspection on
+thought is a large part of why the logical theory seemed so
+compelling: we like to think we are logical. Researchers like Newell
+and Simon used ``think aloud'' experiments to identify problem solving
+techniques,\cite[Ch. 10]{mccorduck} which seems naturally to suggest a logical response: when
+asked to describe how we came to some decision, basing it in logic
+seems the most acceptable alternative. While we certainly may apply logic
 and process symbols, there is good reason to think that isn't how we
 spend most of our time. Symbolic logic takes a lot of mental capacity,
 so generally, we use other sorts of shortcut processes to come to
@@ -489,14 +495,110 @@ to arrive at in some situations. The physical-symbol system hypothesis
 is just that, a hypothesis, and, historically, the classical symbolic
 approach did not yield results as quickly as expected. This was part
 of the reason for the first AI winter, and researchers moved on to
-other approaches.
-
+other approaches. While logic is part of the puzzle, it seems that it
+is not the entireity of it. But this was the archetypal dream of early
+AI: humanlike intelligence via logic systems.
 
 %% Rodney Brooks (3)
+One of those researchers pioneering a new way of doing AI was Rodney
+Brooks. Part of a different wave of AI researchers, disillusioned with
+the failures of logic-based robotic systems (like Shakey, the SRI
+robot named for its tendency to shake when in motion)\cite[Ch. 10 (CHECK)]{mccorduck} to
+achieve intelligent results, he posited a new way to build intelligent
+robots, defined by the subsumption architecture.\cite[p. 353]{mobilebrooks} Above and
+beyond the problems that physical-symbol system based AI had in
+relatively controlled domains, robots controlled with these
+techniques, overwhelmed by the complexity of the real world, responded
+slowly and ineptly. To rectify this, Brooks attempted to cut out
+cognition altogether, focusing instead only on sensing and
+action.\cite[Afterword]{mccorduck} Rather than attempt to engineer a
+human-level intelligence at once, when years of research had failed to
+produce anything approaching these results, why not start small?
+Insects, after all, lack cognition, but respond more adroitly to the
+world than Shakey and its contemporaries. Uncertainty everywhere in
+the physical world makes modeling the world extremely difficult: the
+model has a tendency to get out of sync, and there needs to be
+something to return it to accuracy. By building systems that can
+accommodate uncertainty, Brooks believed, more progress could be
+made.\cite[p. 347]{mobilebrooks} Instead of modeling the world, treat
+the world as ``its own best model'' and focus on embodiment and action
+in the world.\cite[p. 256]{ekbia}
 
-%% Deep learning, ``self-aware'' mario, image recognition and other
+Rather than being built into a single integrated system, the
+subsumption approach is by definition modular. More complex behaviors
+are built out of simper ones: level zero competence might avoid objects,
+while the next level would wander aimlessly, and the next would
+attempt to wander to places it had not been before.\cite[p.
+  351--352]{mobilebrooks} Each layer is separate (and can actually run
+on its own processor), and can read data from
+and write data into the layer below it (hence the term subsumption,
+the higher levels subsume the lower). When a higher level fails or
+cannot run, lower levels continue to operate, and basic behavior is
+maintained.\cite[p. 355]{mobilebrooks} This approach has tempting biological connections as well:
+accurately or not, one can imagine the human being as a robot with a subsumption
+architecture, where breathing and heartbeat are lower than balance,
+which is lower than voluntary motion, which is lower than logical
+thought. And temptingly, it is an approach that can handle
+uncertainties, as each layer is built to be robust in the inevitable
+event of inaccuracies and lost messages. Theoretically, one could
+imagine building systems of great complexity using these approaches,
+but this architecture, the radical relativist response to the
+structural realism of the physical-symbol system, did not alone make
+it past robots of insect intelligence.
+
+Brooks himself abandoned the project of building intelligence from
+these humble, subsumptive blocks. Instead, his research on building
+the Cog robot shifts focus from ``emergence'' to ``integration,'' and
+reversed some of his initial fervor to avoid representation.\cite[p.
+  258]{ekbia} He skipped the middle of the evolutionary tree, straight
+to humanoid forms, because the evolutionary approach was too slow: 
+Brooks reported, it was ``starting to look like, if I was really
+lucky, I might be remembered as the guy who built the best artificial
+cat,'' a distinction he apparently did not desire.\cite[p.
+  65]{brooksflesh}\footnote{As cited in \cite[p. 258]{ekbia}.}
+But to do this, bootstrapped knowledge from other sources was
+necessary, bringing back some of the old approaches.
+
+%% Deep learning
+A number of conceptually different approaches to AI have been tried
+over the past 50 years, often with the same sorts of ambivalences as
+Brooks's later work.\footnote{Ekbia's book does an excellent job
+  exploring and cataloging many of these, more than I have space for.
+  But logical and neorobotic approaches appear most relevant as
+  broad-strokes historical precursors for inclusion here.} Ideas fade
+and resurface as fashions change, and greater computational power
+allows ``failed'' techniques to be tried anew. Ours is the age of
+statistical AI. What the physical-symbol system and embodied cognition
+have in common is their attempt to start from first-principles or zero
+knowledge, and to build inexorably toward intelligence. The difficulty
+of this road led Brooks to recombine some of the old manner of
+knowledge representation into his robotic techniques. The new source
+of bootstrapping information is data, ``Big'' and ``small.'' Current
+techniques are primarily statistical in nature, leveraging these data
+sets by training machine-learning systems; but as we will see
+machine-learning systems have properties that make them ill-suited for
+safety-critical systems, and autonomous vehicles are designed with a
+mix of approaches that allows for more introspection into their
+workings. The buzzword of the day seems to be ``deep learning,'' which
+appears to yield radical new possibilities everywhere it is
+applied---it really just means a return of neural
+networks,\footnote{These systems still have little or nothing to do
+  with actual neurons; they are brain-like in only the barest
+  toy-model sort of way, despite how they are often represented in the
+  press} which, armed with some improvements in weight generation, more layers of
+nodes, and more data to train with, have been able to eclipse many of
+the previous techniques\cite{???}.
+
+%% ``self-aware'' mario, image recognition and other
 %% claptrap (1) (incl. John von Neumann & ALife (See CMS790 paper)
+But as we have seen before, the AI hype-machine is doing its work. And
+some of the popular claims about deep learning are simply beyond
+belief. But it is important to understand why this technique is not a
+magic bullet before one can understand the real shape and implications
+of the driverless car vision.
 
+
+In brief, this is the 
 
 
 %% 2.1) data gathering and mapping
@@ -509,7 +611,7 @@ other approaches.
 
 %% 2.2) machine vision
 %% --pull from the Spectator paper (4 p)
-
+%% INCL. machine learning
 
 %% 2.2) what standard of safety? 
 %% --better than an average person? or better than the best people? (1 p)
