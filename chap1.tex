@@ -857,32 +857,31 @@ particularly easy for human beings, but particularly difficult for
 machines. The invention of the photocell, early a tool for workplace
 monitoring and surveillance, provided a simple channel through which
 electrical systems could respond to the amount of light reaching
-them.i
-Though the photocell provides the computer with access to brightness
-information over time, it falls far short of the ability of human eyes
-to perceive detail and depth, identify shapes, and interpret
-expression and motion. Emulating these characteristics represents a
-key goal of artificial intelligence research. DARPA's 1983 Strategic
-Computing Initiative included image interpretation as one of its main
-focus areas.i But it is only relatively recently that real-time video
-processing became possible for camera-based navigation on computer
-systems small enough to fit in a standard automobile.ii And machine
+them.\cite{???} Though the photocell can easily provide a computer system
+with access to brightness information over time, perceiving detail and
+depth, identifying shapes, and interpreting expression and motion are
+all capabilities of human vision that require more sophisticated
+technologies to reproduce. DARPA's 1983 Strategic Computing Initiative
+included image interpretation as one of its main
+focus areas.\cite{???} But it is only relatively recently that real-time video
+processing, needed for camera-based navigation, became feasible for computer
+systems small enough to fit in a standard automobile.\cite{???} And machine
 vision problems, including object recognition and scene
 interpretation, continue to be difficult, even with increased
 processing power and new algorithms. 
+
 As an engineering discipline, computer vision takes a decidedly
 practical and reductionist view of what it means to see. The goal is
 generally not to achieve creative interpretation or aesthetic
 valuation, but to differentiate free space from things a robot should
-not run into.i But this so-called objective focus still encodes
+not run into.\cite{???} But this so-called objective focus still encodes
 certain subjective judgments about objects (including people),
 behaviors, and intent. And while computer vision is having success
 with object detection, there is a wide variety of human knowledge
-about objects and scenes that is missing in current computer models.ii
+about objects and scenes that is missing in current computer models.\cite{???}
 
 Though vision has not always been the sensory mode that dominated
-autonomous vehicle research—earlier research focused on radio control
-or electromagnetic tracks—vision is a particularly tempting sense to
+autonomous vehicle research, vision is a particularly attractive sense to
 use, as it is integral to how humans drive. In an attempt to build
 autonomous vehicles that can operate without infrastructural changes,
 research has moved away from tracks and cables toward vision-guided
@@ -890,76 +889,58 @@ systems. New approaches were pioneered by Ernst Dickmanns at
 University Bundswerhr in Munich, with the vision-guided VaMoRs van,
 and continued via the EUREKA PROMETHEUS project in 1987, in which
 Dickmanns and Daimler-Benz built cars guided by analog video
-cameras.iii Like the earlier VITA project by Daimler that used an
+cameras.\cite{???} Like the earlier VITA project by Daimler that used an
 analog video-camera signal processed through a framegrabber, these
 cars digitized analog video at relatively low resolutions. The
 features the systems searched for, including lane markings and other
-cars, are geometrically distinct and visible even in small images.iv
+cars, are geometrically distinct and visible even in small images.\cite{???}
 
 Vision-guided systems, now using digital video cameras and
 off-the-shelf consumer hardware, have the benefit of being inexpensive
 and insensitive to interference from other nearly devices (unlike
-sonar, for example, which becomes problematic in crowded situationsi).
-Some commercial systems, such as that developed for Mercedes-Benz's
+sonar, for example, which becomes problematic in crowded
+situations\footnote{John Leonard, discussion with the author, December
+3, 2014.}). Some commercial systems, such as that developed for Mercedes-Benz's
 self-driving S-class, which is slowly finding its way into consumer
-vehicles, are primarily guided based on such visual sensors.ii To
+vehicles, are primarily guided based on such visual sensors.\cite{???} To
 these sensors, recent research has added roof-mounted LIDAR arrays.
-LIDAR, short for Light Detection and Ranging, is effectively a depth
+LIDAR, short for Light Detection and Ranging, is a distance
 sensor, which is applied in vehicles to scan the environment with a
 rotating array of laser beams to create a detailed 360-degree
-representation of objects and their distances.iii This technology
+representation of objects and their distances. This technology
 solves some of the difficulties of image interpretation by default, as
 it can provide highly-sensitive information about free space and
 obstacles. Shape-detection algorithms can then be used (in addition to
 vision-based data) to classify obstacles as different types of
-objects.iv 
+objects: pedestrians, bicyclists, cars, and trucks.\cite{???}
 
 Pedestrian detection algorithms search for person-like shapes, where
-“person-like” is determined by, for example, processing thousands of
-images previously classified (by people) as being images of humans, so
+“person-like” is determined by, for example, training a classifier
+using thousands of images previously labeled (by people) as being images of humans, so
 the system can learn the features that correlate with a person being
-in a particular region of an image.
-
-These sensors and techniques impact how we are known by machine-vision
-systems. Based on the views of these sensors, objects in the
-environment are placed into categories by the vehicle's computers:
-pedestrian, bicyclist, car, truck. Categories allow the system to make
+in a particular region of an image. These detected categories allow the system to make
 statistical predictions about likely types of behavior: according to
 one of Google's patent applications, bicyclists are likely to be more
-erratic than trucks, and should be treated accordingly.i An obstacle
-detected as a person can be expected to move, perhaps erratically,
-while an object that is considered inanimate will not.\footnote{The
+erratic than trucks, and should be treated
+accordingly.\cite{predictPatent} These sorts of predictions are
+something that human drivers do consistently, and are therefore also
+likely important to how autonomous vehicles may drive.\footnote{The
   DARPA Urban Challenge crash, the first crash between two autonomous
   cars, provides an important lesson on the vagaries of object
   detection: the classification threshold between moving and
   stationary, set too high, allowed one vehicle to interpret the other
-  as stationary, leaving no room for unexpected behavior.i} 
+  as stationary, leaving no room for unexpected behavior.\cite{???}} 
 
-The new technologies of vehicle automation thereby produce through
+And because autonomous cars see---putatively “as we see”---their sight can
+be leveraged as visual evidence of their operation. Computer vision systems that identify
+pedestrians can be shown to do so, via the detection boxes that act as
+diagnostic tools for researchers and direct representations of
+internal system information. The new technologies of vehicle automation thereby produce through
 their operation new forms of evidence, which can be presented through
-electronic information media. Because autonomous cars see—putatively
-“as we see”—their sight can be leveraged as visual evidence. Computer
-vision systems that identify pedestrians can be shown to do so, via
-the detection boxes that act as diagnostic tools for researchers and
-direct representations of internal system information. 
+electronic information media.
 
 
-
-%% 2.2) what standard of safety? 
-%% --better than an average person? or better than the best people? (1 p)
-%% --human problems with using projected statistics to define policy:
-%% does it make people feel better to know a system is statistically
-%% safer when they are uncomfortable with it? see cars/planes for example
-%% (3 p)
-%% -->perspective of caution? or  ``losing lives every day'' that
-%% could be saved?
-%% ----how much risk is legitimate?? (2 p)
-%% --airlines as a place where we see the different dimensions of
-%% statistical safety vs. passenger's feelings of safety (3 p)
-%% ---drawing from PARC/CAST documents
-
-
-%% 2.3) functionalism over understanding
+%% 2.2) functionalism over understanding
 %% --for better or worse these devices are not humanlike in their
 %% understanding
 %% ----AI winters & the rise of commercial ML AI with much smaller goals
@@ -971,7 +952,38 @@ direct representations of internal system information.
 %% a normal car! (1 p)
 %% -and of course interviews with people (Ryan Chin; Walker Smith etc.
 %% where they matter to this type of vehicle)
->>pull from my paper? but really, this needs to be informative not critical
+\subsection{Functionalism and Utilitarianism} 
+But for better or worse, self-driving cars will not be human-like in
+understanding, even while they can detect and identify pedestrians.
+A wide range of software companies and startups have entered the AI
+industry, but these companies are not primarily focused on
+general-purpose AI. Though certain ventures still hold out the dream
+of doing so, several AI winters have shown that the creation of
+general intelligence is very difficult, and is by no means around the
+corner. Those working in the field are well aware of
+this.\cite{???-articlerebuttingmusk} 
+
+The utilitarian model of AI makes good sense for a number of reasons.
+First, achievable, makes money
+Second, humanlike characteristics may not be helpful
+But, assumes deep understanding is unnecessary: quote from USC talk
+
+
+%% 2.3) what standard of safety? 
+%% --better than an average person? or better than the best people? (1 p)
+%% --human problems with using projected statistics to define policy:
+%% does it make people feel better to know a system is statistically
+%% safer when they are uncomfortable with it? see cars/planes for example
+%% (3 p)
+%% -->perspective of caution? or  ``losing lives every day'' that
+%% could be saved?
+%% ----how much risk is legitimate?? (2 p)
+%% --airlines as a place where we see the different dimensions of
+%% statistical safety vs. passenger's feelings of safety (3 p)
+%% ---drawing from PARC/CAST documents
+\subsection{Safety and Statistical Risk}
+What drives this is safety
+
 
 %% 3) (or worked in to each of the previous) current research
 %%--not historical, but actual last-20-years papers about this
