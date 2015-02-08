@@ -1,15 +1,16 @@
-\chapter{Technological Realities}
+\chapter{The Stakes of our Stories}
 
-Technological Realities (27 p)
+3. Stakes of stories/tech (swap 4?)
+-data collection
+-mapping
+-ML/machine vision
+-functionalism vs. Understanding
+-statistics and risk
+-planning, policy, cities
 
-1) bring in the telerobotics/supervisory control literature
--why supervisory control? and where is it used? (5 p)
--examine the issue of deskilling vs. the ``irony of automation'' well
-known in Human Factors, in which increased automation actually
-increases human load (2 p)
--but SC allows for particular combinations of human skills and machine
-competencies (1 p)
---used all over industry, aviation, undersea (2 p)
+
+
+
 
 2)Other problems:
 --Göde Both and reluctance to use Machine Learning (1 p)
@@ -62,13 +63,453 @@ etc. and the necessary caution in ascribing them to tech; we can look
 and see that the ``intelligence'' in action here is really very
 different than what we usually mean when we use that term
 (human-centric)
---so does knowing this reality change what we want to see? (couple of p)
+--so does knowing this reality change what we want to see? (couple of
+p)
 
-3) situate the moonshot approach (which may actually be easier in some
-senses but less socially acceptable) and the mixed approach in a way
-that does not support a teleology of autonomous vehicle development
-(think Sheridan's graph of telerobotics, not the SAE's 5 stages) (4 p)
---in historical context of previous systems that are wholly or
-partially autonomous (4 p)
+
+%% 2.1) data gathering and mapping
+%% --this approach presupposes large amounts of data collection (maps),
+%% and opens the way to more information about the passengers (2 p)
+%% --see Google's patents in particular which talk about sensing things
+%% like the number of passengers (4 p)
+\subsection{Data Gathering and Monitoring} 
+
+%%   $$$$$$$$      NOTE      $$$$$$$$$
+%%
+%%
+%%
+%%      More HISTORY, Less CRITIQUE
+%%                (here)
+%%
+%%
+%% ``this assumes xyz'' rather than ``but really abc''
+
+
+Autonomous vehicles are and will continue to be networked
+technologies. This connectedness brings with it great possibilities
+for coordinating traffic and improving city planning, as well as great
+risks to privacy and security, whether devices are networked with each
+other or simply connected to central servers. 
+
+With what networks, and for what reasons, will autonomous vehicles be
+connected? Current driverless car concepts depend on networked
+information for vehicle guidance. While, historically, certain
+guidance systems have been insulated from communications---inertial
+guidance systems for intercontinental ballistic
+missiles are a particular example of this,\cite{mackenzie}---and
+Google's vehicles use inertial navigation devices\cite{knightfurther}
+alongside other sources of position data, current navigation systems
+depend on global positioning satellites. Google's approach to
+driverless car development currently necessitates accurate
+and expensive\footnote{An autonomous vehicle researcher at MIT
+  quoted prices in the range of $70,000 to $100,000 per device for the
+GPS alone, while noting that those would of course come down with
+greater production volume.} differential GPS receivers.
+
+But a number of other developments already suggest that autonomous
+vehicles will be connected to more than just global positioning
+networks. GM's OnStar service already connects equipped vehicles to central servers for
+purposes of safety, security, and convenience. The system has the
+ability to automatically alert the authorities in case of an accident
+or theft. It also provides vehicle diagnostics to the owner's tablet
+or smartphone, and the OnStar app also allows the owner to configure settings, lock and
+unlock doors, and remotely operate the lights and horn.\cite{onstar}
+While these vehicles are not (yet) autonomous, OnStar's present
+capabilities are representative of features that will become more common in highly
+connected and computerized vehicles, including autonomous ones.
+
+Additionally, vehicles that can receive information from each other and from the
+roadway are a top priority for the NHTSA, and have been on the
+research agenda for decades.\cite[p. 11]{wetmore} These concepts would
+collect and use data to streamline traffic flow and provide
+information to reduce delays and accidents. But there is potential to
+do far more with the available information,
+and data collected by the vehicle to make possible its own functioning
+could be made to serve other purposes. Information about the vehicle
+and its surroundings, including the locations of cars and pedestrians,
+precise GPS coordinates of the vehicle itself, and the vehicle's speed
+and acceleration, not only represent important knowledge for
+path-finding by the vehicle itself, but new sources of potential
+revenue for the groups in position to collect them. Uber, which
+through its GPS-enabled ride-hiring applications still collects only a
+fraction of the data that would be available through a self-driving
+vehicle, has agreed to share its ride data with municipalities for purposes of
+city planning.\cite{uberJardin} Though this data is ostesibly being
+shared for the public good, it also serves private ends.
+
+Google has envisioned vehicles that can determine their number of
+occupants, and use facial-recognition or other biometric systems to
+identify them. According to one patent,\cite{predictPatent} these vehicles could prevent
+unauthorized persons from putting a child in a car, prevent convicted
+sex offenders from operating their vehicles within the
+legally-required distances of schools and playgrounds, or prevent a
+car's doors from being opened (even from the inside) by a child unless
+an authorized adult is present. These are only visions, and patents
+are notorious for trying to cover as many possible angles of a
+technology even if they are not intended to be applied in practice.
+But these suggestions represent a perspective on safety and societal
+order that posits technological surveillance and enforcement as an
+appropriate preventative measure against criminal behavior. Whether or not protecting
+against these threats is an appropriate use of this information is a
+matter for societal judgment, but such proposals, if enacted, would
+require these vehicles to have unprecedented levels of very sensitive
+knowledge about people and their lives: biometrics, criminal
+histories, family and trust networks. 
+
+Data ideology tells us that we can understand ourselves better through
+these data, that we can use them to determine patterns we never knew were
+there. Out of this ideology come publications like Uber's blog, which
+describes customer ``insights'' gained through their ride data, which
+are ostensibly interesting to the public. ``Look here,'' they seem to
+say, ``we can tell you about \emph{you}.'' But it important to
+recognize that the ideologies of data collection---for corporate
+profit and public use---are deeply intertwined, and strongly
+influenced by the possibility of using machine learning techniques and
+statistical analyses to find and exploit patterns.
+
+
+\subsection{Maps and Mapping}
+
+Other types of data collection are also implicated in the current
+vision of the driverless car project. In order to drive with us,
+autonomous systems will have to understand,
+for at least a practical sense of “understanding,” traffic rules and
+their accompanying signs, signals, lanes, and customs. This is, at its
+core, a highly complex problem of interpretation and representation
+for machines. Human understanding is built
+through years of experience: it is through existing as a human being
+in a particular cultural context that we know to drive on roads but
+not on sidewalks, and how to tell the difference. But we do not have
+this luxury in training machines.
+
+Here, the connections of autonomous systems to information networks
+again become important. The vehicles in the
+DARPA Grand Challenge did not navigate “on their own”: they used GPS
+to follow a path laid out for them in advance, using their autonomy
+only to avoid obstacles like rocks and ruts.\footnote{John Leonard,
+  discussion with the author, December 3, 2014} And though successful
+road tests have been accomplished without navigational assistance,
+using only visual stimuli (such as the EUREKA PROMETHEUS project
+in the 1990s)\cite{???}, modern systems are tending to use more external
+stimuli, rather than less, in an attempt to increase safety. Even as
+advanced as it is, Google's autonomous vehicle technology requires
+hyper-detailed 3D maps in order to operate properly on public
+roadways.\cite{???} These maps are generated by vehicles outfitted with
+special sensor arrays, like the LIDAR Google uses for their autonomous
+vehicles, which drive a route and collect data which can be used to
+reconstruct the model.\cite{???}
+
+Pre-made maps are used so the vehicle knows where stoplights, signs,
+and curbs are, reducing the computational load on the machine in the
+crowded visual landscape of driving, and allowing it to focus on
+elements of the environment that are changing rather than those likely
+to be static.\cite{???} Mapping claims a unique capability to represent the real, objectively
+and diagrammatically, but also requires that world to remain largely
+static, at least on the order of how long it takes to update the map
+for a particular region. The necessary level of continual mapping is a massive task if the
+vehicles must be usable everywhere. The United States alone contains almost
+8.5 million road miles\footnote{Data as of 2008,
+  http://blog.cubitplanning.com/2010/02/road-miles-by-state/\cite{???}},
+and it took years for Google Streetview to acquire the level of
+coverage it currently has. The utopian discourse of driverless cars
+implicitly suggests that such vehicles will be available everywhere,
+and are the solution to nationwide transit problems. But widespread
+egalitarian access to maps-based devices depends upon a rapid,
+widespread mapping initiative.
+
+The seemingly universalizing forces of maps and computer programming
+have a tendency to help hide issues of geographical and cultural
+specificity, which are rendered invisible in the utopian narrative.
+But though engineering practice holds that these issues are
+conquerable, they should be anything but invisible. Programmed devices
+must must know about speed limits, about traffic
+lights, about rules of the road that were never designed for
+autonomous systems. These devices must respond to human caprices and
+be adapted to longstanding, ingrained laws and habits. They must
+include historical knowledge, rooted in the legal and social histories
+of roadways, which may differ between cities and states, and certainly
+between countries across the world. Local customs and behaviors differ, and even if maps are
+available, the same vehicle programming may not work for Los Angeles,
+Boston, and the rural Midwest, let alone Singapore, Mumbai or Cairo.
+The map, for all of its objective standardization, still represents
+real places subject to cultural histories and vulnerable to
+socio-economic dynamics. These social and regional issues are often
+ignored in the driverless vehicle narrative, but nevertheless stand to
+be critical to the manner in which these technologies could come to
+enter everyday life.
+
+
+
+\subsection{Machine Vision}
+%% 2.2) machine vision
+%% --pull from the Spectator paper (4 p)
+%% INCL. machine learning
+Interpretation of the world around us is a task that seems
+particularly easy for human beings, but particularly difficult for
+machines. The invention of the photocell, early a tool for workplace
+monitoring and surveillance, provided a simple channel through which
+electrical systems could respond to the amount of light reaching
+them.\cite{???} Though the photocell can easily provide a computer system
+with access to brightness information over time, perceiving detail and
+depth, identifying shapes, and interpreting expression and motion are
+all capabilities of human vision that require more sophisticated
+technologies to reproduce. DARPA's 1983 Strategic Computing Initiative
+included image interpretation as one of its main
+focus areas.\cite{???} But it is only relatively recently that real-time video
+processing, needed for camera-based navigation, became feasible for computer
+systems small enough to fit in a standard automobile.\cite{???} And machine
+vision problems, including object recognition and scene
+interpretation, continue to be difficult, even with increased
+processing power and new algorithms. 
+
+As an engineering discipline, computer vision takes a decidedly
+practical and reductionist view of what it means to see. The goal is
+generally not to achieve creative interpretation or aesthetic
+valuation, but to differentiate free space from things a robot should
+not run into.\cite{???} But this so-called objective focus still encodes
+certain subjective judgments about objects (including people),
+behaviors, and intent. And while computer vision is having success
+with object detection, there is a wide variety of human knowledge
+about objects and scenes that is missing in current computer models.\cite{???}
+
+Though vision has not always been the sensory mode that dominated
+autonomous vehicle research, vision is a particularly attractive sense to
+use, as it is integral to how humans drive. In an attempt to build
+autonomous vehicles that can operate without infrastructural changes,
+research has moved away from tracks and cables toward vision-guided
+systems. New approaches were pioneered by Ernst Dickmanns at
+University Bundswerhr in Munich, with the vision-guided VaMoRs van,
+and continued via the EUREKA PROMETHEUS project in 1987, in which
+Dickmanns and Daimler-Benz built cars guided by analog video
+cameras.\cite{???} Like the earlier VITA project by Daimler that used an
+analog video-camera signal processed through a framegrabber, these
+cars digitized analog video at relatively low resolutions. The
+features the systems searched for, including lane markings and other
+cars, are geometrically distinct and visible even in small images.\cite{???}
+
+Vision-guided systems, now using digital video cameras and
+off-the-shelf consumer hardware, have the benefit of being inexpensive
+and insensitive to interference from other nearly devices (unlike
+sonar, for example, which becomes problematic in crowded
+situations\footnote{John Leonard, discussion with the author, December
+3, 2014.}). Some commercial systems, such as that developed for Mercedes-Benz's
+self-driving S-class, which is slowly finding its way into consumer
+vehicles, are primarily guided based on such visual sensors.\cite{???} To
+these sensors, recent research has added roof-mounted LIDAR arrays.
+LIDAR, short for Light Detection and Ranging, is a distance
+sensor, which is applied in vehicles to scan the environment with a
+rotating array of laser beams to create a detailed 360-degree
+representation of objects and their distances. This technology
+solves some of the difficulties of image interpretation by default, as
+it can provide highly-sensitive information about free space and
+obstacles. Shape-detection algorithms can then be used (in addition to
+vision-based data) to classify obstacles as different types of
+objects: pedestrians, bicyclists, cars, and trucks.\cite{???}
+
+Pedestrian detection algorithms search for person-like shapes, where
+“person-like” is determined by, for example, training a classifier
+using thousands of images previously labeled (by people) as being images of humans, so
+the system can learn the features that correlate with a person being
+in a particular region of an image. These detected categories allow the system to make
+statistical predictions about likely types of behavior: according to
+one of Google's patent applications, bicyclists are likely to be more
+erratic than trucks, and should be treated
+accordingly.\cite{predictPatent} These sorts of predictions are
+something that human drivers do consistently, and are therefore also
+likely important to how autonomous vehicles may drive.\footnote{The
+  DARPA Urban Challenge crash, the first crash between two autonomous
+  cars, provides an important lesson on the vagaries of object
+  detection: the classification threshold between moving and
+  stationary, set too high, allowed one vehicle to interpret the other
+  as stationary, leaving no room for unexpected behavior.\cite{???}} 
+
+And because autonomous cars see---putatively “as we see”---their sight can
+be leveraged as visual evidence of their operation. Computer vision systems that identify
+pedestrians can be shown to do so, via the detection boxes that act as
+diagnostic tools for researchers and direct representations of
+internal system information. The new technologies of vehicle automation thereby produce through
+their operation new forms of evidence, which can be presented through
+electronic information media.
+
+
+%% 2.2) functionalism over understanding
+%% --for better or worse these devices are not humanlike in their
+%% understanding
+%% ----AI winters & the rise of commercial ML AI with much smaller goals
+%% (see Wired articles, etc) (3 p)
+%% --the ideology that drives them is an engineering mindset: ``just make
+%% it work'' (2 p)
+%% --pulling the quote from my USC talk: also interesting to note
+%% regarding 1.2 that it seems to expect a humanoid robotic chauffeur in
+%% a normal car! (1 p)
+%% -and of course interviews with people (Ryan Chin; Walker Smith etc.
+%% where they matter to this type of vehicle)
+\subsection{Functionalism and Utilitarianism} 
+But for better or worse, self-driving cars will not be human-like in
+understanding, even while they can detect and identify pedestrians.
+A wide range of software companies and startups have entered the AI
+industry, but these companies are not primarily focused on
+general-purpose AI. Though certain ventures still hold out the dream
+of doing so, several AI winters have shown that the creation of
+general intelligence is very difficult, and is by no means around the
+corner. Those working in the field are well aware of
+this.\cite{???-articlerebuttingmusk} So much current work is
+fundamentally utilitarian, building systems with clear goals, metrics
+for success, and market segments.
+
+The utilitarian model of AI makes good sense for a number of reasons.
+First, much can be achieved with current technologies. Rather than
+focusing on a long-term project, which would carry much greater risks
+and rewards which are further off, achieving short term goals is an
+attractive prospect. It can not only attract money but can be
+profitable sooner. Though short term commercial viability is not
+necessarily applicable for this vision of the self-driving vehicle, it
+is possible to have working prototypes on the road, generating
+interest and publicity even in controlled conditions. Taking
+journalists for test drives drums up interest, even if the technology
+is not ready for full-scale deployment. Make no mistake: the current
+vehicles are capable of recognizing pedestrians, but any claim that
+they ``know'' or ``understand'' is a tenuous misuse of words which
+could no longer credibly mean what they generally do. 
+
+Second, humanlike characteristics may not be helpful for building
+specific applications. One would likely not want one's self-driving car
+to be preoccupied or emotional.\cite{???-wiredFutureofAI} It may be that, for utilitarian
+purposes like driving, many of the characteristics of the human are
+detrimental, their elimination helpful and intentional. Much of the
+discussion around why autonomous vehicles are necessary centers on
+just such qualities: distractability, sleepiness, lapses in
+concentration.\cite{???} We would not wish to emulate such
+characteristics in robotic systems. However, these are human
+capabilities, but also only caricatures of the human. People possess a
+variety of other capabilities which might be helpful to certain AI
+systems. As AI researcher Doug Lenat wrote in 1997:
+\begin{quote}
+Before we let robotic chauffeurs drive around our streets, I'd want the
+  automated driver to have a general common sense about the value of a
+cat versus a child versus a car bumper, about children chasing balls
+into the streets, about young dogs being more likely to dart in front
+of cars than old dogs (which, in turn, are more likely to bolt than
+elm trees are), about death being a very undesirable thing.\cite[p.
+  122]{ekbia}\end{quote} 
+
+Current approaches, however, assume this kind of deep understanding is
+unnecessary, both for the technical creation of such vehicles as well
+as their public acceptance. It is an interesting read on the changing
+times to notice that Lenat's statement seems to suggest humanoid
+robotic drivers operating regular cars. As well as moving toward
+functionalist systems, the industry has moved toward embedded systems
+within devices, systems that make no pretenses to be humanoid, but
+instead revel in appliance-hood. Whether this shift in the form of AI
+systems makes customers more or less nervous about computer-driven
+vehicles is an empirical question\footnote{CAN I FIND RESEARCH ON
+  THIS}. But it certainly suggests a desire to make the systems more
+invisible---and actually has important implications for human-computer
+interaction, as we will see in the next section. Though it may seem
+obvious, it is vital to remember that the devices we discuss here may
+have the properties Lenat mentions only in the way that Mario is
+``self-aware,'' possessing programmed constraints that cause it to
+avoid people, and perhaps expect children to behave erratically. 
+
+
+%% 2.3) what standard of safety? 
+%% --better than an average person? or better than the best people? (1 p)
+%% --human problems with using projected statistics to define policy:
+%% does it make people feel better to know a system is statistically
+%% safer when they are uncomfortable with it? see cars/planes for example
+%% (3 p)
+%% -->perspective of caution? or  ``losing lives every day'' that
+%% could be saved?
+%% ----how much risk is legitimate?? (2 p)
+%% --airlines as a place where we see the different dimensions of
+%% statistical safety vs. passenger's feelings of safety (3 p)
+%% ---drawing from PARC/CAST documents
+\subsection{Safety and Statistical Risk}
+
+But regardless of understanding, what drives the self-driving car
+narrative is safety; specifically, the poor safety record of human
+drivers and the potential for machines to do much better, free from
+human frailties of distraction and fatigue. How bad are human
+drivers, really? Conventional stories of human drivers paint us as
+plainly terrible, prone to road rage and drowsyness and generally
+doing anything except paying attention\footnote{Numerous popular
+  articles take this position\cite{???}}. However, the statistics tell
+a slightly different story. Official numbers show that the number of
+motor vehicle accidents has remained in the range of 10--11 million
+per year for most of the late 2000s. The death rate seems to have
+decreased overall in this time, settling somewhere below 1.5 deaths
+per 100 million vehicle miles, presumably due to a combination of
+better safety features (especially since 1990) and other
+factors.\cite{???} The total number of vehicle-related deaths is much
+lower, at a still significant 35,000 deaths per year. But this alone
+does not tell the story. At around 1.5 deaths per 100 million vehicle
+miles, or about 1 death per 67 million miles, humans seem relatively
+competent in a statistical sense. The average American, who might
+drive 1 million miles\cite{???} is unlikely to be
+involved in a fatal crash in his or her lifetime. Looking at non-fatal
+accidents as well, humans get involved in about one accident per
+286,000 vehicle miles. Part of why the autonomous vehicle problem is
+such a difficult one is that these numbers are relatively high.
+
+Theoretically, computers can do better. But especially careful human
+drivers can also clearly beat the human average. But how safe do
+autonomous vehicles need to be in order to be allowed on our roads?
+Safer than the average human? or safer than the very best drivers?
+Such questions have real impact when it comes to how devices are
+designed and when they become commercially viable. The autonomous
+vehicle enterprise seems to call for using such projected statistics
+to define policy. One common narrative is that undue caution in the
+rollout of autonomous vehicles will directly ``cost'' lives, since
+people are killed by human drivers every day.\cite{???-blog} However,
+people are also accustomed to the current automobile death rate, and
+any autonomous vehicle crashes are likely to attract deep
+scrutiny\footnote{As Jim Womack has pointed out, there is no good side
+to change as a regulator. Regulators are not congratulated when things
+go right, only criticized when things go wrong. So some measure of
+tentativeness is almost certainly justified to the regulatory mind.
+(Discussion with the author, December 3, 2014)} as
+to whether a human could have prevented the accident.\cite{???}
+
+These are questions of policy, but also questions of human acceptance.
+This ideology posits lowering accident rates above all else, leaving
+no space for human squeamishness about technology and responsibility. 
+The statistical argument suggests that the death rate is all that
+matters, but humans are notoriously bad at understanding and
+responding to statistics. Does it make us feel better---more
+comfortable, more likely to get into autonomous taxis and spend our
+money on autonomous cars---to know that they are statistically safer
+than the average driver? 
+
+Airplanes are one type of vehicle for which these different dimensions of
+safety---statistical safety compared with perceptions or feelings of
+safety---have already become visible. Despite the comparative statistical safety of flying,
+people tend to be more afraid of getting on an airliner than getting in their
+cars.\cite{???} While this may have to do with a number of factors,
+including that aircraft do not remain on the ground during operation,
+it also represents a situation in which passengers give over their
+agency to pilots performing a job they do not understand and could not
+take over in an emergency.\cite{???-canIFindAnythingOnThis} SIMILAR
+ISSUES WITH TRAINS?\cite{??} The
+PARC/CAST working group had to account for these issues in their recent
+recommendations about airplane safety. They judged that if air traffic
+were to continue to increase with XXXX rates of crashes, by XXXX it
+would reach one fatal crash per day, which would be intolerable to
+airline customers, even though the overall accident rate would be no
+larger.\cite{???-PARCCAST} Though aircraft would be as safe as they
+had ever been, people, on seeing the sheer number and scale of
+accidents, would be unlikely to choose to fly. While the issues facing
+aircraft and trust are not precisely the same as those for cars, this
+example shows that actual safety rates are only
+one component of interest when considering how consumers react to
+modes of transportation. Perceived safety---due to accident scale,
+publicity, trust, or other factors---may be very different. But
+while research into how to get human beings to trust robotic drivers
+is being done\cite{???}, the voices pushing for autonomous cars sooner
+rather than later would suggest that the statistics are all that
+matters. 
+
+
+\subsection{Planning, Policy, Cities}
+
 
 
