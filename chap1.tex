@@ -19,14 +19,17 @@ course impacted by a wide variety of practices and perspectives, from
 the market and readership needs of news organizations to the pervasive
 culture of commodity scientism.\cite{???-smithCommodityScientism} The
 reasons for why these stories are the way they are may be innumerable
-and difficult to pin down. But specifically regarding the ways that
+and difficult to pin down. Specifically regarding the ways that
 driverless cars are figured in the press as autonomous machines, there
 are a number of identifiable sources for these modes of writing and
 ideological connections: science fiction, factory automation,
-artificial intelligence, and engineering and policy documents. Each,
+artificial intelligence, and engineering and policy documents. Some of
+these sources themselves have more direct impacts, such as
+policy documents that stand to shape the way state legislation proceeds. Each,
 in its turn, impacts the popular narrative in specific and important
 ways, which must be understood if we are to come to grips with the
-question of why we are receiving a particular story.
+question of why we are receiving a particular story, why vehicle
+automation appears on the surface the way that it does.
 
 \subsection{Science Fictions, Historical Dreams}
 
@@ -139,6 +142,7 @@ primarily those rooted in the cultural consciousness, rather than in
 nuanced, factual histories.
 
 <INCLUDE MORE ACTUAL HISTORY>
+<Wiener's automated factory from the 1950s>
 
 The early areas of automation which get picked-up by popular attention
 include the textile mills of the early 1800s, in which a large
@@ -340,7 +344,8 @@ and resurface as fashions change, and greater computational power
 allows ``failed'' techniques to be tried anew. But much of this
 history is presently unappreciated outside of the discipline. Ours is the age of
 statistical AI, and that is what receives attention in the
-self-driving car narrative. The buzzword of the day seems to be ``deep learning,'' which
+self-driving car narrative. The buzzword of the day seems to be ``deep
+learning,'' which
 appears to yield radical new possibilities everywhere it is
 applied---it really just means a return of neural
 networks,\footnote{These systems still have little or nothing to do
@@ -350,7 +355,7 @@ networks,\footnote{These systems still have little or nothing to do
 nodes, and more data to train with, have been able to eclipse many of
 the previous techniques\cite{???}.
 
-FIND AN NEURAL NETWORK PRIMER I CAN REFER TO\footnote{
+FIND A NEURAL NETWORK PRIMER I CAN REFER TO\footnote{
 (perhaps Jordan, Michael I.; Bishop, Christopher M. (2004). ``Neural
 Networks''. In Allen B. Tucker. Computer Science Handbook, Second
 Edition (Section VII: Intelligent Systems). Boca Raton, FL: Chapman \&
@@ -425,13 +430,264 @@ or newly extended techniques.
 But while some of the conventional driverless car narrative comes from
 poor understanding of the technology and history, some also comes
 straight from the engineering standards and policy documents set up to
-guide the industry's development.
+guide the industry's development. A number of levels-of-autonomy or
+levels-of-automation taxonomies have been developed to guide
+researchers and public agencies toward an appropriate understanding of
+how automation research will progress. While they vary in terms of how
+prescriptive or descriptive they are, these documents are easily taken
+as evidence for how automated systems must or will develop in
+practice.
 
-<From DM paper>
+The primary formulations of levels of autonomy for self-driving cars
+have been published by the National Highway Traffic Safety
+Administration (NHTSA) and the Society of Automotive Engineers
+(SAE).\footnote{The German Federal Highway Research Institute, BASt,
+ has also produced a taxonomy that predates the SAE's work, and
+ influenced it in key ways.}
+These reports exhibit some resonances and contradictions in how these
+organizations represent autonomous vehicles and their human drivers.
+Viewed in the larger context of the discourse on levels of automation
+in general, these speak to different ideas of who the “driver” will be
+in automated systems. However, both make particular assumptions about
+the way autonomy is or will be implemented that may not ultimately be
+valid and certainly seem to foreclose on certain alternative ways in
+which systems could be designed. These documents represent an important
+vector for the traditional autonomous vehicle narrative, and are
+therefore worthy of deeper scrutiny.
+
+The NHTSA's levels of automation focus largely on the human driver and
+human costs, and are unable to think beyond human-machine opposition.
+The agency identifies three ``distinct but related streams of
+technological change'': 
+
+\begin{quote}
+``(1) in vehicle crash avoidance systems that provide warnings and/or
+limited automated control of safety functions; (2) V2V communications
+that support various crash avoidance applications; and (3)
+self-driving vehicles''\cite{???}
+\end{quote}
+
+Though the agency positions these technologies ``as part of a
+continuum,''\cite{???} aligning themselves with Thomas Sheridan, whose
+work forms a fundamental part of \ref{chap3}, this belies
+their three-part dissection of the technological landscape and their
+following 5-level taxonomy. They correctly recognize that today's
+``crash avoidance and mitigation technologies'' are the ``building blocks
+for what may one day lead to a driverless vehicle,'' but incorrectly
+assume that an easy line can be drawn between driven and
+driverless.\cite{???} According to their definition, Automated
+vehicles are those in which ``aspects of a safety-critical control
+function (e.g., steering, throttle, or braking) occur without direct
+driver input.''\cite{???} Therefore, the NHTSA definition excludes warning
+systems that nevertheless still use ``automation'' in varying degrees,
+drawing a suspect line between monitoring and action. Though there is
+a difference between systems that only provide information and systems
+that directly affect the mechanical state of the vehicle, making that
+distinction part of the definition of “automation” perpetuates an
+inaccurate view that automation is only meaningful or important to
+consider when it affects a physical mechanism. Information automation
+is written out of the NHTSA's definition.
+
+Their definition also excludes non safety-critical ``control
+functions.'' The agency is likely attempting to make this distinction
+so that cars with currently banal automatic technologies like
+automatic transmissions do 
+not count as ``automated vehicles,'' but this is the wrong footing on
+which to rest a definition of automation. Automated wipers and hazard
+lights may well be ``safety critical.'' The state of the transmission
+and drivetrain is fundamentally important to throttle control. The
+terms of the agency's definition of ``automation'' itself are incoherent
+and self-contradictory. By writing out current systems from the field
+of ``automated vehicles,'' the NHTSA has hobbled their terminology.
+
+The agency does not view the human-machine system as a whole, focusing
+on, by labeling as ``automation,'' only those processes that are
+mechanical in result and are arbitrarily considered to be
+``safety-critical'' as opposed to ``secondary.'' Even if one does not
+wish to include 
+the driver as part of the ``vehicle,'' real-world vehicle tasks, or
+control functions, are more complicated than simply turning the
+steering wheel. The NHTSA's levels of autonomy only compound the
+issues already exposed. Level 0, or “no-automation” represents
+precisely the issues inherent in their definition of automation. Level
+1 is the only automation level beyond zero that does not have the
+ability to apply all types of mechanical input to the system: it is
+limited to ``one or more specific control functions'' that operate
+``independently,'' and only for certain periods of time.\cite{???} The
+necessity of independence between automated ``control functions'' is
+especially hard to fathom: in a modern automobile, few if any systems
+are truly independent, instead coordinated via electronic management
+systems.\footnote{For example, see systems like Bosch's comprehensive
+  electronic energy management, EEM.} 
+
+The report is even confused on the number of control functions, though
+it ultimately means that both steering and brakes/throttle cannot be
+automated at the same time in a level 1 system: 
+
+\begin{quote}
+``there is no combination of vehicle control systems working in unison
+that enables the driver to be disengaged from physically operating the
+vehicle by having his or her hands off the steering wheel AND feet off
+the pedals at the same time''\cite{???}
+\end{quote}
+
+This continues the agency's curious focus on the physical state of the
+driver's body, repeated in level 2 automation to make the distinction
+that now the operator can be ``disengaged from physically operating the
+vehicle by having his or her hands off the steering wheel AND foot off
+pedal at the same time'' [sic].\cite{???} This description of bodily state is
+the most coherent part of the levels definitions, but makes little
+practical sense for defining automation. One can drive hands-and-feet
+free in a non-automated vehicle, for short periods of time, in the
+right conditions. Does the car become a level 2 during this time?
+
+While this question seems fatuous, it becomes important if the
+physical state of the driver's body will define system-level
+automation. (It is also worth noting that this clarification is
+unnecessarily normative, and does not transfer to other types of
+bodily input—like GM's abandoned ``Unicontrol''\cite{???}—or controls designed
+for amputees.) Though this stipulation attempts to address what the
+human driver is actually doing, it is insufficiently granular to
+account for the various types of mental and physical effort exerted:
+from using control stalks to monitoring for vehicles to consulting a
+GPS or mentally planning a route to monitoring and adjusting an
+automation system via steering-wheel based controls. But the
+preoccupation with the body results from the NHTSA's charter: the
+human is a safety liability, something to be protected. The operations
+of hands and feet represent readily visible and na\"{\i}ve distinctions
+between human and automated, even if the distinctions do not turn out
+to be particularly useful when faced with further technical scrutiny.
+For their stated audience, primarily state lawmakers who are not
+likely to be human factors engineers or well-versed in human-machine
+interaction, these markers of human action are persuasive, but likely
+to contribute to bad policies.
+
+Further levels extend the functions which are automated. Levels 2-4
+have automated systems capable of making all the electromechanical
+inputs necessary to drive; they differ only in the extent to which
+human stewardship is necessary.\cite{???} This exposes naïve assumptions about
+how vehicles will be automated: one whole system at a time. How much
+control is handed back when the human has to take over more vehicle
+operation tasks is not clear: One primary control function? All
+primary control functions? The NHTSA is trying to define an overall
+automation level for a vehicle, but their definition masks system
+specificities. The report is not clear on the level of automation for
+a vehicle in which some control systems require continuous monitoring
+and others can transition to manual control on an appropriate
+timescale. And the NHTSA's taxonomy rests on the assumption that the
+work of driving a vehicle will remain basically the same, some tasks
+simply shuffled to the computer—system control first, monitoring of
+control second—with no new cognitive loads placed on the human as a
+result. This too is a na\"{\i}ve position that is not supported by current
+examples of automation technology, which often result in the
+generation of new types of human work (such as monitoring the
+automation system itself).
+
+Contrasting the NHTSA's model with the SAE's provides a deep look into
+the priorities of the organizations. The SAE document provides a full
+taxonomy of levels of automation for ``on-road motor vehicles,'' and the
+presumed audience consists of engineers not policymakers.\cite{???} The report
+focuses on the three ``highest'' automation levels (``conditional, high
+and full automation''), implicitly because these are the newest areas
+of research and therefore the most important. The report is careful to
+distance itself from the terms ``autonomous'' or ``self-driving'' as used
+in the media, preferring instead its own carefully-defined
+terminology.\cite{???} 
+
+The SAE report does try to square itself with NHTSA recommendations,
+however approximately, and represents the hidden difference between
+NHTSA's levels 2 and 3 as the monitoring of the environment by the
+vehicle (in level 2 the vehicle does not monitor, and in level 3 it
+does). In contrast, the NHTSA report does not make this plain, and
+indeed a level 2 system can be said to ``relinquish control with no
+advance warning'' which is impossible without either knowledge of the
+environment or the occurrence of a bug—the system needs something on
+which to base its decision to “relinquish control” if such a decision
+can be said to be made.\cite{???} Rather than overloading the word ``control,''
+the SAE considers the ``dynamic driving task'' to have a number of
+components, including the detection and classification of objects and
+events, the response to such events, planning of maneuvers, steering
+and turning (including lane-holding and changing), acceleration and
+deceleration, and ``enhancing conspicuity'' (referring to lighting,
+signaling, gesturing, etc.).\cite{???} Like the NHTSA's taxonomy, the SAE's
+document focuses primarily on four major aspects of this task:
+steering, acceleration/deceleration, monitoring of the environment,
+and fallback performance, but is somewhat clearer about how tasks are
+defined—in particular, it is clearer about the separation of the
+driving task into longitudinal and lateral components. Also like the
+NHTSA, the SAE's definitions show all systems above level 1 having the
+full electromechanical capability to drive the vehicle (to execute
+both longitudinal and lateral driving tasks) which makes it difficult
+to account for complex hybrid systems in which some tasks may be
+highly automated and others not.
+
+The primary distinction is whether the ``human driver'' or ``automated
+driving system'' monitors the driving environment.\cite{???} The report deals
+appropriately with human psychology, stating specifically that higher
+levels of automation are based on the expectation that the human need
+not ``and therefore will not''\footnote{Attention and task hand-over are
+  known issues in aircraft automation, as prolonged inattention leaves
+  pilots ill-positioned to regain control of systems when necessary
+  (see for example the events leading up to the Air France 447
+  crash). This will be a particular focus in \ref{chap3}} continuously
+monitor the environment.\cite{???} But their 
+picture is still binary, rather than considering the moment-to-moment
+distribution of human 
+cognitive effort. This is implicitly connected to their inclusion of
+the lower levels of automation only ``as points of reference to help
+bound the full range of vehicle automation''\cite{???}: they are not within
+the document's focus, which favors an implicit---to the NHTSA's
+explicit\footnote{The NHTSA explains this by deferring to existing
+  laws: ``Generally, these laws seem to contemplate vehicle 
+automation at Levels 3 and 4, as discussed above, i.e., some form of
+self-driving operation. 
+Accordingly, these recommendations are tailored to Levels 3 and 4
+automation.''\cite[p. 10]{???}}---rhetoric of progress toward the
+higher levels of autonomy. 
+Not only are hybrid task monitoring systems classified as level 2
+regardless of their complexity or capabilities, the SAE's taxonomy by
+definition leaves out whole classes of systems where the default
+execution of the dynamic driving task is up to the human but
+monitoring/fallback performance are computerized, or where the dynamic
+driving task is shared in a complex way, as is monitoring and fallback
+performance. It considers only systems in which longitudinal and
+lateral control is handed over to the system earlier in the hierarchy
+than monitoring or fallback performance. The SAE is better about
+identifying new types of human work, such as the monitoring of the
+automated system, generated by partial automation
+strategies.\footnote{For instance, the human driver ``constantly
+  supervises dynamic driving task executed by driver assistance
+  system.''\cite[p. 3]{???}} They
+are also more conscious of issues of the handover of control, and
+specifically discuss delayed-release of particular tasks ``when
+immediate human takeover could compromise safety,'' slowly
+transitioning control of a system from fully autonomous to fully
+manual though never lingering in between.\cite{???} 
+
+The SAE mentions the true complexities of driving at the report's end,
+describing how the dynamic driving task is distinct from driving:
+``Driving entails a variety of decisions and actions, which may or may
+not involve the vehicle being in motion or even being in an active
+lane of traffic.''\cite{???} Driving is split into Strategical, Tactical, and
+Operational components, where strategical includes trip planning and
+route selection, tactical includes maneuvering, while operational
+involves ``split-second reactions that can be considered pre-cognitive
+or innate.''\cite{???} The SAE is explicit about their exclusion of Strategical
+effort, presumably the human's task, from the definition of the
+dynamic driving task. However, this admission does expose an
+inconsistency within the SAE's taxonomy: level 5 automation (and some
+types of level 4 automation) definitionally require Strategical effort
+(route selection is implicit within GPS navigation), which is not
+separately mentioned as a system capacity in the document.
+
+Both taxonomies ignore the external labor involved in automation:
+human action displaced in space and time. Where do remotely monitored
+systems fit? What about human preparatory work that allows for
+automation? These are questions to which we will return in \ref{chap3}.
 
 \subsection{Researchers in the Field}
 
-
+<use interview material, and material from talks>
 
 
 %% 3) (or worked in to each of the previous) current research
