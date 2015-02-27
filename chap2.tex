@@ -31,7 +31,7 @@ change that is strangely most noticeable in the most mundane parts of
 our lives---how we shop, how we communicate, how we find
 partners---almost as if ``designed by a bored researcher who kept one
 thumb permanently on the fast-forward button''\cite[p.
-  7]{???-Neuromancer1984}. No longer does the future seem to be
+  7]{Neuromancer1984}. No longer does the future seem to be
 defined by flying cars and jetpacks. Instead, it is defined by
 information, and its collection and use. The stakes of autonomous
 vehicles are thereby deeply intertwined with the
@@ -53,10 +53,15 @@ Union's Court of Justice
 ruled in the landmark Costeja decision that since Google is processing
 ``personal data,'' and acting as a ``data controller,'' it may be
 compelled to remove links to pages containing personal information
-from its search results.\cite{???} The EU ruling, in deference to European
+from its search results.\cite{ICO} The EU ruling, in deference to European
 tradition and contrary to that of the United States, places an
 individual's rights to privacy above the ability of users to access
-information online.\cite{???} There is growing recognition that publicly
+information online.\footnote{Specifically, ``whilst it is true that the
+data subject’s rights also override, as a general rule, that interest
+of internet users, this balance may however depend, in specific cases,
+on the nature of the information in question and its sensitivity for
+the data subject’s private life and on the interest of the public in
+having that information.''\cite{COJCosteja}} There is growing recognition that publicly
 available data can be highly sensitive and that it may be beneficial
 to allow individuals certain legal rights to control their own
 electronic reputations, at least in particular circumstances. Costeja
@@ -66,7 +71,7 @@ open public removal of ``public'' information.\footnote{This removal,
   however, is controlled and curated by Google itself, which has not
   waited for guidance on how to proceed but has forged forward on its
   own, as a way to set the standards by which information removal can
-  be justified.\cite{???-http://www.theguardian.com/technology/2015/feb/18/the-right-be-forgotten-google-search}} But much of our
+  be justified.\cite{powlesChaparro}} But much of our
 information is even harder to control.
 
 Many current data-driven business models\footnote{See for example
@@ -92,12 +97,12 @@ sensing, in order to operate; but it may be that not all the
 information that is collected should be shared outside the immediate
 context of its use. What is sensed, and what can be appropriately
 transmitted back to servers for processing and storage, is of
-paramount importance: this is a question of privacy in context.\cite{???}
+paramount importance: this is a question of privacy in context.\cite{nissenbaum}
 Following Nissenbaum, privacy must always be seen in the context of
-particular users and a particular use.\cite{???} It is not that data about our
+particular users and a particular use.\cite[p. 2]{nissenbaum} It is not that data about our
 commuting routes, for example, should never be collected, but that collected data
 should not be sent uncritically to any third party without our
-knowledge or consent, a violation of our information norms.\cite{???} 
+knowledge or consent, a violation of our information norms.\cite[p. 3]{nissenbaum} 
 Automated vehicles are and will continue to be networked
 technologies. This connectedness brings with it great possibilities
 for coordinating traffic and improving city planning, as well as great
@@ -175,14 +180,15 @@ information landscape, to see such information sold to third-party advertisers.
 These sorts of security and privacy issues are not unique to
 autonomous vehicles, nor even to networked vehicles. What Roger Clarke
 calls ``dataveillance'' is already possible: electronic tolls already
-allow for a measure of tracking.\cite{???} Networked traffic cameras are
+allow for a measure of tracking.\cite[p. 25]{nissenbaum} Networked traffic cameras are
 already being used to amass large databases of information about
 (non-networked) cars and their travel patterns by reading passing
-license plates.\cite{???} With sufficient coverage of cities and regions,
+license plates.\cite[p. 26]{nissenbaum} With sufficient coverage of cities and regions,
 these databases can capture the movements of large segments of the
 population, and therefore include potentially sensitive information
 about people's movements. Despite this, their collection and use
-remains largely unregulated.\cite{???} California police are coming under
+remains largely unregulated.\footnote{Groups such as the EFF and ACLU
+  are attempting to do something about this.\cite{kayyaliEFF}} California police are coming under
 criticism from civil rights groups about their mass collection of
 vehicle position information through police license plate cameras.iv
 Clearly, these types of contested data collection are already
@@ -195,7 +201,11 @@ Increasing surveillance by government and law enforcement is not the
 only threat posed by the potential for ever more fully networked
 vehicles. Networked technologies do not have a great security record,
 and there is no reason to believe automated cars will be any
-different, barring greater scrutiny and regulation.\cite{???}
+different, barring greater scrutiny and
+regulation.\footnote{Commercial networked devices routinely lack basic
+security measures. And for a large number of other systems, security
+is defeated by being out-of-date or by using default passwords that
+were never changed. See for example \cite{zetter}.}
 Networked capabilities within vehicles are being used to
 implement vehicle kill-switches, capable of remotely disabling
 vehicles on the whim of the controlling organization---for example, if
@@ -204,16 +214,16 @@ potential for this is quite troubling: not only could drivers
 potentially find their cars impossible to start at an arbitrary time,
 with serious implications for safety, the existence of these devices
 presents opportunities for hackers to cause nuisance or
-harm.\cite{???-http://boingboing.net/2015/02/24/the-time-a-hacker-remotely-bri.html}
+harm.\cite{goodman}
 Existing vulnerabilities in web services and dealership practice
 allowed Ramos-Lopez to hijack 100 cars from a Texas dealership and
 either disable them or set
 the horns
-going.\cite{???-http://www.wired.com/2010/03/hacker-bricks-cars/} A
+going.\cite{poulsenHacker} A
 high-school student at a security camp in July of 2014 was apparently
 able to hack into an automobile with \$15 worth of components, and
 gain access to lights, horns, and even the remote start
-feature.\cite{???-http://www.autoblog.com/2015/02/18/14-year-old-hacker-caught-industry-by-surprise-featured/}
+feature.\cite{bigelow14}
 The
 potential for this kind of access gets more frightening when one
 considers the effects an integrated, network-connected vehicle that is capable of
@@ -276,7 +286,7 @@ Localization has been a fundamental issue for robotics since the
 beginning of the field. In order to figure out how to act, a robot
 needs to know where it is; and in general, robotic environments can be
 expected to change rapidly with motion, and to vary significantly from
-place-to-place\cite[p. 4]{???-SLAMbook}. Motions cannot, for the most part,
+place-to-place\cite[p. 4]{SLAMbook}. Motions cannot, for the most part,
 be pre-planned:  they must continually be reevaluated in new and
 emerging situations, as the robot moves through the environment. As a
 key part of this puzzle the robot must be able to determine its own
@@ -288,7 +298,7 @@ severely limits the range of behavior that is possible. Without
 reference to the environment, errors slowly accrue, and a system that
 navigates in a known space without localization will find itself
 getting further and further off-track.} component of successful
-navigation.\cite[p. 5]{???-SLAMbook} This relation can be expressed
+navigation.\cite[p. 5]{SLAMbook} This relation can be expressed
 in different forms---either quantitative representations such as maps,
 or logical, prepositional statements---and these representations carry
 their own techniques of interpretation. 
@@ -299,17 +309,17 @@ estimate a robot's position, those elements themselves must be known
 in order to perform this process. Mapping is the complementary
 process, the estimation of ``\emph{unknown} spatial relations that
 exist between environment elements'' in order to allow for subsequent
-navigation\cite[p. 5]{???-SLAMbook}. There is a somewhat tricky
+navigation\cite[p. 5]{SLAMbook}. There is a somewhat tricky
 precedence problem we face here:  in order to build maps with
 autonomous systems, they must know where they are; in order to know
 where they are, they must have maps with which to measure
-against.\cite[p. 6]{???-SLAMbook}
+against.\cite[p. 6]{SLAMbook}
 
 Returning to the history of AI,
 localization was part of the cause of the poor performance of the
 robot Shakey: world modeling through a symbolic approach was slow,
 which was rendered even more problematic by the relative lack of
-computing power.\cite{???-mccorduck?}
+computing power.\cite[Afterword]{mccorduck}
 Though one way to determine robot position in the world is through
 simultaneous localization and mapping (SLAM)---a serious research area in
 robotics, as it is ideal for areas that are impractical to map
@@ -328,7 +338,7 @@ mapping are both considered ``satisfactorily solved in practical
 situations''---though SLAM techniques
 are still somewhat less reliable or developed---given sufficient
 computational resources and environmental data.\cite[p.
-  5-6]{???-SLAMbook}
+  5-6]{SLAMbook}
 
 %%Fernández-Madrigal, Juan-Antonio, and José Luis Blanco Claraco.
 %%2013. Simultaneous Localization and Mapping for Mobile Robots :
@@ -345,34 +355,36 @@ road tests have been accomplished without navigational assistance,
 using only visual stimuli (such as the EUREKA PROMETHEUS project
 in the 1990s, which navigated only with cameras and therefore could
 only follow the road in an automated fashion, rather than navigate to
-given GPS coordinates)\cite{???}, modern systems are tending to use more external
+given GPS coordinates)\cite{UlmerVITA}, modern systems are tending to use more external
 stimuli, rather than less, in an attempt to increase safety and
 vehicle capability. Even as
 advanced as it is, Google's autonomous vehicle technology requires
 hyper-detailed 3D maps in order to operate properly on public
-roadways.\cite{???} These maps are generated by human-piloted vehicles outfitted with
+roadways.\cite{gomesObstacles} These maps are generated by human-piloted vehicles outfitted with
 special sensor arrays, like the LIDAR Google uses for their autonomous
 vehicles, which drive a route and collect data which can be used to
-reconstruct the model used for future drives.\cite{???} 
+reconstruct the model used for future drives.\footnote{Nhai Cao
+  (Global Product Line Manager at TomTom), presentation at The Road
+  Ahead Forum on Future Cities 2014, Cambridge, MA, MIT, November 21, 2014.} 
 
 The vehicle does not operate in a SLAM mode, at least not completely.
 Pre-made maps are used so the vehicle knows where stoplights, signs,
 and curbs are, reducing the computational load on the machine in the
 crowded visual landscape of driving, and allowing it to focus on
 elements of the environment that are changing rather than those likely
-to be static.\cite{???} Prior knowledge of speed limits should make the car's
+to be static.\cite{gomesObstacles} Prior knowledge of speed limits should make the car's
 behavior more reliable and predictable in all conditions, even if
 speed limit signs are missing or obscured---consider how often human
 drivers, when faced with an absence of signs, base their behaviors on
 supposition or prior knowledge. When Google's car was certified for
 testing in Nevada, Google was allowed to pre-select the route the car
 would take, so that they could build the comprehensive model the
-system requires beforehand.\cite{???} The system would likely not have been
+system requires beforehand.\cite{harrisNevada} The system would likely not have been
 capable of passing a test in which the examiner could have added
 detours on the fly. And though Google claims to have driven more than
 700,000 miles with their cars, those are not 700,000 unique miles. A
 limited, thoroughly pre-mapped route has been driven many times to
-achieve those numbers.\cite{???}
+achieve those numbers.\cite{gomesCircles}
 
 Mapping claims a unique capability to
 represent the real, objectively
@@ -380,8 +392,7 @@ and diagrammatically, but also requires that world to remain largely
 static, at least on the order of how long it takes to update the map
 for a particular region. The necessary level of continual mapping is a massive task if the
 vehicles must be usable everywhere. The United States alone contains almost
-8.5 million road miles\footnote{Data as of 2008,
-  http://blog.cubitplanning.com/2010/02/road-miles-by-state/\cite{???}},
+8.5 million road miles\footnote{Data as of 2008\cite{carneyMiles}},
 and it took years for Google Streetview to acquire the level of
 coverage it currently has. The maps required for driverless car
 localization are a significantly more difficult project in terms of
@@ -399,7 +410,9 @@ but it will not happen immediately or all-at-once. More likely,
 certain areas will be 
 mapped and restricted, or separate divided public rapid transit
 systems will operate on roads that can be carefully
-monitored.\cite{???} While
+monitored.\footnote{This point came up in a discussion with a
+  scientist with experience with a UK-based firm working on public
+  rapid transit, or PRT, systems.} While
 Mountain View, California may be mapped early, rural West Virginia or
 Northern Maine may not be mapped as soon or as frequently.
 Inequalities may be increased if routes frequented by upper-middle
@@ -1281,7 +1294,7 @@ all developers in this space, it is not a vision we can afford.
 This chapter has investigated six different perspectives on the
 social, cultural, and informational contexts of the autonomous
 vehicle, including:  the technologies involved in its operation, the
-data it collects, the statistics with which it is mobilized, the
+data it collects, the statistics with which it is motivated, the
 ethics and epistemologies with which it is designed, and the civic
 ends to which it might be mobilized. While in chapter \ref{chap:1} we
 illuminated the historical background behind the dominant narrative of
