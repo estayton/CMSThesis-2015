@@ -51,7 +51,13 @@ performing a maneuver ``on its own,'' that operation is monitored, at
 least intermittently, by a person who can theoretically correct errors
 made by the automation.\footnote{Of course there are serious
   limitations to this capability, as HSC research shows, and as I will
-  more fully describe later in this chapter} But in May of 2012,
+  more fully describe later in this chapter} 
+
+%%Use the Hireart job posting; looking for people who can monitor
+%%comms and vehicle ops; a complex task; but the actual operations
+%%shrouded in secrecy
+
+However, in May of 2012,
 Google actually tested one of these vehicles in Nevada, on public
 roads, in the only government test yet conducted in the United States.
 The documentation of this test---which occurred with engineers Chris
@@ -247,7 +253,8 @@ controls in autonomous mode, instructing the vehicle which lane to be
 in or which turns to make without having to maneuver manually (3); it
 allows the operator to pay intermittent attention to the vehicle by
 including fail-safe modes and the ability to handle most driving
-situations (4, 5); in the case of a time delay (drowsyness) or an
+situations (4, 5); in the case of a time delay in response (e.g. due
+to drowsyness) or an
 operator's failure to control, the vehicle will attempt to behave
 safely (5 and 6). While actually designing and engineering such a
 system is by no means as simple as sketching it briefly as I have, it
@@ -262,6 +269,59 @@ vision, mapping, or automated sensing, but may do much to address
 human discomfort with automation systems and concern with being
 outside of the control loop of their automated vehicle.
 
+With our attention on supervisory control, new questions and processes
+come into focus. If the machine is clearly no
+longer the sole component of analysis, what formerly neglected pieces
+must be considered? How do we assess system design or performance, or
+think about the ways these newly expanded devices operate? In this
+pursuit it is worthwhile to expand our
+view to encompass other related work. As Sheridan notes, much study of
+supervisory control has gone on elsewhere under different names, but
+with similar guiding concepts. Coming instead from Cognitive
+Science\footnote{And, notably, responding to the canonical focus of
+  cognitive science on the ``mental processes that organize the
+  behavior'' of an individual, a position Hutchins cites as having its
+standard statement in Newell and Simon's 1972 \emph{Human problem
+  solving}.\cite[p. 265-266]{hutchinsCockpit} These AI pioneers show
+up again here, and their individualist focus perhaps sheds some 
+light on why the narratives of automated vehicle technology that are
+inflected by AI are so different than they would be if told instead
+through the lens of supervisory control.},
+Edwin Hutchins and his anthropological work on group cognition
+processes expands from the traditional focus on the individual agent
+to systems of interacting agents and technologies. As he identifies,
+the outcomes of tasks are not determined by individual components of a
+system but by the overall dynamics of the system, and the behaviors of
+a complex thinking system cannot be ``inferred from the properties of
+individual agents, alone,'' irrespective of the detail to which those
+individuals may be studied or modeled.\cite[p. 265]{hutchinsCockpit}
+Hutchins's ``How a Cockpit Remembers Its Speeds'' lays out a framework
+for understanding the cognitive activities of a human-machine system,
+and uses the example of an airline cockpit to show how the cognitive
+properties of a system as a whole may be very different than those of
+individual human actors within that system.\footnote{This is also true
+for systems that do not actually contain ``automation'' technologies
+as part of their make-up. The speed-bugs discussed in ``How a Cockpit
+Remembers Its Speeds'' are rudimentary in terms of other forms of
+cockpit automation, but the issues they present do not disappear with
+increased automation. Hutchins and Klausen co-wrote another
+article in 1995 titled ``Distributed Cognition in an Airline
+Cockpit,''\cite{???-hutchinsKlausen} which focuses on the interactions of the Captain, first
+officer, second officer, and air-traffic control. This exchange,
+though it involves control yokes, altitude alerts, and other
+technological actants, is primarily focused on the joint capabilities
+of the human crew.} Studying the humans alone,
+or the automation alone, does not suffice to explain the overall
+behavior of a joint human-machine cognitive system.\footnote{It is
+  worth noting here that these are not the remarks of a maverick or a
+  ``mere'' anthropologist working on his own. The research involved
+  was supported by a grant from the NASA Ames Research Center, as part
+  of the Aviation Safety/Automation Program.}
+
+more than just memory: about processing, changing the form of
+information
+--whole system has a ``memory'' that is distinct from the pilot's
+identifies a new unit of analysis, cockpit as whole
 
 Hutchins
 —while Hutchins' cockpit
@@ -269,9 +329,11 @@ remembers its speeds through a combination of human activity and
 physical cognitive aids,\cite{???} the NHTSA's “vehicle” may sometimes “not
 perform a control function.”\cite{???}
 
-Ironies of automation
+Ironies of automation - this becomes clear only now that we focus on
+the joint system, and which tasks are allocated where
+--what is the demand on human perceptual systems at any particular time
 
-Combinations of skills
+Combinations of skills (may have been covered)
 
 Wrap up: Actual use all over industry (Sheridan 10-11), and implicit
 in much popular writing, 
@@ -280,6 +342,21 @@ HSC not even that well considered/thought out in many fields; HF
 engineers low on status and too often just brought in at the last
 minute to design an interface rather than actually being involved in
 device design from the beginning.
+
+advantage: ``It is possible to design computer systems with open
+interfaces (Hutchins, 1990) that support learning in joint action but
+this can only be done when the designer goes beyond the conception of
+the isolated individual user.'' \cite[p. 13]{hutchinsKlausen}
+
+``if we step back and look at the entire aviation system and ask how
+it is that aircraft are kept separated from each other, we see that it
+is through the propagation of representational state of descriptions
+of flight paths into the state of the aircraft controls
+themselves.''\cite[p. 14]{hutchinsKlausen}
+--not quite the same for cars, but similar in principle
+--when that system is the vehicle system and involves computerized
+displays, sensors, and people (even at a Google-level), the same point holds
+
 
 
 As a way to INTRODUCE HSC, actually
@@ -360,6 +437,12 @@ from needing a fully automated vehicle'', and it seems quite possible
 to create a vehicle that will allow distractions on the order of that
 time span even if it is not feasible to build one that is fully automated
 
+Avoiding: the question ``People: sinners or saints?''; a ``false
+position'' (see woods\&hollnagel JCS ch 1); 
+-we are both sources of success and failure
+-all cognitive systems finite
+-success is not a given that the human degrades, but something
+achieved through careful engineering
 
 note especially the contradiction within X's characterization of human
 drivers and their future: ``humans are bad drivers and we should all
@@ -388,6 +471,16 @@ will inevitably involve
 -the important question is when/how are people involved, and this
 should be empirically not ideologically driven
 
+Whether you are an operator in a vehicle trying to monitor that you
+are on the right path and not about to be killed; or someone waiting
+for their car to come pick them up who wants to ensure it is en route
+and not in an accident; or a system-tech at Google administering a
+fleet of automated vehicles attempting to ensure they are not being
+hijacked or stolen, the situation you are in is one of supervisory
+control
+-NOT RECOGNIZING it as such does not make it not so, only means we are
+likely to neglect the most important parts of the system design in
+terms of its adoption and long-term use
 
 
 
