@@ -51,7 +51,35 @@ performing a maneuver ``on its own,'' that operation is monitored, at
 least intermittently, by a person who can theoretically correct errors
 made by the automation.\footnote{Of course there are serious
   limitations to this capability, as HSC research shows, and as I will
-  more fully describe later in this chapter} 
+  more fully describe later in this chapter} This point is made not
+only numerous articles describing vehicle operations in general terms,
+but by Google's
+own job postings, searching for ``vehicle safety specialists'' to join
+the self-driving car team in Mountain View. The ideal operator will
+develop ``a unique set of operational skills'' using the vehicles, and
+operate ``comfortably in a fast-paced environment, sometimes managing
+up to four communication channels simultaneously via various high- and
+low-tech mediums.''\cite{???-googleJobPosting} This person's primary
+duties include filing daily reports and monitoring operations of the
+software with ``constant focus.''\footnote{While this constant focus
+  is likely to be solely an artifact of the car as a device still in
+  testing phases, the development of a ``unique set of operational
+  skills'' is just the sort of learning one might expect to perform in
+order to operate a car with a novel human-machine interface. While it
+may be Google's intention that only test drivers need develop this
+kind of expertise, requiring it of prospective users is not
+necessarily a bad idea. While there is a reluctance to require drivers
+to acquire new skills, people are already licensed before they are
+allowed to drive, and the terms of that licensing may well need to
+change with new technologies and new relationships to automotive
+technology.} This role is clearly not one for a passive participant,
+an observer who sits in the seat, lets the software run (and perhaps
+self-diagnose failures), and only presses an abort button in an
+emergency. The test driver is instead an active participant in the
+complex process of 
+vehicle operation. Further details of these drives, however,
+are difficult to come by. Test drivers are, expectedly, required to
+``keep all project details confidential.''\cite{???-googleJobPosting}
 
 %%Use the Hireart job posting; looking for people who can monitor
 %%comms and vehicle ops; a complex task; but the actual operations
@@ -318,25 +346,78 @@ behavior of a joint human-machine cognitive system.\footnote{It is
   was supported by a grant from the NASA Ames Research Center, as part
   of the Aviation Safety/Automation Program.}
 
-more than just memory: about processing, changing the form of
-information
---whole system has a ``memory'' that is distinct from the pilot's
-identifies a new unit of analysis, cockpit as whole
+Hutchins is very particular about the point that the speed bugs and
+other cockpit devices function as more than just memory aids for the
+pilots. They do not na\"{\i}vely increase pilot memory. Instead, they
+are information processing tools, responsible for changing the form of
+information, giving it a new representation and altering the
+interaction with that information: specifically, changing a task that
+requires memory and comparison to a readout to a simpler task of
+``judgments of spatial proximity'' of the needle to the speed
+bugs.\cite[p. 282]{hutchinsCockpit}. The whole system can be said to
+have a ``memory'' that is distinct from the pilot's memory: the
+``\emph{cockpit system} remembers speeds'' by virtue of the pilots
+within that system judging a needle against the bug.\cite[p.
+  283]{hutchinsCockpit} I introduce this material here because
+Hutchins, by looking at cognitive behaviors within this particular
+setting, identifies a new unit of analysis: the cockpit as a whole.
+Automation systems are more complex than the cockpit's
+visual-mechanical aides, but are appropriate subjects of the same kind
+of analysis.\footnote{As an aside, I would argue that if a number of
+  modern information technologies, like smartphones, seem to have done
+relatively little to alter human beings, it is because the individual
+is still the unit of analysis. When the unit of analysis is instead
+set at the individual plus his or her immediate technological
+surroundings, much greater differences in capability become apparent.}
+Automation likewise takes complicated jobs involving spatial
+processing and reasoning (driving between the lines and avoiding other
+cars), and transforms them through technological interfaces into other
+tasks. It is precisely these changes in task to which we should attend
+if we would like to properly understand (and design) the role of the
+operator within an automated vehicle. But this perspective is not
+represented in the prevailing guides for automated system development.
+While Hutchins's cockpit remembers its speeds through a combination of
+human activity and physical cognitive aids, the NHTSA's ``vehicle''
+may sometimes ``not perform a control function''\cite[p. 3]{NHTSA} and
+nevertheless remain on the road. The NHTSA's documentation instead
+focuses simplistically on whether the human or the ``vehicle''
+controls, rather than addressing what control involves or how it may
+be shared between human and automated systems.
 
-Hutchins
-—while Hutchins' cockpit
-remembers its speeds through a combination of human activity and
-physical cognitive aids,\cite{???} the NHTSA's “vehicle” may sometimes “not
-perform a control function.”\cite{???}
+A more nuanced view of the cognitive tasks involved in interacting
+with automated systems also goes quite a ways toward clarifying some
+of the more difficult parts of system automation. Specifically,
+significant research interest in human factors engineering focuses on
+the problem of so-called ironies of automation, whereby increasing automation actually
+increases the load on the operator, rather than decreasing it, and
+leads to increased failure rather than increased
+reliability.\cite{???-somethingin-hutchins} It might
+not be clear at first glance how this would be, and it is in part an
+interface problem---with how information is presented to the operator,
+not with the concept of automation itself. But a distributed,
+cognitive attention to automation highlights the problem:  an
+automation system may transform a task from a complex visual task for the
+operator (e.g. driving) to another complex visual task (e.g. monitoring a control
+panel with many displays and lights, and switches to press) while the
+overall processes within and results of the system remain
+fundamentally congruent---the system still ``knows'' how to turn, for
+example, but instead of the driver turning the wheel, she interacts
+with the automation systems in cognitively-intense way. Attending to
+the complex internal dynamics of
+the joint system improves the analysis: looking at which tasks are
+allocated where, and what is the demand on human perceptual and
+decision-making systems, at any particular time. As one should expect,
+people drive largely based on experience and instinct,\cite{article-http://www.telegraph.co.uk/news/science/science-news/11410261/Driverless-car-beats-racing-driver-for-first-time.html} not logical
+thought, and similarly system performance should be expected to shift
+over time as interactions with automation are internalized.
 
-Ironies of automation - this becomes clear only now that we focus on
-the joint system, and which tasks are allocated where
---what is the demand on human perceptual systems at any particular time
-
-Combinations of skills (may have been covered)
-
-Wrap up: Actual use all over industry (Sheridan 10-11), and implicit
-in much popular writing, 
+Not to belabor the point, however, the perspective I am describing is
+not fundamentally new. Supervisory control and
+joint-cognitive systems approaches are actually in use all over
+industry, even in cases where they are not necessarily recognized in
+those terms. 
+%%Wrap up: Actual use all over industry (Sheridan 10-11), and implicit
+%in much popular writing, 
 just not generally acknowledged as an important field in all its complexity
 HSC not even that well considered/thought out in many fields; HF
 engineers low on status and too often just brought in at the last
@@ -458,6 +539,10 @@ actually make sense!
 -greater safety imply taking licenses away? a question that really
 -only makes sense with a particular vision of autonomy (perhaps a
 -better question is what sort of licensing/training is necessary)
+-->difference in airlines (professional) and cars (non-professional)
+BUT people are licensed to drive: no reason to say new training may
+-not be necessary or good; or that some continuing education would not
+-be a net good thing
 
 
 Conclusion:
@@ -481,7 +566,8 @@ control
 -NOT RECOGNIZING it as such does not make it not so, only means we are
 likely to neglect the most important parts of the system design in
 terms of its adoption and long-term use
-
+-AND ignore new skills/competencies that may be important for
+operation (not to say ``required'' but perhaps they should be)
 
 
 
