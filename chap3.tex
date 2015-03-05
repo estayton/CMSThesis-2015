@@ -409,14 +409,42 @@ allocated where, and what is the demand on human perceptual and
 decision-making systems, at any particular time. As one should expect,
 people drive largely based on experience and instinct,\cite{article-http://www.telegraph.co.uk/news/science/science-news/11410261/Driverless-car-beats-racing-driver-for-first-time.html} not logical
 thought, and similarly system performance should be expected to shift
-over time as interactions with automation are internalized.
+over time as interactions with automation are internalized. As
+Hutchins and Klausen describe, ``It is possible to design computer systems with open
+interfaces (Hutchins, 1990) that support learning in joint action but
+this can only be done when the designer goes beyond the conception of
+the isolated individual user.''\cite[p. 13]{hutchinsKlausen}
+Appropriately recognizing interactions is critical to successful design.
 
 Not to belabor the point, however, the perspective I am describing is
 not fundamentally new---simply, its importance is not often
 recognized outside of particular disciplinary boundaries. Supervisory control and 
 joint-cognitive systems approaches are actually in use all over
 industry, even in cases where they are not necessarily cast in
-those terms. 
+those terms. <??? Describe some from Sheridan 10-11> While it is also
+implicit in much popular writing about autonomous systems, however,
+supervisory control is not generally acknowledged as an important and
+developed field. Human supervisory control is not even that well
+considered in many engineering fields; even today, the human factors
+engineer is often low in status within the engineering hierarchy, and
+is too often brought in at the last minute to design an interface for
+an already specified device,\footnote{This subtlety of the politics
+  within engineering communities themselves was not something I was
+  previously aware of, but was made clear to me by David Mindell.
+  Discussion with the author, September 8, 2014.} rather than actually being involved in
+device design from the beginning, as effective supervisory control
+requires. While the related discipline of interaction design or
+user-experience design is gaining in importance in the information
+technology sector\footnote{This I can speak to personally, through my
+  involvement with programming communities building web and mobile
+  applications. Demand for UI/UX designers has increased dramatically,
+following the success of design-first product development by IT
+companies, most notably Apple.}, this too is often (though not always) a surface-level
+consideration of the interface, without consideration of deeper
+dynamics of human and joint cognitive processes. However, it may be
+that this kind of engineering work gains greater recognition with the
+entry of Google, Apple, Tesla, and other high-technology companies
+into the autonomous vehicle space.
 %%Wrap up: Actual use all over industry (Sheridan 10-11), and implicit
 %in much popular writing, 
 %just not generally acknowledged as an important field in all its complexity
@@ -425,35 +453,39 @@ those terms.
 %minute to design an interface rather than actually being involved in
 %device design from the beginning.
 
-advantage: ``It is possible to design computer systems with open
-interfaces (Hutchins, 1990) that support learning in joint action but
-this can only be done when the designer goes beyond the conception of
-the isolated individual user.'' \cite[p. 13]{hutchinsKlausen}
-
-``if we step back and look at the entire aviation system and ask how
+Hutchins and Klausen make it a particular point to highlight that
+human-machine dynamics of information transfer are at the center of
+the appropriate and safe operation of aircraft: ``if we step back and
+look at the entire aviation system and ask how
 it is that aircraft are kept separated from each other, we see that it
 is through the propagation of representational state of descriptions
 of flight paths into the state of the aircraft controls
-themselves.''\cite[p. 14]{hutchinsKlausen}
---not quite the same for cars, but similar in principle
---when that system is the vehicle system and involves computerized
-displays, sensors, and people (even at a Google-level), the same point holds
+themselves.''\cite[p. 14]{hutchinsKlausen} This situation is not quite
+the same for cars, but in principle, the highway presents a similar
+situation. The propagation of a ``plan'' of the vehicle's path on the
+road into the state of the vehicle's controls keeps vehicles apart.
+And when that vehicle system involves computerized
+displays, sensors, and people (even at a high-level of oversight, as
+one would find represented in an employee monitoring a vehicle fleet
+from an office), the same point holds. Given these underlying
+similarities in terms of human-machine interaction, let us look at
+other examples of automated technologies (in space, underwater, and in
+the air) to see how previous sets of designers and users have
+negotiated compromises of automation, autonomy, and human-control.
 
 
 
-As a way to INTRODUCE HSC, actually
+%% As a way to INTRODUCE HSC, actually
 
-1) bring in the telerobotics/supervisory control literature
--why supervisory control? and where is it used? (5 p)
--examine the issue of deskilling vs. the ``irony of automation'' well
-known in Human Factors, in which increased automation actually
-increases human load (2 p)
--but SC allows for particular combinations of human skills and machine
-competencies (1 p)
---used all over industry, aviation, undersea (2 p)
+%% 1) bring in the telerobotics/supervisory control literature
+%% -why supervisory control? and where is it used? (5 p)
+%% -examine the issue of deskilling vs. the ``irony of automation'' well
+%% known in Human Factors, in which increased automation actually
+%% increases human load (2 p)
+%% -but SC allows for particular combinations of human skills and machine
+%% competencies (1 p)
+%% --used all over industry, aviation, undersea (2 p)
 
-
-NRC report on aviation (see e.g. 14-15)
 
 
 
@@ -557,6 +589,23 @@ will inevitably involve
 -the important question is when/how are people involved, and this
 should be empirically not ideologically driven
 
+NRC report on aviation (see e.g. 14-15)
+``For example, antilock braking systems and airbag systems on cars are
+fully
+automatic, deciding on their own when to act. However, fully automatic
+systems as well as fully
+autonomous systems depend on humans to define and limit the scope of
+their authority and the range of possible actions. Movement along the
+continuum typically does not eliminate or diminish the importance
+of the humans to the operations of the system, but it does change
+their role. In fact, the human’s role
+becomes more rather than less important when moving toward the
+autonomous end of the spectrum
+because it is so important to assure that the systems are
+properly designed, tested, deployed, and monitored to
+ensure the aircraft’s continued airworthiness.''
+
+
 Whether you are an operator in a vehicle trying to monitor that you
 are on the right path and not about to be killed; or someone waiting
 for their car to come pick them up who wants to ensure it is en route
@@ -569,6 +618,5 @@ likely to neglect the most important parts of the system design in
 terms of its adoption and long-term use
 -AND ignore new skills/competencies that may be important for
 operation (not to say ``required'' but perhaps they should be)
-
 
 
