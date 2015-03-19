@@ -26,8 +26,21 @@ built the ``Linrrican Wonder'' from a 1926 Chandler, and demonstrated
 it live, on the streets of New York City. But it would be wrong to
 characterize a 90-year engineering journey as the continual
 progression toward a ``modern,'' developed device. There is nothing
-fundamentally ``natural'' about the way automated--or, in the press,
-often ``autonomous'' or ``self-driving''---vehicles are being
+fundamentally natural about the way automated--or, often interchangeably
+``autonomous,'' ``driverless,'' or ``self-driving''\footnote{I indeed use these terms
+  interchangeably at times even within this text, but I should mention
+the specifics of their use here. Autonomous, driverless, and self-driving
+vehicles are generally one and the same, though the terms
+``driverless'' and
+``self-driving'' are used particularly in the press when talking about
+these systems. Both ideas presuppose largely self-contained operation
+on the part of the automated system. An ``automated'' vehicle however
+does not necessarily presuppose self-contained operation, and cars
+have become increasingly automated over the past 50 years (through
+ABS, traction control, cruise control, automatic transmissions, etc.) without, so
+far at least, becoming autonomous. This point, simple though it
+sounds, is at the center of this thesis and is specifically the focus
+of chapter \ref{chap3}.}---vehicles are being
 envisioned, designed, and talked about. Instead, automated vehicle
 development has sustained several successive, overlapping paradigms,
 in part, though not completely driven by the technical capabilities
@@ -37,53 +50,355 @@ machine interaction, that shape engineering practice and vehicle
 development, and alter how developments are represented and discussed
 in popular media. What we believe self-driving cars to be---or what we
 believe they soon will be---is a product of the popular, teleological understanding
-of technology development, which draws from American technocratic
-impulses and narratives. However, alternative narratives exist, and
-are very influential among certain groups of automation researchers. In
+of technology development, which draws from existing technocratic
+impulses and narratives\footnote{These narratives are deeply, though
+  not exclusively, American, and are intertwined with stories of
+  American technological progress over the last century, from the
+  Manhattan Project to the Apollo Program to ARPAnet to IBM's
+  Watson.}. However, alternative narratives exist, and 
+are very influential among certain groups of automation researchers,
+but deserve much broader recognition outside of these circles. In
 order to understand the way that automated vehicles have been figured
 popularly, the implications of that vision, and the alternatives to
 it, we should start by understanding the varied types and dimensions
 of historical automotive automation research.
 
+ Self-driving cars are born from the
+same history as interchangeable parts, assembly lines, machine tools,
+and scientific management, as electrification, computerization, and
+networked interconnection. When asked how to make something better,
+safer, faster, easier, more productive, we involve machines or at
+least what H. M. Collins describes as ``machine-like actions''\cite{???}. It is
+vital that we recognize this is not a new predilection, but is
+something that is has been with us since the Industrial Revolution.
+Furthermore, technological visions and concepts inscribe excitement about the
+technologies of the present moment, and this tendency has deeply
+affected the history of automated vehicle research. From the railroad to the
+Internet (passing through the telegraph, the airship, electrification,
+television, the automobile, the rocket), each new mode of
+communication (or transportation\cite{???}) ushers in new visions of our
+collective future. We are famously bad at these predictions\cite{???} but they
+nevertheless drive the popular imaginary, which has included automated
+vehicles since the 1920s, and other types of automation for hundreds
+of years previous\footnote{For more on this, see chapter
+  \ref{chap1}.}. Both visions of and research on self-driving
+technology have taken on aspects of the central information
+technologies of their day, and re-inscribed them as control
+technologies for physical devices.
 
->>>Story hook: currently, this calls out to be a brief historical
-sweep through self-driving car dreams from the 1920s/30s to the
-present; but it could also begin with the reveal of the Google car; or
-the Youtube video of the guy in the Mercedes tricking the lane assist
-function to drive for him on the highway (2 p)
+Houdina's early experiments in radio-controlled vehicles, which began
+this chapter, put us into a time period in which radio was an
+exciting, emerging technology, which was envisioned as a way to take
+the driver out of the vehicle, even if a human's direct commands were
+still necessary for vehicle operations. Aachen Motors's ``Phantom
+Auto,'' operating on the same principles, toured Milwaukee a year
+later,\cite{???} and returned as an attraction in Fredericksburg in 1932\cite{???}.
+Radio control had at this point been public knowledge for at least two
+decades, since Nikola Tesla's 1898 demonstration of a radio-controlled
+boat,\cite{???} but though it was not fundamentally new the use of the
+technology on public roads nevertheless shocked onlookers.
+Contemporary news articles describe the machine as if it drove itself,
+as if the physical position of the person was what mattered, not the
+fact that a human was always using the radio transmitter. ``Driverless,
+it will start its own motor, throw in its clutch, twist its steering
+wheel, toot its horn, and it may even 'sass' the policeman at the
+corner''\cite{???}. In ``one of the most amazing products of modern science'' the
+car proceeds ``as though there were an invisible driver at the wheel''
+in an effect both ``uncanny and mystifying''\cite{???}. Such work,
+though it seems relatively primitive in retrospect (hardly more than a
+glorified RC-car, though it was a compelling demonstration of the
+power of radio control to remove the driver from a full-size vehicle), may well have
+helped capture the popular imagination. This basic idea would reemerge
+a few years later.
 
-1) establish what the technology is: in its varied types and
-dimensions: this is not ONE THING or ONE IDEA (4 p)
----INCLUDING historical models: see Erkki Huhtamo, media archaeology
-(2 p)
->>>>pull from my essay!
+The 1939 New York World's Fair opened to great acclaim. Covering over
+a thousand acres and attracting a total of over 44 million visitors,
+the fair was a massive public spectacle demonstrating the technical
+prowess of American industry and providing a grand vision for the
+future of the nation. The structure of the exhibition—exemplified in
+its grand (and oddly-named) buildings, the Perisphere and
+Trylon—manifested the modernist techno-utopian ideology\footnote{As a
+  side note, this has been described not only as techno-utopian but as
+an outgrown of commodity scientism, a triumph of a sort of
+marketing-driven approach to technology that is more rhetoric than
+substance.\cite{???-DMsclass} It seems likely that commodity
+scientism, or a similar phenomenon, is deeply involved in the ways
+modern technological narratives are generated and consumed.} that drove the
+dramatic technological displays\cite{???}. The great success of the fair was
+GM's Futurama exhibit: the line for the exhibit routinely stretched to
+two miles in length, and 28,000 people visited the exhibit each day.
+The Futurama exhibit presented an idea of what the world would look
+like in 1960, one which included trains and aircraft, a farm, and an
+amusement park.\cite{???} But though GM's displays went far beyond automobiles,
+they were still the focal point: the bird's-eye view presented a
+future city with multi-lane elevated expressways filled with largely
+automated vehicles. For their concept cars, GM separated the control
+functionality for steering from that for the maintenance of speed and
+distance between cars. The car's lateral position was maintained via
+curved barriers that would restore the position of the car via
+gravity, a low-tech solution to the more complicated problem of
+steering. However, the Futurama exhibit described that distance
+between cars would be maintained via a ``sophisticated system of radio
+control''\cite{???}. Prior to electronic circuits, this would have been
+accomplished via vacuum tubes, a technology well known at the time,
+and certainly subject to significant hurdles in terms of mechanical
+reliability. It was not until digital electronics were invented that
+hardware became the relatively stable component of driverless systems,
+with software reliability becoming the key issue\cite{???}. But despite the
+fragility of glass tubes traveling at high speed, and despite the fact
+that the technology could work well only for sufficiently
+well-designed roads (high-speed highways, built specifically for these
+vehicles, with attendant infrastructural costs), such a system was
+reasonably coherent as a vision of what 1960 might be, from the
+perspective of attendees. This aspirational future was clean,
+modernist, and efficient; the rationalization of the factory, already
+achieved and itself a subject of a great deal of public
+interest---through factory tours of major Detroit automotive plants, and
+working GM and Ford assembly lines at the earlier Century of Progress
+Exhibition in Chicago (1933-1934)\cite{???}---had spread to the city and
+countryside, where working hours were reduced through electrification,
+and even driving could become leisure, the mere supervision of a
+device operating via radio control.
 
+But radio was not the only revolutionary medium to be included in
+ portrayals of the self-driving car of the future. The cover of the
+ April 1936\cite{???} edition of the magazine Modern Mechanix betrays a
+ different vision of the autonomous vehicle: the so-called ``electric
+ eye automobile'' which would steer itself via a control loop, using an
+ array of ``electric eyes,'' or photocells, on the car to track a light
+ beam projected from the car and reflected by mirrors in the road
+ surface. As the article, titled ``Light Beams Steer Super Racing
+ Cars,'' describes:
+\begin{quote}
+With speeds, such as recently attained by the famous Sir Malcom
+Campbell, already approaching the point where human reflexes are too
+slow to insure safe control of the car, science has turned to the
+photo electric cell for a possible solution. A proposed driverless car
+involves the use of multiple electric eyes as the heart of its
+steering mechanism. A powerful beam of light directed at a large lens
+on the front of the car is concentrated on steel mirrors set at an
+angle in the trackbed. The reflections are “caught” by the electric
+eyes which convey the electrical impulses to a mechanical-electrical
+brain which keeps the speeding car on its course.\cite{???}
+\end{quote}
+
+The cover pictures an intrepid ``driver'' using a camera to take a
+``movie recording'' of the car's performance, while he leaves the
+``driving responsibilities to the mechanical and electrical brain''\cite{???}.
+Responsible for initially putting the car into motion, the driver can
+then step back from the task of driving, allowing the electrical
+controls of mechanical linkages within the car---meticulously diagrammed
+within the magazine article---to convey him safely and speedily down
+the track. The photocells within the vehicle's sensing mechanism would
+operate relays controlling the steering linkage, closing the loop
+between sensing and acting in the manner of a ``teleological,''
+self-governing mechanism with corrective feedback.\cite{???} But how
+the car's governor could be modified to allow it to race with or
+beside other cars is not mentioned, which is telling since it is the
+complexities of the road environment that make automated driving so difficult.
+
+By 1960, driverless vehicles had not been brought to market, but
+interest in the technology continued. Ford's vice president of
+engineering and research, Andrew Kucher, was referenced in the \emph{Chicago
+Daily Tribune}, April 25, 1959, in a speech he gave at Northwestern
+University, taking seriously the idea of autonomous cars. The article,
+titled ``In 50 Years: Cars Flying Like Missiles!'' asks readers: ``can
+you imagine flying automobiles directed by automatic guidance
+systems?''\cite{???} Matt Novak suggests that ``Arthur Radebaugh's syndicated
+Sunday comic 'Closer Than We Think' was also a likely inspiration''
+for contemporary images of advanced car technologies---in this case
+the vision of flying cars shown in \emph{The Jetsons} in 1962, a
+dream related to, but still distinct from, the driverless dream---as in
+1958 it depicted hovering 
+cars floating on an air cushion in an ``already proved'' concept
+publicized by the same Andrew Kucher\cite{???}. Newspapers from April of that
+year also describe a 3-foot-long model of Kucher's ``Glideair'' that was
+demonstrated to reporters in Detroit\cite{???}. The car may not be driverless,
+but the people depicted riding in the ``flying carpet car'' in
+Radebaugh's illustration don't seem to be paying much attention to
+where it is going, and the road surface is bordered with ridges that
+visually suggest the idea that the car will keep itself within the
+demarcated space.
+
+One particularly salient public image from the 1950s comes from the
+Saturday Evening Post, which ran an advertisement for ``America's
+Electric Light and Power Companies'' that depicted self-driving cars
+coasting through an idyllic landscape, guided by electricity.\cite{???} The roadways
+are clean and clear, stretching off confidently into the distance. The
+landscape, tamed and controlled, yet retains its natural beauty:
+nowhere to be seen are smokestacks and the power plants generating the
+guiding force of these vehicles. Instead we see the rural, even
+pastoral, landscape largely unbesmirched, only cut across by the
+rationalization of a futuristic interstate highway system\footnote{Recall that
+the Federal Aid Highway Act of 1956 began the creation of the
+interstate system as we have it today}. Within the finned, bubble
+canopied auto sits a nuclear family, father,
+mother, daughter, and son, enjoying family time, a game of dominoes.
+Perfectly coiffed, snappily dressed, and totally at ease, the mother
+and daughter play, while the son admires a model of a futuristic
+delta-wing jet aircraft and the father looks on. Their faces glow with
+expressions of domestic contentment. The father, in the ``driver's
+seat,'' is turned away from the wheel and the thoroughly contemporary
+dashboard and instrument cluster, facing backward. The caption reads: 
+\begin{quote}
+One day your car may speed along an electric super-highway, its speed
+and steering automatically controlled by electronic devices embedded
+in the road. Travel will be more enjoyable. Highways will be made
+safe—by electricity! No traffic jams . . . no collisions . . . no
+driver fatigue.\cite{???}
+\end{quote}
+The limitless possibilities of electricity, measured and controlled by
+America's Electric Light and Power Companies, reproduce a conservative
+present into an equally conservative future. 
+
+If electricity was still the force that would be harnessed to make the
+roadways safe, what were the ``mechanical equivalents of sense
+organs''\cite{???-wiener}for the driverless car? New
+wartime and postwar developments in electronics, the same ones that
+inspired new science fiction visions of the future, drove actual
+research in automated vehicle systems. In the early 1950s, General
+Motors and RCA developed a scale model of an automated highway system,
+completed in 1953, that would allow the two companies to experiment
+with developing real steering and distance control systems.\cite{???}
 General Motors's 1950s Firebird concept
 vehicles sold themselves on this research, despite the fact that
-Firebird II ``had no automated capabilities whatsoever.''ii GM's
+Firebird II ``had no automated capabilities whatsoever.''\cite{???} GM's
 promotional films suggested the vehicle could be controlled
-electronically from traffic control towers—like those in use in
-aviation—placed along major highways: the car was ``under the direction
-of an 'electronic brain' on a dream highway of the future.''iii This
+electronically from traffic control towers---like those in use in
+aviation---placed along major highways: the car was ``under the direction
+of an 'electronic brain' on a dream highway of the future.''\cite{???} This
 would have been the realization of the New York World's Fair exhibit
-from two decades earlier: GM's Futurama from the 1939 World's Fair
-depicted cars that maintained distance from each other via a
-“sophisticated system of radio control.”iv Also in the 1950s, RCA's
+from two decades earlier. Building to make
+this optimistic vision of GM's engineering ability a reality,
+engineers lead by Joseph Bidwell and Lawrence Hafstad within GM
+Research installed ``pick-up coils'' on a 1958 Chevrolet: through a
+feedback system like that of the ``electric eye automobile,'' these
+coils would adjust the vehicle's steering.\cite{???} But unlike the
+light-guided vehicle from the 1930s, this car had a new guidance
+mechanism, which is entirely consistent with the image presented in
+the Saturday Evening Post: a wire carrying alternating current would
+be embedded in the road and would be tracked by the pick-up coils on
+the car. A GM press release announced on February 14, 1958:
+\begin{quote}
+An automatically guided automobile cruised along a one-mile check road
+at General Motors Technical Center today, steered by an electric cable
+beneath the concrete surface. It was the first demonstration of its
+kind with a full-size passenger car, indicating the possibility of a
+built-in guidance system for tomorrow’s highways.... The car rolled
+along the two-lane check road and negotiated the banked turn-around
+loops at either end without the driver’s hands on the steering wheel.\cite{???}
+\end{quote}
+
+Instead of the mechanical ``half-pipes'' of the 1939 Futurama, advances in
+technology would allow a future of automated steering powered
+by alternating current. Electromagnetism supplemented electricity as the
+guidance mechanism of choice. Also in the 1950s, RCA's
 Vladimir Zworykin, a lead inventor of television technology, was
 working on an intelligent road system of his own. His concept,
-inspired by “railroad block signals,” used circuits embedded in the
+inspired by ``railroad block signals,'' used circuits embedded in the
 road to magnetically sense vehicle speed and location, placing sensing
 and coordination capabilities outside of the vehicle, in road-side
-systems.v Zworykin's centralized planning model would send
+systems.\cite{???} Zworykin's centralized planning model would send
 instructions to individual cars, and a 1/40th scale demonstration
 system was built for the 1960 Highway Research Board meeting in
-Washington D.C.vi
+Washington D.C.\cite{???}
 
-%%THIS STUFF DUPLICATES CH1; sort it out!
+The 1964 New York World's Fair hosted a second Futurama exhibit, in
+which GM presented an automated highway system much like Zworykin's
+system next to multitudinous nuclear-powered concepts. The exhibit was
+thus described: 
+\begin{quote}
+A revolutionary 'Autoline' expands the capacity of a three-lane
+expressway: Electronically, a control-tower operator steers, brakes
+and sets the speed of each car in an automatic lane; groups of cars
+move at equal intervals as a group.\cite{???}
+\end{quote}
+ Advances in
+electronics, and the expansion of early control theory into
+cybernetics through the work of Norbert Wiener (who gave numerous
+public lectures through the 1950s) and his contemporaries seemed
+poised to make revolutionary applications of electrical control
+possible. Wiener himself weighed in, in a lecture given in 1960, to
+make the case for automated control systems: ``by the time we are able
+to react to our senses and stop the car which we are driving, it may
+already have run head on into a wall,'' he wrote, and the answer to
+this problem was the lightning speed of cybernetic control.\cite{???} But real
+developments in automated driving did not materialize, and research
+languished throughout the late 1960s and 1970s.\cite{???}
 
+In contrast to earlier radio or track-based electrical control, the
+``modern'' era of self-driving vehicle research begins with
+computer-vision based approaches. While computer vision techniques had
+been experimented with for vehicle guidance since 1969, it was not
+until the 1980s that microelectronics became powerful enough to
+process images in near real time and compact enough to be placed on
+the vehicle itself\cite{???}. In the 1980s, Ernst Dickmanns's lab at the
+University Bundswerhr, in Munich, Germany was active in some of the
+earliest self-driving car research and development\cite{???}. Their early
+vehicle, a specially equipped 5-ton Mercedes-Benz van---computerized
+controls could be used to perform all necessary driver inputs---was
+fitted with cameras, other sensors, and an image-processing system to
+close the control loop and drive the vehicle based on visual
+information.\cite{???} This early experiment, VaMoRs, paralleled in the United
+States with a Carnegie Mellon-developed vehicle based on a Chevrolet
+panel van, was successfully tested on roads without traffic at up to
+60 miles per hour,\cite{???} and was soon followed by new projects produced as
+part of the EUREKA PROMETHEUS project\cite{???}. The largest driverless vehicle
+research project of the time, funded by EU member states to the tune
+of almost 750 million Euros, PROMETHEUS ran from 1987 to 1995 and
+involved the VaMP vehicle from Dickmanns's research lab along with its
+Daimler-Benz twin, VITA-II. Typical of vehicles of the time, VITA used
+a CCIR analog video-camera signal processed through a framegrabber
+which would feed the visual information into the transputer-based
+parallel-processing system\cite{???}. The VITA-II system, scaled down to fit in
+a passenger car (an S-class SEL 500), again used digitized analog
+video signals to detect lanes and other vehicles\cite{???}. Additional sensors
+detected brake pressure, temperature, steering angle, acceleration in
+lateral and longitudinal directions, and yaw\cite{???}. The camera systems used
+applied two-camera setups with stabilized two-axis rotation to allow
+them to follow objects of interest in the scene\cite{???}. And the
+technology largely worked, with the PROMETHEUS project coming to a
+successful conclusion in 1994 and 1995 with 1000 kilometers of largely
+autonomous operation in normal traffic conditions on Paris motorways,
+as well as a finale drive from Munich to Copenhagen\cite{???}.
+
+Further autonomous vehicle research has progressed incrementally from
+these vision-based beginnings. Significant interest was spurred by the
+DARPA Grand Challenge in 2004 and 2005,\cite{???} and the DARPA Urban Challenge
+in 2007, which brought together industry groups and universities to
+try to extend the capabilities of fully autonomous vehicles. While the
+Grand Challenge technologies bear little resemblance to current
+navigation approaches designed to deal with the complexities of
+real-world road environments,\footnote{These vehicles basically
+  followed a predetermined GPS path, with gross navigation skills to
+  avoid obstacles at smaller scales. However, the desert environment,
+  though hostile in many ways, is not nearly so complex as an urban or
+suburban road. The navigational approaches applied there are
+fundamentally different than those necessary for an every-day
+self-driving vehicle.} but the Urban Challenge
+vehicles, both via their sensor setups and algorithmic approaches to
+navigation, can be interpreted as another step along the path to the
+modern self-driving car, as instantiated within Google's design approach. 
+
+But approaches today have a variety of forms: Google, Mercedes, Tesla
+Volvo another story, building from years of work in ADAS AVCS
 
 %% DO include the CES depictions; and contrast with the 1950s ad, at
 %% least in a footnote!
+
+
+%% >>>Story hook: currently, this calls out to be a brief historical
+%% sweep through self-driving car dreams from the 1920s/30s to the
+%% present; but it could also begin with the reveal of the Google car; or
+%% the Youtube video of the guy in the Mercedes tricking the lane assist
+%% function to drive for him on the highway (2 p)
+%% 1) establish what the technology is: in its varied types and
+%% dimensions: this is not ONE THING or ONE IDEA (4 p)
+%% ---INCLUDING historical models: see Erkki Huhtamo, media archaeology
+%% (2 p)
+%% >>>>pull from my essay!
+%%THIS STUFF DUPLICATES CH1; sort it out!
+
 
 2) deal in general with some of the popular portrayals of the
 technology: the nature of the self-driving car as it will appear in
@@ -119,8 +434,8 @@ ceding their driving agency to a computer system.\cite{clytton}
 
 
 
----The future doesn't look like we think it does, pull material from
-CMS801 final paper! 
+%---The future doesn't look like we think it does, pull material from
+%CMS801 final paper! 
 
 
 
