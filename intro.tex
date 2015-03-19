@@ -380,11 +380,42 @@ vehicles, both via their sensor setups and algorithmic approaches to
 navigation, can be interpreted as another step along the path to the
 modern self-driving car, as instantiated within Google's design approach. 
 
-But approaches today have a variety of forms: Google, Mercedes, Tesla
-Volvo another story, building from years of work in ADAS AVCS
-
-%% DO include the CES depictions; and contrast with the 1950s ad, at
-%% least in a footnote!
+But approaches today have a variety of forms. While Google is making
+headlines with its self-driving vehicle research, and is defining the
+look of the autonomous car with its roof mounted LIDAR scanner, other
+companies are developing vehicles with slightly different sensors and
+techniques. Google's approach uses cameras and the rotating laser
+scanner, along with detailed pre-mapping and highly-accurate
+differential GPS\cite{???}. Mercedes, so far, focuses more on cameras and radar,
+without using expensive LIDAR systems or requiring exquisitely
+detailed pre-mapping of streets---and some of these features are
+already seen in the new S-class luxury sedan, though these vehicles
+have not yet reached the level of capability of Mercedes's ``Bertha''
+test vehicle\cite{???}. But these sensing choices come with their own
+trade-offs in terms of operations, safety, and how safety can be
+determined and proven. Even Apple claims, as of the time of writing,
+to be working on an autonomous vehicle, though its approach has not
+yet been made public. Tesla Motors is also working on an iterated
+approach to vehicle autonomy, focusing publicly on software updates to
+existing cars that add new automated features. Volvo is both involved
+in a public test of vehicle autonomy in Sweden, and is moving forward
+with automated systems in its production cars, building from years of
+research in Advanced Driver Assistance Systems (ADAS) and Advanced
+Vehicle Control Systems (AVCS). It is important to recognize that
+there is a spectrum of approaches being developed today, from iterated
+improvements on current designs to radical approaches that attempt to
+achieve full self-driving at once. Automated\footnote{I use ``automated''
+  precisely here. It is one of the main failures of the
+  ``self-driving'' term that it appears to make a clear distinction: 
+  either something can drive itself or it cannot. But there are even
+  levels here: Under what circumstances can it be self-driving? Is
+  complete self-driving capability necessary before the term applies?
+  These questions will return again and again through this thesis,
+  especially in chapters \ref{chap1} and \ref{chap3}. }---or even
+``self-driving''---vehicles are not just one, uniform type of
+thing. And, critically, there is no clear
+line to be drawn between their extremes, as we will see in chapter
+\ref{chap3}. 
 
 
 %% >>>Story hook: currently, this calls out to be a brief historical
@@ -400,44 +431,73 @@ Volvo another story, building from years of work in ADAS AVCS
 %%THIS STUFF DUPLICATES CH1; sort it out!
 
 
-2) deal in general with some of the popular portrayals of the
-technology: the nature of the self-driving car as it will appear in
-the near future is not self-evident, no matter how loud Google's voice
-or how large their investment (4 p)
----you would be excused for thinking XYZ, based on what you read in
-the popular press
----but this is a flawed picture of the future, and an incomplete
-picture of the tech
+%% DO include the CES depictions; and contrast with the 1950s ad, at
+%% least in a footnote!
+One would be excused, however, for thinking differently. The popular
+portrayal of self-driving technology is not often very nuanced. While
+there is a fair amount of popular argument about whether these
+vehicles will be beneficial (or how beneficial they will be) along
+various axes of interest, there is relatively little discussion of
+what these vehicles will actually be---outside of discussions of
+Google's desire to eliminate steering wheels facing off against
+regulators, or questions of whether the automakers' gradual approach
+or Google's ``moonshot'' approach will triumph: the implicit
+assumption is that everyone is headed for the same technological
+goals, the same ultimate type of device.
 
->One vision is that these are coming in 2-5 years; law just needs to
->get out of the way
+the CES 2015 vision, glitzy
+--contrast with 1950s ad: non-obvious differences here, even what we
+think we will USE these cars for has changed (family to work)
+
+One popular vision of this technology focuses on the future: the
+idea that these vehicles will be commercially available in as little
+as five years, and that in just two decades the majority of cars on the road will be
+fully autonomous. Even respected business information and consulting
+bodies have bought into this dream.\footnote{For example, the IHS
+  predicts 54 million such vehicles by 2035, which is not as extreme,
+  but still a sizable fraction of road vehicles \cite{IHSstudy}} In
+these vehicles, the users would 
+step in, select a destination, and would then be free to read, sleep,
+watch a movie, answer emails, or otherwise occupy themselves without
+needing to pay any attention to the operation of the vehicle. While this
+vision has its benefits, it makes many people nervous about
+ceding their driving agency to a computer system, especially on such a
+potentially short timescale.\cite{clytton}
+Forbes article about Google's 5-year plan
+--marketed w/o steering wheels
+--outlaw drivers
+--that these vehicles would operate on public roadways (which is NOT
+stated here, and probably not true on this timescale, but seems
+implied)
+-in this vision, the law just needs to get out of the way, and
+everyone's life could improve
+
+%% 2) deal in general with some of the popular portrayals of the
+%% technology:  (4 p)
+%% ---you would be excused for thinking XYZ, based on what you read in
+%% the popular press
+%% ---but this is a flawed picture of the future, and an incomplete
+%% picture of the tech
+
 >Another is that there are big problems to be solved, the technology
 >isn't there
+-questions of safety? legality? insurance?
 -both suggest moral /ethical/legal quandaries
+--would we accept a computer that kills 3000 to save 30000 that we
+>kill?
+
 HOWEVER nobody (popularly) seems to dispute what the object is that is
 >being discussed, or how else it might look. both these narratives
 >tend to take a particular technological picture and either support it
 >or illustrate its problems
 >idea that ''if you are asked to take control, we've failed'' as a culture of developers
 
-The popular visions of this technology focus on the future: the
-idea that in just two decades the majority of cars on the road will be
-fully autonomous. Even respected business information and consulting
-bodies have bought into this dream.\footnote{For example, the IHS
-  predicts 54 million such vehicles by 2035, which is not as extreme,
-  but still a sizable fraction of road vehicles \cite{IHSstudy}} In these vehicles, the users would
-step in, select a destination, and would then be free to read, sleep,
-watch a movie, answer emails, or otherwise occupy themselves without
-needing to pay any attention to the operation of the vehicle. While this
-vision has its benefits, it makes many people nervous about
-ceding their driving agency to a computer system.\cite{clytton}
-
-
+however, the nature of the self-driving car as it will appear in
+the near future is not self-evident, no matter how loud Google's voice
+or how large their investment.
 
 %---The future doesn't look like we think it does, pull material from
 %CMS801 final paper! 
-
-
 
 3) and shift to the lead-in to the main thesis sections: 
 KEY QUESTIONS: What are the stories we are hearing vs. Other ones out
@@ -454,9 +514,9 @@ different social/cultural impacts (2 p)
 I can disprove that this conventional story is right, true, and the
 only story to tell.**
 
-Note: I need more voices from actual modern driverless car research
-papers, though looking at the Dickmanns ones more is a good idea! need
-a section specifically on how the ideologies come through!
+%% Note: I need more voices from actual modern driverless car research
+%% papers, though looking at the Dickmanns ones more is a good idea! need
+%% a section specifically on how the ideologies come through!
 
 Note: I set out to plumb the depths of the cultural and social
 implications of self-driving vehicle technology. In my na\"{\i}vet\'{e}, I
