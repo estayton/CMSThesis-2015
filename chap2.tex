@@ -506,13 +506,16 @@ practical and reductionist view of what it means to see. The goal is
 generally not to achieve creative interpretation or aesthetic
 valuation, but to identify particular objects in a scene, to recognize
 faces, or to differentiate free space from things a robot should
-not run into.\cite{???} But this so-called objective focus still encodes
+not run into\footnote{SRI's Shakey robot, for example, made navigation
+  plans via rudimentary computer vision tools, specifically sonar range-finding.}. But this so-called objective focus still encodes
 certain subjective judgments about objects (including people),
 behaviors, and intent. Consider, for instance, the issue of object
 detection. While it may be a objective question whether or not a
-particular object (e.g. a wrench) is physically present and visible in a scene, it is not
+particular object (e.g. a wrench) is physically present and visible in
+a scene, it is not
 necessarily so self-evident which objects are noteworthy or important
-to detect (e.g. does the worm gear on an adjustable wrench in addition
+to detect (e.g. does the worm gear on an adjustable wrench count as a
+separate object in addition
 to the wrench itself)---these choices depend on applications, and the judgments of
 designers as to what is worth measuring. And while computer vision is having success
 with object detection, there is a wide variety of human knowledge
@@ -520,7 +523,7 @@ about objects and scenes that is missing in current computer
 models, including propositional understandings (``what would happen if
 . . ?''), projections about occlusions (``what is behind that?''), and
 connections to other sensory modes (``what would that feel like if I
-touched it?'').\cite{???} 
+touched it?'') \cite{gomesJordan}.
 
 Regardless, though vision has not always been the sensory mode that dominated
 autonomous vehicle research, it is a particularly attractive sense to
@@ -532,17 +535,17 @@ systems. New approaches were pioneered by Ernst Dickmanns at
 University Bundswerhr in Munich, with the vision-guided VaMoRs van,
 and continued via the EUREKA PROMETHEUS project in 1987, in which
 Dickmanns and Daimler-Benz built cars guided by analog video
-cameras.\cite{???} Like the earlier VITA project by Daimler that used an
+cameras \cite{ulmerVITA-II}. Like the earlier VITA project by Daimler that used an
 analog video-camera signal processed through a framegrabber, these
 cars (VITA-II and VaMoRs-P) digitized analog video at relatively low resolutions. The
 features the systems searched for, including lane markings and other
 cars, are geometrically distinct and visible even in small
-images.\cite{???} That these vehicles were designed primarily for
+images \cite{ulmerVITA}. That these vehicles were designed primarily for
 highway operation under constant human supervision made this strategy
 acceptable, since pedestrian interactions were likely to be
 rare.\footnote{The documentation of the VITA-II mentions pedestrian
   interaction management as future work necessary for changing the
-  working domain from the highway to urban and country environments.\cite{???}}
+  working domain from the highway to urban and country environments \cite{ulmerVITA-II}.}
 
 %%Can cite SivakSchoettle p. 3 on weather; and they cite Lavrinc 2014 there
 
@@ -550,7 +553,7 @@ The apparent primacy of computer vision, however, only holds for fair
 weather. Rain, sleet, and 
 snow interfere with vision-guided systems, and currently prevent them
 from operating safely, as numerous more skeptical news articles are
-happy to note.\cite{knightFurther}\cite{gomesObstacles} While the
+happy to note \cite{knightFurther} \cite{gomesObstacles}.  While the
 human eye is generally very good at
 pattern recognition and filtering out noise, getting computers to
 appropriately recognize all 
@@ -560,7 +563,8 @@ and less safe for all drivers, it reduces visibility---which decreases
 the distances at which objects can be detected, and therefore also the
 time the system has to react---as well as potentially decreasing image
 contrast and presenting interference to the image---through drops or
-streaks on the glass through which images are taken.\cite{???-rainACAS} These issues also
+streaks on the glass through which images are taken
+\cite{rainADAS}. These issues also 
 affect people (though our brains can filter out raindrops on the
 windshield rather than interpreting them as obstacles), but human
 drivers would, at least ideally, choose to drive more slowly given
@@ -571,7 +575,7 @@ reduced visibility, or alter their behavior to be more conservative in
 these situations. However, ``developing algorithms that work perfectly
 under all weather conditions appears to be unrealistic,'' so such a
 modular and cautious approach may well be necessary in order to build
-robust systems.\cite{???-rainACAS} While commercial use of
+robust systems \cite[p. 50]{rainADAS}. While commercial use of
 vision-guided self-driving vehicles on 
 sunny days may indeed be possible in the near future, use in
 less-than-ideal conditions is likely to be limited for some time,
@@ -584,7 +588,7 @@ sonar, for example, which becomes problematic in crowded
 situations\footnote{John Leonard, discussion with the author, December
 3, 2014.}). Some contemporary commercial systems, such as that developed for Mercedes-Benz's
 self-driving S-class, which is slowly finding its way into consumer
-vehicles, are primarily guided based on such visual sensors.\cite{???} To
+vehicles, are primarily guided based on such visual sensors \cite{makingBertha}. To
 these sensors, recent research has added roof-mounted LIDAR arrays.
 LIDAR, short for Light Detection and Ranging, is a distance
 sensor, which is applied in vehicles to scan the environment with a
@@ -594,7 +598,9 @@ solves some of the difficulties of image interpretation by default, as
 it can provide highly-sensitive information about free space and
 obstacles. Shape-detection algorithms can then be used (in addition to
 vision-based data) to classify obstacles as different types of
-objects: pedestrians, bicyclists, cars, and trucks.\cite{???}
+objects: pedestrians, bicyclists, cars, and trucks\footnote{This also
+  works for other kinds of physical objects. See for example the
+  detection work done by \cite{fukuda}}.
 
 %% DONE?
 %% --Göde Both and reluctance to use Machine Learning (1 p)
@@ -609,15 +615,16 @@ objects: pedestrians, bicyclists, cars, and trucks.\cite{???}
 While much computer vision research uses machine-learning algorithms to detect
 objects, engineers in automotive applications are justifiably
 reluctant to rely on machine-learning: as Göde Both has noted in his
-ethnographic research on developers of driverless cars in Europe,\cite{bothpt1}
-machine learning techniques are brittle and unpredictable:\cite{bothpt2} neither
+ethnographic research on developers of driverless cars in
+Europe \cite{bothpt1},
+machine learning techniques are brittle and unpredictable \cite{bothpt2}: neither
 characteristic makes them suited for software that must be highly
 reliable and on which people's lives literally depend. So mixes of
 manual and machine-learning approaches are used to do object
 detection. Though machine-learning can be a highly-effective
 technique, it is generally difficult or impossible to know what the
 system has actually ``learned'' and therefore how it will react in new
-and unknown situations.\cite{bothpt2} Pedestrian detection algorithms search for
+and unknown situations \cite{bothpt2}. Pedestrian detection algorithms search for
 person-like shapes, where
 ``person-like'' is determined by, for example, training a classifier
 using thousands of images previously labeled (by people) as being images of humans, so
@@ -631,7 +638,7 @@ Even discounting these concerns, shape-detection is not a complete
 solution, as the knowledge it provides about objects is only
 skin-deep: the sensors cannot differentiate a rock from a crumpled
 newspaper, and Google's car will serve to avoid
-both.\cite{gomesCircles} Further distinguishing objects requires a lot
+both \cite{gomesCircles}. Further distinguishing objects requires a lot
 of information besides position or simple physical volume,
 including fine-grained information about the object's surface
 appearance, and interpretation of physical properties from observable
@@ -642,14 +649,14 @@ Detected categories allow the system to make
 statistical predictions about likely types of behavior: according to
 one of Google's patent applications, bicyclists are likely to be more
 erratic than trucks, and should be treated
-accordingly.\cite{predictPatent} These sorts of predictions are
+accordingly \cite{predictPatent}. These sorts of predictions are
 something that human drivers do consistently, and are therefore also
 likely important to how autonomous vehicles may drive.\footnote{The
   DARPA Urban Challenge crash, the first crash between two autonomous
   cars, provides an important lesson on the vagaries of object
   detection: the classification threshold between moving and
   stationary, set too high, allowed one vehicle to interpret the other
-  as stationary, leaving no room for unexpected behavior.\cite{???}}
+  as stationary, leaving no room for unexpected behavior \cite{collisionPaper}.}
 Categories alone, even if achieved, are also insufficient if detected
 objects are treated solely as obstacles to be avoided. One notable
 researcher who I spoke to drives around searching 
@@ -667,10 +674,12 @@ required to account for these sorts of difficult perceptual situations.
 %%<Include quotes from the interview>
 
 However, because autonomous cars see---putatively ``as we see''---their sight can
-be leveraged as visual evidence of their operation. Computer vision systems that identify
+be leveraged as visual evidence of their operation. Computer vision
+systems that identify 
 pedestrians can be shown to do so, via the detection boxes that act as
 diagnostic tools for researchers and direct representations of
-internal system information. The new technologies of vehicle
+internal system information.\footnote{See for example Volvo's ad for
+  the S60's pedestrian detection capabilities \cite{volvovideo}.} The new technologies of vehicle
 automation thereby produce through 
 their operation new forms of evidence, which can be presented through
 electronic information media. We can point to these images and identify
@@ -692,7 +701,11 @@ the way we perceive driverless systems in their operation, providing
 us a different manner of insight and introspection, but also
 potentially a different level of obfuscation, than ever before. When
 considering how these vehicles are presented to us---and the fervor with
-which some researchers demand that we accept them\cite{???}---it is important to
+which some researchers demand that we accept them\footnote{For
+  example, technical speakers at the The Road Ahead conference at MIT,
+hosted by the SENSEable Cities lab (November 21, 2014) suggested
+concerned users ``get out of the way'' of coming fully autonomous
+technology.}---it is important to 
 remember the many black boxes of information processing behind the
 naturalized image of the sensor readout. The rhetoric of the
 self-evident visual image, as it operates in the autonomous vehicle
@@ -703,12 +716,27 @@ strong rhetorical impact on discourse about neuroscience. Colorful
 pictures of the brain, as the inheritors of Enlightenment notions of
 visual evidence par excellence, have a way of convincing the viewer of
 the validity of reseachers' claims about physical brain locations and
-their effects,\cite{???} especially since those pictures are presented as the
-direct, transparent products of sensing techniques. The conflation of
+their effects \cite{lehrerNeuro}, especially since those pictures are presented as the
+direct, transparent products of sensing techniques \cite[p.
+  76]{kellyMagnetic}. The conflation of 
 human and machine vision which makes these images so confusing is as
-misleading in vehicle navigation as it is in neuroscience. Significant
+misleading in vehicle navigation as it is in neuroscience.\footnote{In
+her book \emph{Magnetic Appeal}, Joyce argues that ``seeing does not
+equal truth or unmediated access to the human body,'' but that
+practices equating these are so common that images are often used to
+stand for such, despite the doctors involved being well aware of how
+institutions and social practices shape these kinds of evidence
+\cite[p. 76]{kellyMagnetic}. But she also notes that
+popular narratives are particularly bad at heeding the sorts of local
+practices that shape technological and image-based knowledge, falling
+prey to the ``myth of photographic truth'' \cite[p.
+  75]{kellyMagnetic}. These tendencies seem to be of great relevance
+when considering other complex, technological projects dependent on
+imaging and which use images rhetorically, to stand for the ``truth''
+of their ability to perform a task---such as detect a pedestrian in a
+crosswalk.} Significant 
 statistical processing is necessary to make sense of data in either
-realm, processing that is generally beyond the public's gaze\cite{???} but the
+realm, processing that is generally beyond the public's gaze \cite{koerthFish} but the
 end result leaves the viewer with a false sense that something real
 has been sensed, revealed, and affirmed by the image.
 
@@ -746,7 +774,7 @@ ventures still hold out the dream
 of doing so, several AI winters have shown that the creation of
 general intelligence is very difficult, and is by no means around the
 corner. Those working in the field are well aware of
-this.\cite{???-articlerebuttingmusk-http://www.popsci.com/bill-gates-fears-ai-ai-researchers-know-better?cmpid=currents} So much current work is
+this \cite{sofgeAIFears}. So much current work is
 fundamentally utilitarian, building systems with clear goals, metrics
 for success, and market segments.
 
@@ -755,17 +783,20 @@ Though computer science and philosophies of AI have been using
 words, to talk about computers since the beginning of the field, these
 uses should not be taken at face value. ``Intelligence'' is slippery,
 and its definition is not constant over time. It is difficult to
-define intelligence in ourselves\cite{???} and yet another thing to define it
+define intelligence in ourselves \cite{huntIntelligence} and yet another thing to define it
 in relation to other entities. Weaving was once considered to be a
 peculiarly human capability, a sign of an advanced, intelligent
-mind.\cite{???} But after Vaucanson's loom allowed mechanical devices to weave
+mind \cite[p. 627]{riskinDuck}. But after Vaucanson's loom allowed mechanical devices to weave
 seemingly on their own, this capacity was no longer seen as uniquely
 human, and was no longer a marker of intelligence. The same process
 occurred with chess in the 1990s. When IBM's Deep Blue beat Gary
 Kasparov, chess ceased to be the standard by which intelligence could
 be judged, precisely because it had been achieved. Real intelligence
 had to lie elsewhere: for example, in the game Go, mastery of which
-has continued to elude machines.\cite{???}
+has continued to elude machines.\footnote{``When IBM's Deep Blue beat
+  Gary Kasparov in 1997, most Artificial Intelligence researchers and
+  commentators decided that chess playing did not require intelligence
+  after all and declared a new standard, the ability to play Go'' \cite[p. 623]{riskinDuck}.}
 
 Nevertheless, machines manage to do things that seem ``intelligent.'' So
 though these terms are heuristics for understanding the observed
@@ -781,8 +812,8 @@ also merely pattern recognition: does a system that can associate star
 with its definition really know what a star is? Is mere linguistic
 association sufficient for knowledge?
 
-H. R. Ekbia\cite{???} and others remind us that we should be skeptical of the
-applications of these terms to computational processes. As we have
+H. R. Ekbia and others remind us that we should be skeptical of the
+applications of these terms to computational processes \cite{ekbia}. As we have
 seen, Searle's thought experiment of the ``Chinese room''
 argues that symbol processing and pattern recognition alone is not
 intelligence, though from the outside the results may appear to be
@@ -796,9 +827,10 @@ article ``Strategic Computing,'' warn of the difference between domain
 capabilities and ``common sense,'' and suggest that ``unwarranted
 optimism'' and a particular funding climate (issues also present today)
 push researchers to mask the shortcomings of AI with ``semantic
-shifts.''\cite{???} We alter the definitions of ``knowledge'' and ``understanding''
+shifts'' \cite[p. 14]{ornstein}. We alter the definitions of ``knowledge'' and ``understanding''
 to fit what our machines can do, and these claims, taken literally,
-``give rise to unrealistic confidence in the power of the technology.''\cite{???}
+``give rise to unrealistic confidence in the power of the
+technology'' \cite[p. 15]{ornstein}.
 The two-way process of linguistic and technological change---that
 intelligence gets applied to describe whatever researchers manage to
 achieve, while real ``intelligence'' retreats away from each
@@ -823,12 +855,17 @@ rather than closes, questions.
 
 Second, humanlike characteristics may not even be helpful, in general, for building
 specific applications. One would likely not want one's self-driving car
-to be preoccupied or emotional.\cite{???-wiredFutureofAI} It may be that, for utilitarian
+to be preoccupied or emotional. It may be
+that, for utilitarian 
 purposes like driving, many of the characteristics of the human are
 detrimental, their elimination helpful and intentional. Much of the
 discussion around why autonomous vehicles are necessary centers on
 just such qualities: distractability, sleepiness, lapses in
-concentration.\cite{???} We would not wish to emulate such
+concentration.\footnote{A vast proportion of articles make a claim
+  like this. For example: ``They don’t get sleepy or
+  distracted, they don’t have blind spots, and there is nothing on
+  their 'minds' except getting safely from point A to point B'' \cite{merrill}.} We
+would not wish to emulate such 
 characteristics in robotic systems. However, though these are human
 capabilities, presented in this way they exist largely as caricatures
 of the human. People possess a
@@ -840,8 +877,8 @@ Before we let robotic chauffeurs drive around our streets, I'd want the
 cat versus a child versus a car bumper, about children chasing balls
 into the streets, about young dogs being more likely to dart in front
 of cars than old dogs (which, in turn, are more likely to bolt than
-elm trees are), about death being a very undesirable thing.\cite[p.
-  122]{ekbia}\end{quote} 
+elm trees are), about death being a very undesirable thing \cite[p.
+  122]{ekbia}.\end{quote} 
 
 This is a difficult knowledge and perception problem. But even more,
 it is an issue of selfhood, embodiment, even sentience. While cats,
@@ -860,10 +897,10 @@ unnecessary, both for the technical creation of such vehicles as well
 as their public acceptance. If the machine behaves in an appropriate
 way, like an ideal human driver, it will be a ``satisfactory social
 prosthesis'' in Collins's terms, and ``will not appear alien'' even if
-it cannot truly ``understand''\cite[p. 31]{???-Collins}. Driving, from
+it cannot truly ``understand'' \cite[p. 31]{Collins}. Driving, from
 this perspective, involves only behavior-specific acts, which can be
 satisfactorily emulated using the behavioral coordinates of
-action\cite[p. 33--37]{???-Collins}. And yet the ideology of artificial
+action \cite[p. 33--37]{Collins}. And yet the ideology of artificial
 intelligence, the focus of the field itself, is bound up in the idea
 of ``intelligent'' machines that can be said to ``know.'' And the
 knowing involved in action, as opposed to mere behavior, may be
@@ -900,7 +937,7 @@ complicated technological systems.
 %%ETHICS
 Robot ethics is an issue of growing importance to society at
 large---given the rapidly-expanding uses of robotics for labor, military,
-research, entertainment, and healthcare, among other regimes\cite[p.
+research, entertainment, and healthcare, among other regimes \cite[p.
   5-6]{patrickLin}---but we should be very clear what we mean when we
 discuss it. Lin, Abney, and Bekey's collection is wide-ranging,
 considering perspectives including safety and errors (how should
@@ -909,7 +946,7 @@ responsibility (when accidents happen, who is liable?), ethical codes
 (how, and with what ethical frameworks, can robots be programmed to
 operate ``ethically''?), and social impact
 (how do we weigh potential for robots to eliminate
-jobs?).\cite{robotEthics} Here, I consider ethical codes specifically,
+jobs?) \cite{robotEthics}. Here, I consider ethical codes specifically,
 since they interact with functionalist approaches. The question of
 driverless car ethics has spurred quite a volume of news articles,
 with a greater or lesser handle on the questions
@@ -918,7 +955,8 @@ involved.\footnote{One article discusses a notable
   cars to be flexible enough in their 
 engineering to be able to make ethical judgements that aren't
 necessarily written into their programming,'' a statement whose
-meaning is difficult to parse.\cite{jessicaDavies} Such statements presumably
+meaning is difficult to parse \cite{jessicaDavies}. Such statements
+presumably 
 refer to judgments that are not explicitly defined by programmers, but
 instead reliant on some kind of more general ethical calculus. A
 program that does things that are not in its programming at all,
@@ -938,7 +976,7 @@ AI, as I discuss here; and focus on it distracts from the real issues
 at hand.} Lin himself has been successful in urging a dialogue
 within various autonomous vehicle research groups about the ethics of
 their products, as well as getting media recognition of this push for
-self-conscious development.\cite{timeEthics} However, many articles
+self-conscious development \cite{timeEthics}. However, many articles
 elide fundamental distinctions in the situations being discussed,
 distinctions which should be foremost in our minds when we consider
 the stakes of developing autonomous machines.
@@ -964,7 +1002,8 @@ can be predicted, and it would be foolish to place full responsibility
 on the programmers: there is real autonomy in devices, in that they
 may do things we do not want. But though all devices have bugs and
 will be unpredictable in certain circumstances, the first place to
-look for ethics, for an implicit or explicit ethical calculus, is the human beings
+look for ethics, for an implicit or explicit ethical calculus, is the
+human beings 
 that do the design.} They are being made by software engineers,
 self-consciously or not, even if no
 explicit calculus is used and the developers' ethics are only
@@ -977,10 +1016,7 @@ intellectual property potentially defended by anti-circumvention
 laws---and enact an ethics impervious to scrutiny.\footnote{Digital
   rights management and anti-circumvention laws are abused routinely
   to lock out consumers and even muzzle security researchers. For a
-  recent example, see \cite{???-higgins}  Parker Higgins, “DRM in Cars Will Drive Consumers
-  Crazy,” Electronic Frontier Foundation, November 13, 2013, accessed
-  October 17, 2014
-  https://www.eff.org/deeplinks/2013/11/drm-cars-will-drive-consumers-crazy
+  recent example, see \cite{higgins}.
 }
 
 
@@ -1012,19 +1048,25 @@ human frailties of distraction and fatigue. How bad are human
 drivers, really? Conventional stories of human drivers paint us as
 plainly terrible, prone to road rage and drowsyness, and generally tending
 to do anything except pay attention to the road\footnote{Numerous popular
-  articles take this position\cite{???}}. However, the statistics tell
+  articles take this position, some based more in fact, and others
+  more in rhetoric..
+  But human fallibility is often mistaken for humans being useless in
+  all situations, a misconception we will return to in chapter
+  \ref{chap:3}.}. However, the statistics tell
 a slightly different story. Official numbers show that the number of
 motor vehicle accidents remained in the range of 10--11 million
-per year for most of the late 2000s. The death rate seems to have
+per year for most of the late 2000s. The death rate has
 decreased overall in this time, settling somewhere below 1.5 deaths
 per 100 million vehicle miles, presumably due to a combination of
 better safety features (especially since 1990) and other
-factors.\cite{???} The total number of vehicle-related deaths is much
+factors \cite{censusDeaths}. The total number of vehicle-related deaths is much
 lower, at a still significant 35,000 deaths per year. But this alone
 does not tell the story. At around 1.5 deaths per 100 million vehicle
 miles, or about 1 death per 67 million miles, humans seem relatively
 competent in a statistical sense. The average American, who might
-drive 1 million miles\cite{???} is unlikely to be
+drive 1 million miles\footnote{This is a conservative estimate,
+  extrapolating from an average yearly mileage of between 13,000 and
+  15,000 miles \cite{fhwa}.} is unlikely to be
 involved in a fatal crash in his or her lifetime. Looking at non-fatal
 accidents as well, humans get involved in about one accident per
 286,000 vehicle miles. Part of why the autonomous vehicle problem is
@@ -1033,26 +1075,31 @@ such a difficult one is that these numbers are relatively high.
 Theoretically, computers can do better. But especially careful human
 drivers can also clearly beat the human average. But how safe do
 autonomous vehicles need to be in order to be allowed on our roads?
-Safer than the average human? or safer than the very best drivers?
+Safer than the average human? or safer than the very best
+drivers?\footnote{Chris Gerdes has admitted, as recently as September
+  2014, that the deep, intuitive experience of race-car drivers to
+  handle emergency situations is something they are still working to
+  match \cite{8truthsandmyths}.}
 Such questions have real impact when it comes to how devices are
 designed and when they become commercially viable---and are at least
 partly ethical questions. The autonomous
 vehicle enterprise seems to call for using such projected statistics
-to define policy. One common narrative is that undue caution in the
+to define policy. One narrative is that undue caution in the
 rollout of autonomous vehicles will directly ``cost'' lives, since
-people are killed by human drivers every day.\cite{???-blog} However,
+people are killed by human drivers every day \cite{driverlessfuture}. However,
 people are also accustomed to the current automobile death rate, and
 any autonomous vehicle crashes are likely to attract deep
-scrutiny\footnote{As Jim Womack has pointed out, there is no good side
+scrutiny\footnote{As Jim Womack pointed out to me, there is no good side
 to change as a regulator. Regulators are not congratulated when things
 go right, only criticized when things go wrong. So some measure of
 tentativeness is almost certainly justified to the regulatory mind.
 (Discussion with the author, December 3, 2014)} as
-to whether a human could have prevented the accident.\cite{???} If,
+to whether a human could have prevented the accident. If,
 instead, human oversight to otherwise fully automated systems were
 required, the additional risks of supervision would also need to be
 accounted for (this is dealt with more thoroughly in chapter
-\ref{chap:3})---including risk homeostasis\cite{???}, the tendency to
+\ref{chap:3})---including the potential for risk homeostasis
+\cite{Wilde}, the tendency to
 behave less cautiously in situations that appear to be more safe.
 
 These are questions of policy, but also questions of human acceptance.
@@ -1072,12 +1119,12 @@ University of Michigan Transportation Research Institute attempts to
 make the case that ``it is not a foregone conclusion that a
 self-driving vehicle would ever perform more safely than an
 experienced, middle-aged driver,'' due primarily to issues of sensing and
-predictive knowledge \cite[p. i]{???-SivakSchoettle}.\footnote{This is worth
+predictive knowledge \cite[p. i]{SivakSchoettle}.\footnote{This is worth
 recognizing, even if it is also trivially true that nothing about AI
 development is a foregone conclusion \emph{a priori}. I believe that
 even if ``computational speed, constant vigilance, and lack of
 distractibility'' are not alone sufficient to beat out all human
-drivers,\cite[p. 4]{???-SivakSchoettle} AI techniques will approach human abilities to use predictive
+drivers, \cite[p. 4]{SivakSchoettle} AI techniques will approach human abilities to use predictive
 knowledge, given sufficient development time.} Most firmly, they
 attempt to impress that no conceivable implementation of self-driving
 vehicles will have zero fatalities. One popular response to this type of
@@ -1087,16 +1134,28 @@ excessive technological optimism. Still, is it entirely fair of them
 to compare robocars only to the best drivers? Most accidents are
 caused by the worst ones, and it is beginning to become clear that
 those are the people that a robot could outperform with one clanky
-arm tied behind its back.\cite{???-RossSafety}\end{quote} 
-But this perspective is far too simplistic. The question of whether an
+arm tied behind its back \cite{rossSafety}.\end{quote} 
+Others argue that self-driving vehicles are not ``as bad as a middling
+driver,'' but ``as \emph{good} as one,'' and place great faith in the
+``pinnacle of human mastery of software'' to outperform human drivers \cite{templetonB}.
+But these perspectives are far too simplistic, and miss the point in a
+significant way. The question of whether an
 automated vehicle's fatality rate exceeds some peoples', matches the
 safest drivers, or bests all human drivers stands to determine which
-vehicles are legal.\cite[p. 6]{???-SivakSchoettle} While projecting vehicle
+vehicles are legal \cite[p. 6]{SivakSchoettle}. While projecting vehicle
 risk functions is tricky enough when comparing against a known human
 standard, it becomes even more difficult when one considers that the
 ``conventional vehicle'' risk function is itself going to change with
 future safety technologies, including automated driver assistance
-features. The fully self-driving vehicle must be compared to a moving target.
+features. The fully self-driving vehicle must be compared to a moving
+target. Meanwhile, academic researchers are unable to gain access to
+these systems to test them against exploits
+\cite{madrigalHack}.\footnote{The
+implication here is quite disturbing: car companies are so far able to
+set the agenda for their own testing (and Google is apparently
+lobbying to count simulated virtual tests as road-test miles
+\cite{harrisVirtual}),
+and third-party oversight is not yet possible.}
 
 %(Phillip E. Ross, ``Has Robocar Safety Been Hyped?'' 20 Jan 2015: http://spectrum.ieee.org/cars-that-think/transportation/safety/has-robocar-safety-been-hyped)
 
@@ -1108,7 +1167,7 @@ they have already been forced to confront these issues in earnest:
 airplane autopilots have a more developed history than automotive
 autodriving, aided by the lower complexity of the air environment,
 with simple mechanical autopilots available as early as
-1912.\cite[p. 16]{???-NRCAutonomy} The \emph{Autonomy Research for
+1912 \cite[p. 16]{NRCAutonomy}. The \emph{Autonomy Research for
   Civil Aviation} report by the National Research Council pays
 significant attention to the fact that ``the lack of generally
 accepted design, implementation, and test practices for
@@ -1116,31 +1175,31 @@ adaptive/nondeterministic systems will impede the deployment of some
 advanced IA [increasingly autonomous] vehicles and systems'' and that
 ``existing V\&V [verification and
   validation] approaches and methods are insufficient for advanced IA
-systems'' for many of the same reasons.\cite[p. 2]{???-NRCAutonomy}
+systems'' for many of the same reasons \cite[p. 2]{NRCAutonomy}.
 Among the high-priority research projects they identify as being both
 most pressing and most difficult, they include both the development of
 methodologies to ``characterize and bound the behavior of
 adaptive/nondeterministic systems'' and the creation of standards for
 the ``verification, validation, and certification of IA
-systems''\cite[p. 4]{???-NRCAutonomy}. As in the automotive space, the
+systems'' \cite[p. 4]{NRCAutonomy}. As in the automotive space, the
 core reason for increasing autonomy is to increase reliability, but
 being assured of this reliability is difficult. As the report notes,
 however, software creators ``are generally expected to prove that the
 software can deliver the intended capabilities at specified
 performance levels and in the relevant environment,'' which involves
 extensive examination of the code, and testing every logic path,
-according to FAA guidelines.\cite[p. 39--40]{???-NRCAutonomy} But
+according to FAA guidelines \cite[p. 39--40]{NRCAutonomy}. But
 these approaches are not scaling to more complex systems, and new
 validation approaches are required to account for the impacts of human
-operators or supervisors on system behavior.\cite[p.
-  40]{???-NRCAutonomy} The NRC panel is not alone in recognizing these
+operators or supervisors on system behavior \cite[p.
+  40]{NRCAutonomy}. The NRC panel is not alone in recognizing these
 issues: the Defense Science Board in their task force report \emph{The
   Role of Autonomy in DoD Systems} attempts to address the importance
 of the larger environment in which automated systems operate, and
 within which they can produce ``unintended operational
-consequences''\cite[p. 2]{???-DSB}. They warn of \emph{brittle}
-platforms, and emphaisze the importance of developing ways to predict
-and understand the resilience of systems\cite[p. 7, 11]{???-DSB}
+consequences'' \cite[p. 2]{DSB}. They warn of \emph{brittle}
+platforms, and emphasize the importance of developing ways to predict
+and understand the resilience of systems\cite[p. 7, 11]{DSB}
 
 %Include NITRD report, if available? http://scenic.princeton.edu/NITRD-Workshop/index.html 
 
@@ -1151,35 +1210,38 @@ money on autonomous cars---just to know that they are statistically safer
 than the average driver? Airplanes are one type of vehicle for which
 these different dimensions of 
 safety---statistical safety compared with perceptions or feelings of
-safety---have already become visible. Despite the comparative statistical safety of flying,
+safety---have already become visible. Despite the comparative
+statistical safety of flying,\footnote{This information is relatively
+  available and publicly known \cite{airlinereporter}, though that does not
+  necessarily change people's minds about travel.}
 people tend to be more afraid of getting on an airliner than getting in their
-cars.\cite{???} While this may have to do with a number of factors,
+cars. While this may have to do with a number of factors,
 including that aircraft do not remain on the ground during operation,
 it also represents a situation in which passengers give over their
 agency to pilots performing a job they do not understand and could not
-take over in an emergency.\cite{???-canIFindAnythingOnThis}
+take over in an emergency.
 
 %SIMILAR ISSUES WITH TRAINS?\cite{??}
 
 The CAST working group has had to account for these issues in their
 recommendations about airplane safety since 1998. Part of their charter---to
-reduce the accident rate by 80 percent\cite{???-PARCCAST}---is
+reduce the accident rate by 80 percent \cite[p. 28]{PARCCAST}---is
 motivated not so much by the rate itself but predictions about its
 most visible effects:  if air traffic were to continue to increase
 with industry predictions but to maintain the 1997 rate of 1.5 major
 crashes per 1 million departures, we would see one fatal crash per
 week by 2005, and one per day by 2025\footnote{See
-  \cite{http://articles.orlandosentinel.com/1999-11-07/news/9911070029_1_plane-aviation-safety-type-of-accident},
+  \cite{predictmorecrashes},
   for example. This point was made to me by David Mindell, discussion
   with the author, November 12, 2014.}
 This frequency of accidents was judged to be intolerable to
 airline customers, even though the overall accident rate would be no
-larger than its ``very safe''\cite{???-PARCCAST} starting
+larger than its ``very safe'' \cite[p. 129]{PARCCAST} starting
 value.\footnote{By comparison, the CAST website describes: ``The
   enhancements made over the past decade have made history in
   commercial aviation - by making it the safest it has ever been.
   Today, fatal accidents are reduced to only one in 22.8 million
-  flights, an absolutely remarkable achievement.''\cite{???-cast-safety.org}} Though
+  flights, an absolutely remarkable achievement.''\cite{cast-safety.org}} Though
 aircraft would be as safe as they 
 had ever been, people, on seeing the sheer number and scale of
 accidents, would be unlikely to choose to fly. While the issues facing
@@ -1189,7 +1251,7 @@ one component of interest when considering how consumers react to
 modes of transportation. Perceived safety---due to accident scale,
 publicity, trust, or other factors---may be very different. But
 while research into how to get human beings to trust robotic drivers
-is being done\cite{???}, the voices pushing for autonomous cars sooner
+is being done \cite{rossTrust}, the voices pushing for autonomous cars sooner
 rather than later would suggest that the statistics are all that
 matters (and indeed, would tend to fabricate those statistics out of
 mere predictions). 
