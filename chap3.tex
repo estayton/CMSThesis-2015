@@ -55,471 +55,13 @@ realm of complete technological possibility: the ideal human-machine
 interaction is, in a sense, no human-machine interaction. As I have
 outlined, this perspective comes from particular roots (automation
 history, artificial intelligence, science fiction), but is not the
-only way to envision automated systems. There is a deep history of
-work in human supervisory control (HSC) that has important implications
-for the real-world design of automated systems, and which tells a
-potentially very different story about what automated vehicle
-operation will look like from a ``driver's'' or operator's point of view.
-
-\subsection{Human Supervisory Control}
-
-No current ``self-driving'' vehicles designed to operate on public
-roadways (as opposed to in controlled conditions) operate in a fully
-autonomous mode. The cars operate---and legally, can only
-operate\cite{???}---in
-a supervised mode, wherein a human driver is responsible for
-overseeing the automated systems. Even if the vehicle is capable of
-performing a maneuver ``on its own,'' that operation is monitored, at
-least intermittently, by a person who can theoretically correct errors
-made by the automation.\footnote{Of course there are serious
-  limits to this capability, as HSC research shows, and as I will
-  more fully describe later in this chapter.} This point is made not
-only numerous articles describing vehicle operations in general terms,
-but by Google's
-own job postings, searching for ``vehicle safety specialists'' to join
-the self-driving car team in Mountain View. The ideal operator will
-develop ``a unique set of operational skills'' using the vehicles, and
-operate ``comfortably in a fast-paced environment, sometimes managing
-up to four communication channels simultaneously via various high- and
-low-tech mediums.''\cite{???-googleJobPosting} This person's primary
-duties include filing daily reports and monitoring operations of the
-software with ``constant focus.''\footnote{While this constant focus
-  is likely to be solely an artifact of the car as a device still in
-  testing phases, the development of a ``unique set of operational
-  skills'' is just the sort of learning one might expect to perform in
-order to operate a car with a novel human-machine interface. While it
-may be Google's intention that only test drivers need develop this
-kind of expertise, requiring it of prospective users is not
-necessarily a bad idea. While there is a reluctance to require drivers
-to acquire new skills, people are already licensed before they are
-allowed to drive, and the terms of that licensing may well need to
-change with new technologies and new relationships to automotive
-technology.} This role is clearly not one for a passive participant,
-an observer who sits in the seat, lets the software run (and perhaps
-self-diagnose failures), and only presses an abort button in an
-emergency. The test driver is instead an active participant in the
-complex process of 
-vehicle operation. Further details of these drives, however,
-are difficult to come by. Test drivers are, expectedly, required to
-``keep all project details confidential.''\cite{???-googleJobPosting}
-
-%%Use the Hireart job posting; looking for people who can monitor
-%%comms and vehicle ops; a complex task; but the actual operations
-%%shrouded in secrecy
-
-However, in May of 2012,
-Google actually tested one of these vehicles in Nevada, on public
-roads, in the only government test yet conducted in the United States.
-The documentation of this test---which occurred with engineers Chris
-Urmson (the project lead) and Anthony Levandowski in the front
-seats---exposes fractures in the traditional perspectives on vehicle
-automation.\cite{harrisNevada} Even though the structure of the
-checklist only breaks down operation into ``Autonomous,'' ``Driver
-Assist,'' and ``Driver Only'' modes, it shows that the human driver
-was required to assist, or to take control, at multiple points during
-the test drive. The test records a mix of autonomous and
-driver-assisted operation when the vehicle faced road construction,
-switching into manual mode and requiring human assistance to continue.
-These hand-overs were not limited to construction, however: 
-``Wojcik [the examiner] also recorded that the car needed driver
-assistance with some turns, although she did not note the
-circumstances.''\cite{harrisNevada} This should not be taken
-simplistically, as evidence that the system is not sufficiently
-advanced. Instead, it is evidence that real operations are more
-nuanced than narratives of them tend to allow for, involving mixes of
-attention and control that change over time and varying road situations.
-
-This operational mode, then, is more properly a human-supervisory mode
-than an autonomous one. The study of HSC is by no means new, but
-perhaps because it does not interact with human fears of obsolescense,
-loss of agency, or robot apocalypse the way AI does---it doesn't stand
-to damage our egos in the same way, in part because because it just
-sounds rather staid and boring---it has not been as commonly
-recognized or discussed in popular narratives. And yet, supervisory
-control is implied any time an article mentions a human driver or
-co-driver monitoring a system, or taking control at a critical moment.
-However, these moments are generally implied weaknesses to the device,
-as the self-driving vehicle narrative is organized around the ultimate
-goal of fully autonomous robot cars. Supervisory control, however,
-admits different goals and possibilities.
-
-The core text of the supervisory control literature is Thomas
-Sheridan's \emph{Telerobotics, Automation, and Human Supervisory
-  Control} from 1992. Though work on such systems had been occurring
-at the MIT Man-Machine Systems Laboratory---among other places---for
-the previous 30 years, this book represents the first time many of the
-concepts that were ``maturing'' over those years of dissertations were
-brought together into one source.\cite[p. xix]{sheridan} Despite its
-age, the book remains a great introduction to the field as well as a
-much-needed counterpoint to other tendencies in the field of
-automation.\footnote{And in fact, Sheridan is almost prescient in his
-  identification of the vehicle automation technologies (Advanced
-  Vehicle Control Systems, or AVCS) that would
-  make it to market: all of the ones he lists we see today, and the
-  last (like automatic lane keeping) are really only just now becoming
-  available. Many of these technologies were in development at the
-  time, as Sheridan's book came out during the middle of the Eureka
-  PROMETHEUS project.} Human supervisory control history in fact
-shares touch-points with the history of automation in its popular
-form, but comes more out of theories of management and human factors
-engineering. Frederick Winslow Taylor is identified as a key player in
-the history, less for his ``dehumanizing'' approach to the worker as
-his intent to generate ``a new interest in the sensorimotor aspects of
-human performance''---in other words, the way that human capabilities
-interact with the tools they use to accomplish the tasks they are
-set\cite[p. 7]{sheridan}. Later human factors or \emph{ergonomics}
-work continued to probe such questions, though many supervisory
-control systems had already entered relatively common use, including
-aircraft autopilots, automatic elevators, and even, perhaps arguably,
-washers and dryers.\cite[p. 8]{sheridan}. Though control researchers
-interested in the behaviors of humans in interactions with highly
-automated systems were already pursuing similar work, supervisory
-control, according to Sheridan, truly came into its own as part of
-research on the teleoperation\footnote{Teleoperation means the
-  extension of an operator's sensing and control capacity to a remote
-  location, via an artificial assemblage.\cite[p. 4]{sheridan}} of vehicles under time delay,
-specifically on the moon. The time delay enforced a fundamental
-constraint on direct operation, as the results of any action require
-three seconds to be reported back to Earth, and therefore made
-apparent the great benefit of having the remotely-operated system
-include its own internal control loop to allow it to perform simple
-delegated tasks.\cite[p. 9]{sheridan}
-
-As Sheridan describes, the concept of
-supervisory control comes from
-the idea of human supervision within management structures:  in an idealized
-case, a human
-supervisor instructs her subordinates, who carry out tasks, summarize
-results, and report them back to the supervisor who decides what
-further actions are required; the supervisor may
-exercise various amounts of monitoring or direct control over the
-actions of her subordinates, based on their skill and her trust in
-their abilities. Replacing the human subordinates with computerized
-components completes the basic analogy to supervisory control as it is
-used here. Sheridan's definition of supervisory control in its
-strictest sense is that
-\begin{quote}one or more human operators are intermittently
-  programming and continually receiving information from a computer
-  that itself closes an autonomous control loop through artificial
-  effectors and sensors to the controlled process or task
-  environment\cite[p. 1]{sheridan}\end{quote}
-The less-strict definition loosens the requirement that the device
-close a control loop of its own, simply requiring it to interconnect
-``through artificial effectors and sensors to the controlled process
-or task environment'':  only in the strict case can the computer
-operator without the human as an autonomous system ``for some
-variables at least some of the time.''\cite[p. 1]{sheridan} This
-emphasis on partial, gradiated control\footnote{The computer system
-  may function primarily on the ``efferent or motor side'' to actually
-implement directives from the supervisory, subject to its own
-sensors.\cite[p. 3]{sheridan} Or it may act principally ``on the
-display side,'' processing incoming sensory information into a form
-digestible for the supervisor, or, as is usual, it may do some
-both.\cite[p. 3]{sheridan} As Sheridan notes, the computer acts
-independently ``at least for short periods of time,'' and the human
-may assume direct control of the entire system or certain variables
-within the system at various points.\cite[p. 3]{sheridan}} is emblematic of the entire HSC
-project, and represents its fundamental ideological difference from
-the AI-focused perspective on automated systems.\footnote{Why is this
-  AI-focused view so prominent? I would argue it is because it
-  captures the public imagination, via science-fiction, and is
-  rhetorically more impressive. As a way to market and drum-up
-  excitement and investment, autonomy simply sounds more interesting
-  than ``supervision,'' while companies can walk-back their actual
-  products toward more comfortable, HSC applications. Additionally, I
-  would speculate that the relatively low marginal position of human
-  factors in engineering is related.} This is neither a
-weakness nor an unwillingness to be sufficiently bold, but a
-well-considered engineering strategy. Sheridan identifes seven
-motivations to develop supervisory control, of which
-six\footnote{Number 5 is not relevant as stated, but is very relevant
-  in principle to a distracted driver.} are
-eminently relevant to self-driving cars and so I will include those
-here in their entireity:
-\begin{quote} (1) to achieve the accuracy and reliability of the
-  machine without sacrificing the cognitive capability and
-  adaptability of the human,
-(2) to make control faster and unconstrained by the limited pace of
-  the continuous human sensorimotor capability,
-(3) to make control easier by letting the operator give instructions
-  in terms of objects to be moved and goals to be met, rather than
-  instructions to be used and control signals to be sent,
-(4) to eliminate the demand for continuous human attention and reduce
-  the operator's workload,
-(5) to make control possible even where there are time delays in
-  communication between human and teleoperator,
-(6) to provide a ``fail-soft'' capability when failure in the
-  operator's direct control would prove catastrophic\cite[p. 12]{sheridan}
-\end{quote}
-
-Though supervisory control, and human factors engineering by proxy, is
-very interested in mathematically modeling the human operator in her
-engagement with the control system---itself a fraught project in
-several ways\footnote{People rarely behave as ideal mathematical
-  functions. The black-boxing of the operator into a stimulus-response
-system is something HF and HSC continue to struggle with, as it is a
-tricky problem to get right. Human operators respond differently under
-laboratory test conditions than they do under the stress of actual
-operations, a fact that troubled X-15 designers attempting to tune
-their fly-by-wire controls.\cite[p. ???]{???-digitalApollo} Though
-improvements have been made in this area, as modeling operator
-responses is a topic of great interest especially in aeronautical and
-astronautical design, human operators continue to be
-unpredictable.}---the specifics of such modeling are not necessary to
-understand the supervisory control concept or the doors it opens in
-understanding the operations of ``self-driving'' vehicles. To provide
-a specific example of supervisory control, consider the following
-situation: a highly-automated vehicle is set up to operate in a
-supervised manner. The vehicle is capable of navigating traffic on its
-own, but includes a map interface, a digital display a shifter that includes an
-autonomous mode ``gear'' selection, a standard set of wheel and
-pedals, a turn signal control,
-and a cruise-control-like control stalk. The user may set a
-destination on the map interface and engage the automation from a stop, or engage
-the automation while the vehicle is in motion. The user is expected to
-be available to assist the vehicle with maneuvers, and oversee its
-behavior:  she may take the wheel at any time to direct the vehicle,
-or use the pedals to force its speed to alter; she may request lane
-changes using the lane signal stalk; she may use the cruise-control
-stalk to subtly alter the vehicle's speed to suit traffic and
-conditions. At any time when the automation is engaged, she may alter
-the destination on the map. When the automation is engaged, the
-vehicle will warn if it is encountering a situation it cannot handle,
-and will revert to a minimal-risk condition if the operator does not
-intervene (e.g. pull to the shoulder and slowly come to a stop).
-Whether or not the automation is engaged,
-certain ADAS or AVCS are operating in closed-loop mode, including
-pedestrian collision detection. And vehicle data including detected
-objects and planned paths through the environment are always being
-presented on the digital display to assist the user in evaluating the
-environment and determining vehicle intent.
-
-This hypothetical vehicle functions in a clearly supervisory mode,
-since high-level commands can be provided by the human operator, to be
-carried out by the automation in accordance with its sensors.
-Information from the environment is processed by the vehicle and
-returned to the user via the display, providing the user with more
-cues as to the environment and indications as to the status of the
-automated system. Such a vehicle bears little resemblance to the
-self-driving vehicle envisioned by Google, but looks quite like a
-current vehicle might after a decade of evolutionary development of
-driver assistance systems. Furthermore, it manages to address all of
-Sheridan's supervisory control motivations. It combines the constant
-vigilance of automated sensing with the judgment and perception of the
-human operator (1 and 2); it allows the operator to provide high level
-controls in autonomous mode, instructing the vehicle which lane to be
-in or which turns to make without having to maneuver manually (3); it
-allows the operator to pay intermittent attention to the vehicle by
-including fail-safe modes and the ability to handle most driving
-situations (4, 5); in the case of a time delay in response (e.g. due
-to drowsyness) or an
-operator's failure to control, the vehicle will attempt to behave
-safely (5 and 6). While actually designing and engineering such a
-system is by no means as simple as sketching it briefly as I have, it
-should be clear that a vehicle of this description is not only
-potentially very useful, but is at least as plausible as a fully
-autonomous robotic car. It presents unique problems of human
-interaction and attention which should not go unremarked upon (and
-real-world examples of these problems will be dealt with later in this
-section), but it also presents unique opportunities for blended
-capabilities that may not only compensate for deficiencies in computer
-vision, mapping, or automated sensing, but may do much to address
-human discomfort with automation systems and concern with being
-outside of the control loop of their automated vehicle.
-
-With our attention on supervisory control, new questions and processes
-come into focus. If the machine is clearly no
-longer the sole component of analysis, what formerly neglected pieces
-must be considered? How do we assess system design or performance, or
-think about the ways these newly expanded devices operate? In this
-pursuit it is worthwhile to expand our
-view to encompass other related work. As Sheridan notes, much study of
-supervisory control has gone on elsewhere under different names, but
-with similar guiding concepts. Coming instead from Cognitive
-Science\footnote{And, notably, responding to the canonical focus of
-  cognitive science on the ``mental processes that organize the
-  behavior'' of an individual, a position Hutchins cites as having its
-standard statement in Newell and Simon's 1972 \emph{Human problem
-  solving}.\cite[p. 265-266]{hutchinsCockpit} These AI pioneers show
-up again here, and their individualist focus perhaps sheds some 
-light on why the narratives of automated vehicle technology that are
-inflected by AI are so different than they would be if told instead
-through the lens of supervisory control.},
-Edwin Hutchins and his anthropological work on group cognition
-processes expands from the traditional focus on the individual agent
-to systems of interacting agents and technologies. As he identifies,
-the outcomes of tasks are not determined by individual components of a
-system but by the overall dynamics of the system, and the behaviors of
-a complex thinking system cannot be ``inferred from the properties of
-individual agents, alone,'' irrespective of the detail to which those
-individuals may be studied or modeled.\cite[p. 265]{hutchinsCockpit}
-Hutchins's ``How a Cockpit Remembers Its Speeds'' lays out a framework
-for understanding the cognitive activities of a human-machine system,
-and uses the example of an airline cockpit to show how the cognitive
-properties of a system as a whole may be very different than those of
-individual human actors within that system.\footnote{This is also true
-for systems that do not actually contain ``automation'' technologies
-as part of their make-up. The speed-bugs discussed in ``How a Cockpit
-Remembers Its Speeds'' are rudimentary in terms of other forms of
-cockpit automation, but the issues they present do not disappear with
-increased automation. Hutchins and Klausen co-wrote another
-article in 1995 titled ``Distributed Cognition in an Airline
-Cockpit,''\cite{???-hutchinsKlausen} which focuses on the interactions of the Captain, first
-officer, second officer, and air-traffic control. This exchange,
-though it involves control yokes, altitude alerts, and other
-technological actants, is primarily focused on the joint capabilities
-of the human crew.} Studying the humans alone,
-or the automation alone, does not suffice to explain the overall
-behavior of a joint human-machine cognitive system.\footnote{It is
-  worth noting here that these are not the remarks of a maverick or a
-  ``mere'' anthropologist working on his own. The research involved
-  was supported by a grant from the NASA Ames Research Center, as part
-  of the Aviation Safety/Automation Program.}
-
-Hutchins is very particular about the point that the speed bugs and
-other cockpit devices function as more than just memory aids for the
-pilots. They do not na\"{\i}vely increase pilot memory. Instead, they
-are information processing tools, responsible for changing the form of
-information, giving it a new representation and altering the
-interaction with that information: specifically, changing a task that
-requires memory and comparison to a readout to a simpler task of
-``judgments of spatial proximity'' of the needle to the speed
-bugs.\cite[p. 282]{hutchinsCockpit}. The whole system can be said to
-have a ``memory'' that is distinct from the pilot's memory: the
-``\emph{cockpit system} remembers speeds'' by virtue of the pilots
-within that system judging a needle against the bug.\cite[p.
-  283]{hutchinsCockpit} I introduce this material here because
-Hutchins, by looking at cognitive behaviors within this particular
-setting, identifies a new unit of analysis: the cockpit as a whole.
-Automation systems are more complex than the cockpit's
-visual-mechanical aides, but are appropriate subjects of the same kind
-of analysis.\footnote{As an aside, I would argue that if a number of
-  modern information technologies, like smartphones, seem to have done
-relatively little to alter human beings, it is because the individual
-is still the unit of analysis. When the unit of analysis is instead
-set at the individual plus his or her immediate technological
-surroundings, much greater differences in capability become apparent.}
-Automation likewise takes complicated jobs involving spatial
-processing and reasoning (driving between the lines and avoiding other
-cars), and transforms them through technological interfaces into other
-tasks. It is precisely these changes in task to which we should attend
-if we would like to properly understand (and design) the role of the
-operator within an automated vehicle. But this perspective is not
-represented in the prevailing guides for automated system development.
-While Hutchins's cockpit remembers its speeds through a combination of
-human activity and physical cognitive aids, the NHTSA's ``vehicle''
-may sometimes ``not perform a control function''\cite[p. 3]{NHTSA} and
-nevertheless remain on the road. The NHTSA's documentation instead
-focuses simplistically on whether the human or the ``vehicle''
-controls, rather than addressing what control involves or how it may
-be shared between human and automated systems.
-
-A more nuanced view of the cognitive tasks involved in interacting
-with automated systems also goes quite a ways toward clarifying some
-of the more difficult parts of system automation. Specifically,
-significant research interest in human factors engineering focuses on
-the problem of so-called ironies of automation, whereby increasing automation actually
-increases the load on the operator, rather than decreasing it, and
-leads to increased failure rather than increased
-reliability.\cite{???-somethingin-hutchins} It might
-not be clear at first glance how this would be, and it is in part an
-interface problem---with how information is presented to the operator,
-not with the concept of automation itself. But a distributed,
-cognitive attention to automation highlights the problem:  an
-automation system may transform a task from a complex visual task for the
-operator (e.g. driving) to another complex visual task (e.g. monitoring a control
-panel with many displays and lights, and switches to press) while the
-overall processes within and results of the system remain
-fundamentally congruent---the system still ``knows'' how to turn, for
-example, but instead of the driver turning the wheel, she interacts
-with the automation systems in cognitively-intense way. Attending to
-the complex internal dynamics of
-the joint system improves the analysis: looking at which tasks are
-allocated where, and what is the demand on human perceptual and
-decision-making systems, at any particular time. As one should expect,
-people drive largely based on experience and instinct,\cite{article-http://www.telegraph.co.uk/news/science/science-news/11410261/Driverless-car-beats-racing-driver-for-first-time.html} not logical
-thought, and similarly system performance should be expected to shift
-over time as interactions with automation are internalized. As
-Hutchins and Klausen describe, ``It is possible to design computer systems with open
-interfaces (Hutchins, 1990) that support learning in joint action but
-this can only be done when the designer goes beyond the conception of
-the isolated individual user.''\cite[p. 13]{hutchinsKlausen}
-Appropriately recognizing interactions is critical to successful design.
-
-Not to belabor the point, however, the perspective I am describing is
-not fundamentally new---simply, its importance is not often
-recognized outside of particular disciplinary
-boundaries.\footnote{This is probably because the issues are
-  somewhat complex, and do not fall into neat dichotomies of
-  human/machine. Again, the relatively marginalized position of
-  human-factors engineering may be part of this.} Supervisory control and 
-joint-cognitive systems approaches are actually in use all over
-industry, even in cases where they are not necessarily cast in
-those terms. 
-
-%%TODO <??? Describe some from Sheridan 10-11 or run paragraphs together>
-
- While it is also
-implicit in much popular writing about autonomous systems, however,
-supervisory control is not generally acknowledged as an important and
-developed field. Human supervisory control is not even that well
-considered in many engineering fields; even today, the human factors
-engineer is often low in status within the engineering hierarchy, and
-is too often brought in at the last minute to design an interface for
-an already specified device,\footnote{This subtlety of the politics
-  within engineering communities themselves was not something I was
-  previously aware of, but was made clear to me by David Mindell.
-  Discussion with the author, September 8, 2014.} rather than actually being involved in
-device design from the beginning, as effective supervisory control
-requires. While the related discipline of interaction design or
-user-experience design is gaining in importance in the information
-technology sector\footnote{This I can speak to personally, through my
-  involvement with programming communities building web and mobile
-  applications. Demand for UI/UX designers has increased dramatically,
-following the success of design-first product development by IT
-companies, most notably Apple.}, this too is often (though not always) a surface-level
-consideration of the interface, without consideration of deeper
-dynamics of human and joint cognitive processes. It may be
-that this kind of engineering work gains greater recognition with the
-entry of Google, Apple, Tesla, and other high-technology companies
-into the autonomous vehicle space, but so far Google's seems to dream
-of minimizing the interface as much as possible, rather than more
-broadly considering what sort of interface makes sense.\cite{???}
-While the interface/UX-first approach of tech companies seems like it
-would put interaction at the center, the focus on simplicity
-presupposes a certain kind of highly automated operation.
-%%Wrap up: Actual use all over industry (Sheridan 10-11), and implicit
-%in much popular writing, 
-%just not generally acknowledged as an important field in all its complexity
-%HSC not even that well considered/thought out in many fields; HF
-%engineers low on status and too often just brought in at the last
-%minute to design an interface rather than actually being involved in
-%device design from the beginning.
-
-Hutchins and Klausen make it a particular point to highlight that
-human-machine dynamics of information transfer are at the center of
-the appropriate and safe operation of aircraft: ``if we step back and
-look at the entire aviation system and ask how
-it is that aircraft are kept separated from each other, we see that it
-is through the propagation of representational state of descriptions
-of flight paths into the state of the aircraft controls
-themselves.''\cite[p. 14]{hutchinsKlausen} This situation is not quite
-the same for cars, which are generally not orchestrated at a
-system-level in the same fashion. But in principle, the roadway presents a related
-information processing situation. The propagation of a ``plan'' of the
-vehicle's path on the 
-road into the state of the vehicle's controls keeps vehicles apart.
-And even when that vehicle system involves computerized
-displays, sensors, and people, the same point holds;  at a high-level of oversight, as
-one would find represented in an employee monitoring an automated
-vehicle fleet remotely 
-from an office, the parallelism with aircraft operations returns in
-full force. Given these underlying
-similarities in terms of human-machine interaction, let us look at
+only way to envision automated systems. Let us look at
 other examples of automated technologies (in space, underwater, and in
 the air) to see how previous sets of designers and users have
 negotiated compromises of automation, autonomy, and human-control.
 
+%%CUT Given these underlying
+%%similarities in terms of human-machine interaction,
 
 
 %% As a way to INTRODUCE HSC, actually
@@ -1122,7 +664,467 @@ inattention, and the risk of catastrophic failures like the AF 447
 crash. However, joint human-machine systems research provides avenues
 to engage operators in the operation of the system in ways that
 increase overall system safety, without necessitating that the human
-be entirely eliminated. There is certainly a difference in the
+be entirely eliminated. There is a deep history of
+work in human supervisory control (HSC), which I keep alluding to,
+that has important implications 
+for the real-world design of automated systems, and which tells a
+potentially very different story about what automated vehicle
+operation will look like from a ``driver's'' or operator's point of view.
+
+\subsection{Human Supervisory Control}
+
+No current ``self-driving'' vehicles designed to operate on public
+roadways (as opposed to in controlled conditions) operate in a fully
+autonomous mode. The cars operate---and legally, can only
+operate\cite{???}---in
+a supervised mode, wherein a human driver is responsible for
+overseeing the automated systems. Even if the vehicle is capable of
+performing a maneuver ``on its own,'' that operation is monitored, at
+least intermittently, by a person who can theoretically correct errors
+made by the automation.\footnote{Of course there are serious
+  limits to this capability, as HSC research shows, and as I will
+  more fully describe later in this chapter.} This point is made not
+only numerous articles describing vehicle operations in general terms,
+but by Google's
+own job postings, searching for ``vehicle safety specialists'' to join
+the self-driving car team in Mountain View. The ideal operator will
+develop ``a unique set of operational skills'' using the vehicles, and
+operate ``comfortably in a fast-paced environment, sometimes managing
+up to four communication channels simultaneously via various high- and
+low-tech mediums.''\cite{???-googleJobPosting} This person's primary
+duties include filing daily reports and monitoring operations of the
+software with ``constant focus.''\footnote{While this constant focus
+  is likely to be solely an artifact of the car as a device still in
+  testing phases, the development of a ``unique set of operational
+  skills'' is just the sort of learning one might expect to perform in
+order to operate a car with a novel human-machine interface. While it
+may be Google's intention that only test drivers need develop this
+kind of expertise, requiring it of prospective users is not
+necessarily a bad idea. While there is a reluctance to require drivers
+to acquire new skills, people are already licensed before they are
+allowed to drive, and the terms of that licensing may well need to
+change with new technologies and new relationships to automotive
+technology.} This role is clearly not one for a passive participant,
+an observer who sits in the seat, lets the software run (and perhaps
+self-diagnose failures), and only presses an abort button in an
+emergency. The test driver is instead an active participant in the
+complex process of 
+vehicle operation. Further details of these drives, however,
+are difficult to come by. Test drivers are, expectedly, required to
+``keep all project details confidential.''\cite{???-googleJobPosting}
+
+%%Use the Hireart job posting; looking for people who can monitor
+%%comms and vehicle ops; a complex task; but the actual operations
+%%shrouded in secrecy
+
+However, in May of 2012,
+Google actually tested one of these vehicles in Nevada, on public
+roads, in the only government test yet conducted in the United States.
+The documentation of this test---which occurred with engineers Chris
+Urmson (the project lead) and Anthony Levandowski in the front
+seats---exposes fractures in the traditional perspectives on vehicle
+automation.\cite{harrisNevada} Even though the structure of the
+checklist only breaks down operation into ``Autonomous,'' ``Driver
+Assist,'' and ``Driver Only'' modes, it shows that the human driver
+was required to assist, or to take control, at multiple points during
+the test drive. The test records a mix of autonomous and
+driver-assisted operation when the vehicle faced road construction,
+switching into manual mode and requiring human assistance to continue.
+These hand-overs were not limited to construction, however: 
+``Wojcik [the examiner] also recorded that the car needed driver
+assistance with some turns, although she did not note the
+circumstances.''\cite{harrisNevada} This should not be taken
+simplistically, as evidence that the system is not sufficiently
+advanced. Instead, it is evidence that real operations are more
+nuanced than narratives of them tend to allow for, involving mixes of
+attention and control that change over time and varying road situations.
+
+This operational mode, then, is more properly a human-supervisory mode
+than an autonomous one. The study of HSC is by no means new, but
+perhaps because it does not interact with human fears of obsolescense,
+loss of agency, or robot apocalypse the way AI does---it doesn't stand
+to damage our egos in the same way, in part because because it just
+sounds rather staid and boring---it has not been as commonly
+recognized or discussed in popular narratives. And yet, supervisory
+control is implied any time an article mentions a human driver or
+co-driver monitoring a system, or taking control at a critical moment.
+However, these moments are generally implied weaknesses to the device,
+as the self-driving vehicle narrative is organized around the ultimate
+goal of fully autonomous robot cars. Supervisory control, however,
+admits different goals and possibilities.
+
+The core text of the supervisory control literature is Thomas
+Sheridan's \emph{Telerobotics, Automation, and Human Supervisory
+  Control} from 1992. Though work on such systems had been occurring
+at the MIT Man-Machine Systems Laboratory---among other places---for
+the previous 30 years, this book represents the first time many of the
+concepts that were ``maturing'' over those years of dissertations were
+brought together into one source.\cite[p. xix]{sheridan} Despite its
+age, the book remains a great introduction to the field as well as a
+much-needed counterpoint to other tendencies in the field of
+automation.\footnote{And in fact, Sheridan is almost prescient in his
+  identification of the vehicle automation technologies (Advanced
+  Vehicle Control Systems, or AVCS) that would
+  make it to market: all of the ones he lists we see today, and the
+  last (like automatic lane keeping) are really only just now becoming
+  available. Many of these technologies were in development at the
+  time, as Sheridan's book came out during the middle of the Eureka
+  PROMETHEUS project.} Human supervisory control history in fact
+shares touch-points with the history of automation in its popular
+form, but comes more out of theories of management and human factors
+engineering. Frederick Winslow Taylor is identified as a key player in
+the history, less for his ``dehumanizing'' approach to the worker as
+his intent to generate ``a new interest in the sensorimotor aspects of
+human performance''---in other words, the way that human capabilities
+interact with the tools they use to accomplish the tasks they are
+set\cite[p. 7]{sheridan}. Later human factors or \emph{ergonomics}
+work continued to probe such questions, though many supervisory
+control systems had already entered relatively common use, including
+aircraft autopilots, automatic elevators, and even, perhaps arguably,
+washers and dryers.\cite[p. 8]{sheridan}. Though control researchers
+interested in the behaviors of humans in interactions with highly
+automated systems were already pursuing similar work, supervisory
+control, according to Sheridan, truly came into its own as part of
+research on the teleoperation\footnote{Teleoperation means the
+  extension of an operator's sensing and control capacity to a remote
+  location, via an artificial assemblage.\cite[p. 4]{sheridan}} of vehicles under time delay,
+specifically on the moon. The time delay enforced a fundamental
+constraint on direct operation, as the results of any action require
+three seconds to be reported back to Earth, and therefore made
+apparent the great benefit of having the remotely-operated system
+include its own internal control loop to allow it to perform simple
+delegated tasks.\cite[p. 9]{sheridan}
+
+As Sheridan describes, the concept of
+supervisory control comes from
+the idea of human supervision within management structures:  in an idealized
+case, a human
+supervisor instructs her subordinates, who carry out tasks, summarize
+results, and report them back to the supervisor who decides what
+further actions are required; the supervisor may
+exercise various amounts of monitoring or direct control over the
+actions of her subordinates, based on their skill and her trust in
+their abilities. Replacing the human subordinates with computerized
+components completes the basic analogy to supervisory control as it is
+used here. Sheridan's definition of supervisory control in its
+strictest sense is that
+\begin{quote}one or more human operators are intermittently
+  programming and continually receiving information from a computer
+  that itself closes an autonomous control loop through artificial
+  effectors and sensors to the controlled process or task
+  environment\cite[p. 1]{sheridan}\end{quote}
+The less-strict definition loosens the requirement that the device
+close a control loop of its own, simply requiring it to interconnect
+``through artificial effectors and sensors to the controlled process
+or task environment'':  only in the strict case can the computer
+operator without the human as an autonomous system ``for some
+variables at least some of the time.''\cite[p. 1]{sheridan} This
+emphasis on partial, gradiated control\footnote{The computer system
+  may function primarily on the ``efferent or motor side'' to actually
+implement directives from the supervisory, subject to its own
+sensors.\cite[p. 3]{sheridan} Or it may act principally ``on the
+display side,'' processing incoming sensory information into a form
+digestible for the supervisor, or, as is usual, it may do some
+both.\cite[p. 3]{sheridan} As Sheridan notes, the computer acts
+independently ``at least for short periods of time,'' and the human
+may assume direct control of the entire system or certain variables
+within the system at various points.\cite[p. 3]{sheridan}} is emblematic of the entire HSC
+project, and represents its fundamental ideological difference from
+the AI-focused perspective on automated systems.\footnote{Why is this
+  AI-focused view so prominent? I would argue it is because it
+  captures the public imagination, via science-fiction, and is
+  rhetorically more impressive. As a way to market and drum-up
+  excitement and investment, autonomy simply sounds more interesting
+  than ``supervision,'' while companies can walk-back their actual
+  products toward more comfortable, HSC applications. Additionally, I
+  would speculate that the relatively low marginal position of human
+  factors in engineering is related.} This is neither a
+weakness nor an unwillingness to be sufficiently bold, but a
+well-considered engineering strategy. Sheridan identifes seven
+motivations to develop supervisory control, of which
+six\footnote{Number 5 is not relevant as stated, but is very relevant
+  in principle to a distracted driver.} are
+eminently relevant to self-driving cars and so I will include those
+here in their entireity:
+\begin{quote} (1) to achieve the accuracy and reliability of the
+  machine without sacrificing the cognitive capability and
+  adaptability of the human,
+(2) to make control faster and unconstrained by the limited pace of
+  the continuous human sensorimotor capability,
+(3) to make control easier by letting the operator give instructions
+  in terms of objects to be moved and goals to be met, rather than
+  instructions to be used and control signals to be sent,
+(4) to eliminate the demand for continuous human attention and reduce
+  the operator's workload,
+(5) to make control possible even where there are time delays in
+  communication between human and teleoperator,
+(6) to provide a ``fail-soft'' capability when failure in the
+  operator's direct control would prove catastrophic\cite[p. 12]{sheridan}
+\end{quote}
+
+Though supervisory control, and human factors engineering by proxy, is
+very interested in mathematically modeling the human operator in her
+engagement with the control system---itself a fraught project in
+several ways\footnote{People rarely behave as ideal mathematical
+  functions. The black-boxing of the operator into a stimulus-response
+system is something HF and HSC continue to struggle with, as it is a
+tricky problem to get right. Human operators respond differently under
+laboratory test conditions than they do under the stress of actual
+operations, a fact that troubled X-15 designers attempting to tune
+their fly-by-wire controls.\cite[p. ???]{???-digitalApollo} Though
+improvements have been made in this area, as modeling operator
+responses is a topic of great interest especially in aeronautical and
+astronautical design, human operators continue to be
+unpredictable.}---the specifics of such modeling are not necessary to
+understand the supervisory control concept or the doors it opens in
+understanding the operations of ``self-driving'' vehicles. To provide
+a specific example of supervisory control, consider the following
+situation: a highly-automated vehicle is set up to operate in a
+supervised manner. The vehicle is capable of navigating traffic on its
+own, but includes a map interface, a digital display a shifter that includes an
+autonomous mode ``gear'' selection, a standard set of wheel and
+pedals, a turn signal control,
+and a cruise-control-like control stalk. The user may set a
+destination on the map interface and engage the automation from a stop, or engage
+the automation while the vehicle is in motion. The user is expected to
+be available to assist the vehicle with maneuvers, and oversee its
+behavior:  she may take the wheel at any time to direct the vehicle,
+or use the pedals to force its speed to alter; she may request lane
+changes using the lane signal stalk; she may use the cruise-control
+stalk to subtly alter the vehicle's speed to suit traffic and
+conditions. At any time when the automation is engaged, she may alter
+the destination on the map. When the automation is engaged, the
+vehicle will warn if it is encountering a situation it cannot handle,
+and will revert to a minimal-risk condition if the operator does not
+intervene (e.g. pull to the shoulder and slowly come to a stop).
+Whether or not the automation is engaged,
+certain ADAS or AVCS are operating in closed-loop mode, including
+pedestrian collision detection. And vehicle data including detected
+objects and planned paths through the environment are always being
+presented on the digital display to assist the user in evaluating the
+environment and determining vehicle intent.
+
+This hypothetical vehicle functions in a clearly supervisory mode,
+since high-level commands can be provided by the human operator, to be
+carried out by the automation in accordance with its sensors.
+Information from the environment is processed by the vehicle and
+returned to the user via the display, providing the user with more
+cues as to the environment and indications as to the status of the
+automated system. Such a vehicle bears little resemblance to the
+self-driving vehicle envisioned by Google, but looks quite like a
+current vehicle might after a decade of evolutionary development of
+driver assistance systems. Furthermore, it manages to address all of
+Sheridan's supervisory control motivations. It combines the constant
+vigilance of automated sensing with the judgment and perception of the
+human operator (1 and 2); it allows the operator to provide high level
+controls in autonomous mode, instructing the vehicle which lane to be
+in or which turns to make without having to maneuver manually (3); it
+allows the operator to pay intermittent attention to the vehicle by
+including fail-safe modes and the ability to handle most driving
+situations (4, 5); in the case of a time delay in response (e.g. due
+to drowsyness) or an
+operator's failure to control, the vehicle will attempt to behave
+safely (5 and 6). While actually designing and engineering such a
+system is by no means as simple as sketching it briefly as I have, it
+should be clear that a vehicle of this description is not only
+potentially very useful, but is at least as plausible as a fully
+autonomous robotic car. It presents unique problems of human
+interaction and attention which should not go unremarked upon (and
+real-world examples of these problems will be dealt with later in this
+section), but it also presents unique opportunities for blended
+capabilities that may not only compensate for deficiencies in computer
+vision, mapping, or automated sensing, but may do much to address
+human discomfort with automation systems and concern with being
+outside of the control loop of their automated vehicle.
+
+With our attention on supervisory control, new questions and processes
+come into focus. If the machine is clearly no
+longer the sole component of analysis, what formerly neglected pieces
+must be considered? How do we assess system design or performance, or
+think about the ways these newly expanded devices operate? In this
+pursuit it is worthwhile to expand our
+view to encompass other related work. As Sheridan notes, much study of
+supervisory control has gone on elsewhere under different names, but
+with similar guiding concepts. Coming instead from Cognitive
+Science\footnote{And, notably, responding to the canonical focus of
+  cognitive science on the ``mental processes that organize the
+  behavior'' of an individual, a position Hutchins cites as having its
+standard statement in Newell and Simon's 1972 \emph{Human problem
+  solving}.\cite[p. 265-266]{hutchinsCockpit} These AI pioneers show
+up again here, and their individualist focus perhaps sheds some 
+light on why the narratives of automated vehicle technology that are
+inflected by AI are so different than they would be if told instead
+through the lens of supervisory control.},
+Edwin Hutchins and his anthropological work on group cognition
+processes expands from the traditional focus on the individual agent
+to systems of interacting agents and technologies. As he identifies,
+the outcomes of tasks are not determined by individual components of a
+system but by the overall dynamics of the system, and the behaviors of
+a complex thinking system cannot be ``inferred from the properties of
+individual agents, alone,'' irrespective of the detail to which those
+individuals may be studied or modeled.\cite[p. 265]{hutchinsCockpit}
+Hutchins's ``How a Cockpit Remembers Its Speeds'' lays out a framework
+for understanding the cognitive activities of a human-machine system,
+and uses the example of an airline cockpit to show how the cognitive
+properties of a system as a whole may be very different than those of
+individual human actors within that system.\footnote{This is also true
+for systems that do not actually contain ``automation'' technologies
+as part of their make-up. The speed-bugs discussed in ``How a Cockpit
+Remembers Its Speeds'' are rudimentary in terms of other forms of
+cockpit automation, but the issues they present do not disappear with
+increased automation. Hutchins and Klausen co-wrote another
+article in 1995 titled ``Distributed Cognition in an Airline
+Cockpit,''\cite{???-hutchinsKlausen} which focuses on the interactions of the Captain, first
+officer, second officer, and air-traffic control. This exchange,
+though it involves control yokes, altitude alerts, and other
+technological actants, is primarily focused on the joint capabilities
+of the human crew.} Studying the humans alone,
+or the automation alone, does not suffice to explain the overall
+behavior of a joint human-machine cognitive system.\footnote{It is
+  worth noting here that these are not the remarks of a maverick or a
+  ``mere'' anthropologist working on his own. The research involved
+  was supported by a grant from the NASA Ames Research Center, as part
+  of the Aviation Safety/Automation Program.}
+
+Hutchins is very particular about the point that the speed bugs and
+other cockpit devices function as more than just memory aids for the
+pilots. They do not na\"{\i}vely increase pilot memory. Instead, they
+are information processing tools, responsible for changing the form of
+information, giving it a new representation and altering the
+interaction with that information: specifically, changing a task that
+requires memory and comparison to a readout to a simpler task of
+``judgments of spatial proximity'' of the needle to the speed
+bugs.\cite[p. 282]{hutchinsCockpit}. The whole system can be said to
+have a ``memory'' that is distinct from the pilot's memory: the
+``\emph{cockpit system} remembers speeds'' by virtue of the pilots
+within that system judging a needle against the bug.\cite[p.
+  283]{hutchinsCockpit} I introduce this material here because
+Hutchins, by looking at cognitive behaviors within this particular
+setting, identifies a new unit of analysis: the cockpit as a whole.
+Automation systems are more complex than the cockpit's
+visual-mechanical aides, but are appropriate subjects of the same kind
+of analysis.\footnote{As an aside, I would argue that if a number of
+  modern information technologies, like smartphones, seem to have done
+relatively little to alter human beings, it is because the individual
+is still the unit of analysis. When the unit of analysis is instead
+set at the individual plus his or her immediate technological
+surroundings, much greater differences in capability become apparent.}
+Automation likewise takes complicated jobs involving spatial
+processing and reasoning (driving between the lines and avoiding other
+cars), and transforms them through technological interfaces into other
+tasks. It is precisely these changes in task to which we should attend
+if we would like to properly understand (and design) the role of the
+operator within an automated vehicle. But this perspective is not
+represented in the prevailing guides for automated system development.
+While Hutchins's cockpit remembers its speeds through a combination of
+human activity and physical cognitive aids, the NHTSA's ``vehicle''
+may sometimes ``not perform a control function''\cite[p. 3]{NHTSA} and
+nevertheless remain on the road. The NHTSA's documentation instead
+focuses simplistically on whether the human or the ``vehicle''
+controls, rather than addressing what control involves or how it may
+be shared between human and automated systems.
+
+A more nuanced view of the cognitive tasks involved in interacting
+with automated systems also goes quite a ways toward clarifying some
+of the more difficult parts of system automation. Specifically,
+significant research interest in human factors engineering focuses on
+the problem of so-called ironies of automation, whereby increasing automation actually
+increases the load on the operator, rather than decreasing it, and
+leads to increased failure rather than increased
+reliability.\cite{???-somethingin-hutchins} It might
+not be clear at first glance how this would be, and it is in part an
+interface problem---with how information is presented to the operator,
+not with the concept of automation itself. But a distributed,
+cognitive attention to automation highlights the problem:  an
+automation system may transform a task from a complex visual task for the
+operator (e.g. driving) to another complex visual task (e.g. monitoring a control
+panel with many displays and lights, and switches to press) while the
+overall processes within and results of the system remain
+fundamentally congruent---the system still ``knows'' how to turn, for
+example, but instead of the driver turning the wheel, she interacts
+with the automation systems in cognitively-intense way. Attending to
+the complex internal dynamics of
+the joint system improves the analysis: looking at which tasks are
+allocated where, and what is the demand on human perceptual and
+decision-making systems, at any particular time. As one should expect,
+people drive largely based on experience and instinct,\cite{article-http://www.telegraph.co.uk/news/science/science-news/11410261/Driverless-car-beats-racing-driver-for-first-time.html} not logical
+thought, and similarly system performance should be expected to shift
+over time as interactions with automation are internalized. As
+Hutchins and Klausen describe, ``It is possible to design computer systems with open
+interfaces (Hutchins, 1990) that support learning in joint action but
+this can only be done when the designer goes beyond the conception of
+the isolated individual user.''\cite[p. 13]{hutchinsKlausen}
+Appropriately recognizing interactions is critical to successful design.
+
+Not to belabor the point, however, the perspective I am describing is
+not fundamentally new---simply, its importance is not often
+recognized outside of particular disciplinary
+boundaries.\footnote{This is probably because the issues are
+  somewhat complex, and do not fall into neat dichotomies of
+  human/machine. Again, the relatively marginalized position of
+  human-factors engineering may be part of this.} Supervisory control and 
+joint-cognitive systems approaches are actually in use all over
+industry, even in cases where they are not necessarily cast in
+those terms. 
+
+%%TODO <??? Describe some from Sheridan 10-11 or run paragraphs together>
+
+ While it is also
+implicit in much popular writing about autonomous systems, however,
+supervisory control is not generally acknowledged as an important and
+developed field. Human supervisory control is not even that well
+considered in many engineering fields; even today, the human factors
+engineer is often low in status within the engineering hierarchy, and
+is too often brought in at the last minute to design an interface for
+an already specified device,\footnote{This subtlety of the politics
+  within engineering communities themselves was not something I was
+  previously aware of, but was made clear to me by David Mindell.
+  Discussion with the author, September 8, 2014.} rather than actually being involved in
+device design from the beginning, as effective supervisory control
+requires. While the related discipline of interaction design or
+user-experience design is gaining in importance in the information
+technology sector\footnote{This I can speak to personally, through my
+  involvement with programming communities building web and mobile
+  applications. Demand for UI/UX designers has increased dramatically,
+following the success of design-first product development by IT
+companies, most notably Apple.}, this too is often (though not always) a surface-level
+consideration of the interface, without consideration of deeper
+dynamics of human and joint cognitive processes. It may be
+that this kind of engineering work gains greater recognition with the
+entry of Google, Apple, Tesla, and other high-technology companies
+into the autonomous vehicle space, but so far Google's seems to dream
+of minimizing the interface as much as possible, rather than more
+broadly considering what sort of interface makes sense.\cite{???}
+While the interface/UX-first approach of tech companies seems like it
+would put interaction at the center, the focus on simplicity
+presupposes a certain kind of highly automated operation.
+%%Wrap up: Actual use all over industry (Sheridan 10-11), and implicit
+%in much popular writing, 
+%just not generally acknowledged as an important field in all its complexity
+%HSC not even that well considered/thought out in many fields; HF
+%engineers low on status and too often just brought in at the last
+%minute to design an interface rather than actually being involved in
+%device design from the beginning.
+
+Hutchins and Klausen make it a particular point to highlight that
+human-machine dynamics of information transfer are at the center of
+the appropriate and safe operation of aircraft: ``if we step back and
+look at the entire aviation system and ask how
+it is that aircraft are kept separated from each other, we see that it
+is through the propagation of representational state of descriptions
+of flight paths into the state of the aircraft controls
+themselves.''\cite[p. 14]{hutchinsKlausen} This situation is not quite
+the same for cars, which are generally not orchestrated at a
+system-level in the same fashion. But in principle, the roadway presents a related
+information processing situation. The propagation of a ``plan'' of the
+vehicle's path on the 
+road into the state of the vehicle's controls keeps vehicles apart.
+And even when that vehicle system involves computerized
+displays, sensors, and people, the same point holds;  at a high-level of oversight, as
+one would find represented in an employee monitoring an automated
+vehicle fleet remotely 
+from an office, the parallelism with aircraft operations returns in
+full force. There is certainly a difference in the
 professionalization of pilots compared with the ordinary status of an
 everyday driver, and this difference in status and roles certainly
 changes the amount of training we expect operators to have and the
