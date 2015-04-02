@@ -1,5 +1,5 @@
 \chapter{The Stakes of our Stories}
-\label{chap:3}
+\label{chap:2}
 
 %% 3. Stakes of stories/tech (swap 4?)
 %% -data collection
@@ -171,7 +171,7 @@ revenue for the groups in position to collect them. Uber, which
 through its GPS-enabled ride-hiring applications still collects only a
 fraction of the data that would be available through a self-driving
 vehicle, has agreed to share its ride data with municipalities for purposes of
-city planning \cite{uberJardin}. Though this data is ostesibly being
+city planning \cite{uberJardin}. Though this data is ostensibly being
 shared for the public good, it also serves private ends: to curry favor with
 authorities that might otherwise attempt to shut the service down. The
 ride data can also be used to provide internal predictions to help
@@ -207,7 +207,7 @@ about people's movements. Despite this, their collection and use
 remains largely unregulated.\footnote{Groups such as the EFF and ACLU
   are attempting to do something about this \cite{kayyaliEFF}.} California police are coming under
 criticism from civil rights groups about their mass collection of
-vehicle position information through police license plate cameras.iv
+vehicle position information through police license plate cameras.\cite{???}
 Clearly, these types of contested data collection are already
 possible. But networked vehicles, with their arrays of sensors,
 provide more avenues of data collection, and therefore stand to
@@ -268,21 +268,21 @@ histories, family and trust networks.
 Prevailing data ideology tells us that we can understand ourselves better through
 these data, that we can use them to determine patterns we never knew were
 there. Out of this ideology come publications like Uber's
-blog\footnote{See blog.uber.com. One particularly noteworthy post,
+blog,\footnote{See blog.uber.com. One particularly noteworthy post,
   from March of 2012, was about customers' ``Rides of Glory''---in
   other words, one-night-stands. This post was later taken down by the
 Uber team, but articles about it remain \cite{gigaom_harris}. Another
 post about the connection between Uber rides and areas of
-crime---notably prostitution---was also removed \cite{venturebeat_obrien}.}, which
+crime---notably prostitution---was also removed \cite{venturebeat_obrien}.} which
 describes customer ``insights'' gained through their ride data, which
 are ostensibly interesting to the public. ``Look here,'' they seem to
-say, ``we can tell you about \emph{you}.'' But it important to
+say, ``we can tell you about \emph{you}.'' But it is important to
 recognize that the ideologies of data collection---for corporate
 profit and public use---are deeply intertwined, and strongly
-influenced by the possibility of using machine learning techniques and
+influenced by the possibility of using machine-learning techniques and
 statistical analyses to find and exploit patterns. Automated vehicles
-are part of this general culture, and without significant effort to
-resist erosions of privacy and data protection stand to open our lives
+are part of this general culture, and, without significant effort to
+resist erosions of privacy and data protection, stand to open our lives
 to greater scrutiny in terms of the means of and reasons for our
 personal mobility.
 
@@ -303,7 +303,7 @@ for machines. Human understanding is built
 through years of experience: it is through existing as a human being
 in a particular cultural context that we know to drive on roads but
 not on sidewalks, and how to tell the difference. But we do not have
-this luxury in training machines.
+this luxury in training machines. %%TODO consider this last sentence
 
 Localization has been a fundamental issue for robotics since the
 beginning of the field. In order to figure out how to act, a robot
@@ -312,7 +312,7 @@ expected to change rapidly with motion, and to vary significantly from
 place-to-place \cite[p. 4]{SLAMbook}. Motions cannot, for the most part,
 be pre-planned:  they must continually be reevaluated in new and
 emerging situations, as the robot moves through the environment. As a
-key part of this puzzle the robot must be able to determine its own
+key part of this puzzle, the robot must be able to determine its own
 relationship to some target location it needs to get to: this
 ``target-robot relation'' is an ``unavoidable''\footnote{It is
   possible to create robots that navigate without any modeling of the
@@ -379,7 +379,7 @@ using only visual stimuli (such as the EUREKA PROMETHEUS project
 in the 1990s, which navigated only with cameras and therefore could
 only follow the road in an automated fashion, rather than navigate to
 given GPS coordinates) \cite{UlmerVITA}, modern systems are tending to use more external
-stimuli, rather than less, in an attempt to increase safety and
+stimuli, rather than fewer, in an attempt to increase safety and
 vehicle capability. Even as
 advanced as it is, Google's autonomous vehicle technology requires
 hyper-detailed 3D maps in order to operate properly on public
@@ -453,7 +453,7 @@ cut directly against the utopian narratives of driverless cars.
 
 Furthermore, the seemingly universalizing forces of maps and computer programming
 have a tendency to hide issues of geographical and cultural
-specificity, which are rendered invisible in these utopian narrative.
+specificity, which are rendered invisible in these utopian narratives.
 But though engineering practice holds that these issues are
 conquerable, they should be anything but invisible. More than
 abstract problems of localization and mapping, automated vehicles
@@ -461,7 +461,7 @@ present the problem of having to exist in an environment that is
 highly complicated, varied, and cultured. Maps alone are insufficient
 for anything but the most simplistic view of vehicle operations.
 Programmed devices
-must must know about speed limits, about traffic
+must know about speed limits, about traffic
 lights, about rules of the road that were never designed for
 autonomous systems. These devices must respond to human caprices and
 be adapted to longstanding, ingrained laws and habits. They must
@@ -469,7 +469,7 @@ include historical knowledge, rooted in the legal and social histories
 of roadways, which may differ between cities and states, and certainly
 between countries across the world. Local customs and behaviors differ, and even if maps are
 available, the same vehicle programming may not work for Los Angeles,
-Boston, and the rural Midwest, let alone Singapore, Mumbai or Cairo.
+Boston, and the rural Midwest, let alone Singapore, Mumbai, or Cairo.
 The map, for all of its objective standardization, still represents
 real places subject to cultural histories and vulnerable to
 socio-economic dynamics. These social and regional issues are often
@@ -617,14 +617,14 @@ objects: pedestrians, bicyclists, cars, and trucks\footnote{This also
 
 While much computer vision research uses machine-learning algorithms to detect
 objects, engineers in automotive applications are justifiably
-reluctant to rely on machine-learning: as Göde Both has noted in his
+reluctant to rely on machine-learning: as G\"{o}de Both has noted in his
 ethnographic research on developers of driverless cars in
 Europe \cite{bothpt1},
-machine learning techniques are brittle and unpredictable \cite{bothpt2}: neither
+machine-learning techniques are brittle and unpredictable \cite{bothpt2}: neither
 characteristic makes them suited for software that must be highly
 reliable and on which people's lives literally depend. So mixes of
 manual and machine-learning approaches are used to do object
-detection. Though machine-learning can be a highly-effective
+detection. Though machine learning can be a highly effective
 technique, it is generally difficult or impossible to know what the
 system has actually ``learned'' and therefore how it will react in new
 and unknown situations \cite{bothpt2}. Pedestrian detection algorithms search for
@@ -662,7 +662,7 @@ likely important to how autonomous vehicles may drive.\footnote{The
   as stationary, leaving no room for unexpected behavior \cite{collisionPaper}.}
 Categories alone, even if achieved, are also insufficient if detected
 objects are treated solely as obstacles to be avoided. One notable
-researcher who I spoke to drives around searching 
+researcher whom I spoke to drives around searching 
 for, and attempting to photograph, situations he believes will cause
 trouble for current vehicles. His collection includes many situations with police
 directing traffic, especially when combined with sun glare or
@@ -670,7 +670,7 @@ occlusions of the sight lines---such as by a mail relay box---that
 would make predictions regarding oncoming 
 objects difficult. His take-away from these situations is that there
 is a significant body of edge-cases that make full autonomy
-impractical for the forseeable future. Instead, humans will be
+impractical for the foreseeable future. Instead, humans will be
 required to account for these sorts of difficult perceptual situations. 
 
 %%TODO
@@ -929,7 +929,7 @@ of T\"{u}bingen's AI Mario may be
 avoid people, and perhaps expect children to behave erratically.
 Nonetheless, despite lacking the facilities for actual ethics, these
 devices possess an implicit ethics: the
-behaviors of these devices will the instantiate moral and
+behaviors of these devices will instantiate the moral and
 ethical judgments of their human creators, based on
 human-authored heuristics and statistical predictions. They will not
 act ethically, but must
@@ -967,7 +967,7 @@ however, is incoherent. Even bugs, though unintentional, are part of
 the program. This sort of phrasing is unfortunate, as it
 risks being read as a robot somehow operating ``outside of its
 program,'' making ad-hoc ethical decisions based on criteria of its
-own invention (even an ethical system trained via machine learning
+own invention (even an ethical system trained via machine-learning
 techniques is fundamentally tied to its programming, though its
 behaviors were not strictly ``written'' by its human programmers, but
 are instead shaped by their selection of training situations and
@@ -1049,7 +1049,7 @@ narrative is safety; specifically, the poor safety record of human
 drivers and the potential for machines to do much better, free from
 human frailties of distraction and fatigue. How bad are human
 drivers, really? Conventional stories of human drivers paint us as
-plainly terrible, prone to road rage and drowsyness, and generally tending
+plainly terrible, prone to road rage and drowsiness, and generally tending
 to do anything except pay attention to the road\footnote{Numerous popular
   articles take this position, some based more in fact, and others
   more in rhetoric..
@@ -1073,12 +1073,13 @@ drive 1 million miles\footnote{This is a conservative estimate,
 involved in a fatal crash in his or her lifetime. Looking at non-fatal
 accidents as well, humans get involved in about one accident per
 286,000 vehicle miles. Part of why the autonomous vehicle problem is
-such a difficult one is that these numbers are relatively high.
+such a difficult one is that individual human beings can drive a long
+time without having an accident.
 
 Theoretically, computers can do better. But especially careful human
 drivers can also clearly beat the human average. But how safe do
 autonomous vehicles need to be in order to be allowed on our roads?
-Safer than the average human? or safer than the very best
+Safer than the average human? Or safer than the very best
 drivers?\footnote{Chris Gerdes has admitted, as recently as September
   2014, that the deep, intuitive experience of race-car drivers to
   handle emergency situations is something they are still working to
@@ -1217,7 +1218,7 @@ safety---have already become visible. Despite the comparative
 statistical safety of flying,\footnote{This information is relatively
   available and publicly known \cite{airlinereporter}, though that does not
   necessarily change people's minds about travel.}
-people tend to be more afraid of getting on an airliner than getting in their
+people tend to be more afraid of getting onto an airliner than getting into their
 cars. While this may have to do with a number of factors,
 including that aircraft do not remain on the ground during operation,
 it also represents a situation in which passengers give over their
@@ -1385,7 +1386,7 @@ taking driverless cabs to work, and students getting drunk and, unable
 to drive themselves home, using automated vehicles to ferry themselves
 back to their apartments. These visions may be greatly influenced by
 the developers themselves---primarily male engineers with masculinist
-preconeptions---either thoughtlessly or as a marketing strategy. But
+preconceptions---either thoughtlessly or as a marketing strategy. But
 regardless of the source, they suggest designed solutions may tend to
 be predisposed to certain types of uses, and less amenable to others
 that fall too far outside this masculine vision. Other uses are still
@@ -1420,8 +1421,10 @@ branded by some, as we saw, as ``soccer moms''), we risk developing
 vehicles that preferentially serve certain dominant uses and not
 others. When I asked one informant whether the developers have an idea
 of what driverless cars would mean for people who have children, he
-replied:  ``they don't think about it.'' While certainly not shared by
+replied:  ``They don't think about it.'' While certainly not shared by
 all developers in this space, it is not a vision we can afford.
+
+\subsection{Conclusion}
 
 This chapter has investigated six different perspectives on the
 social, cultural, and informational contexts of the autonomous
@@ -1435,16 +1438,16 @@ consequences of this vision. If we accept this narrative, these design
 fictions, for the automotive future, what comes along for the ride? We
 have seen that the automated vehicle, so envisioned, exists at the
 nexus of a number of deep, important questions about our relationships
-to technology: what level of privacy is appropriate? what counts as machine
-knowledge? how do we design machines that can be genuinely ethical,
+to technology: What level of privacy is appropriate? What counts as machine
+knowledge? How do we design machines that can be genuinely ethical,
 and do we need to? We have also seen that these vehicles present a
-number of thorny problems not often recognized: what level of
-representational work is required to make them function? how do we
-predict the relative safeties of devices that do not exist? can we
+number of thorny problems not often recognized: What level of
+representational work is required to make them function? How do we
+predict the relative safeties of devices that do not exist? Can we
 achieve better urban design simply by adding autonomy to vehicles?
 All of these questions are united by being largely unanswerable---and
 the problems, unsolvable---by a focus only on the device itself,
-narrowly defined. Instead, these are system-level problems, question
+narrowly defined. Instead, these are system-level problems, questions
 that must be asked of large networks of human and machine actors with
 subtle and shifting interrelationships. Some are likely to be issues
 for any approach to vehicle automation; however, alternative models of
