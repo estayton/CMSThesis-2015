@@ -303,7 +303,7 @@ for machines. Human understanding is built
 through years of experience: it is through existing as a human being
 in a particular cultural context that we know to drive on roads but
 not on sidewalks, and how to tell the difference. But we do not have
-this luxury in training machines. %%TODO consider this last sentence
+this luxury in training machines. %%TODO2 consider this last sentence
 
 Localization has been a fundamental issue for robotics since the
 beginning of the field. In order to figure out how to act, a robot
@@ -410,7 +410,7 @@ limited, thoroughly pre-mapped route has been driven many times to
 achieve those numbers \cite{gomesCircles}.
 
 
-%%TODO Karen Kaplan
+%%TODO2 Karen Kaplan and MAPS
 Mapping claims a unique capability to
 represent the real, objectively
 and diagrammatically, but also requires that world to remain largely
@@ -430,7 +430,7 @@ widespread mapping initiative. The success of such an initiative is
 dependent not only on a large amount of human effort and capital
 investment, but a series of decisions about what regions should take priority.
 
-TomTom\cite{tomtommaps} and Nokia\cite{ubergizmo} both claim to be attempting such
+TomTom \cite{tomtommaps} and Nokia \cite{ubergizmo} both claim to be attempting such
 a mapping project,
 but it will not happen immediately or all-at-once. More likely,
 certain areas will be 
@@ -673,7 +673,7 @@ is a significant body of edge-cases that make full autonomy
 impractical for the foreseeable future. Instead, humans will be
 required to account for these sorts of difficult perceptual situations. 
 
-%%TODO
+%%TODO2
 %%<Include quotes from the interview>
 
 However, because autonomous cars see---putatively ``as we see''---their sight can
@@ -1043,9 +1043,11 @@ laws---and enact an ethics impervious to scrutiny.\footnote{Digital
 %%is it just statistics, testing of components? or can we judge based
 %%on designs??
 
-%%TODO ``competent'' below, TL writes ``?''
-%%TODO: here is the point of ``personal exceptionalism'' I think; fits
+%%TODO (DONE) ``competent'' below, TL writes ``?''
+%%TODO (DONE): here is the point of ``personal exceptionalism'' I think; fits
 %%with this feeling of competence
+%%Personal exceptionalism: ``we think we're good drivers''
+
 The primary driving force in the current self-driving car
 narrative is safety; specifically, the poor safety record of human
 drivers and the potential for machines to do much better, free from
@@ -1068,13 +1070,16 @@ factors \cite{censusDeaths}. The total number of vehicle-related deaths is much
 lower, at a still significant 35,000 deaths per year. But this alone
 does not tell the story. At around 1.5 deaths per 100 million vehicle
 miles, or about 1 death per 67 million miles, humans seem relatively
-competent in a statistical sense. The average American, who might
+competent in a statistical sense---which, from the point of view of
+the individual driver, stands to aid our personal exceptionalism,
+thinking we are better drivers than we are. The average American, who might
 drive 1 million miles\footnote{This is a conservative estimate,
   extrapolating from an average yearly mileage of between 13,000 and
   15,000 miles \cite{fhwa}.} is unlikely to be
 involved in a fatal crash in his or her lifetime. Looking at non-fatal
 accidents as well, humans get involved in about one accident per
-286,000 vehicle miles. Part of why the autonomous vehicle problem is
+286,000 vehicle miles, still large on the scale of a driver's overall
+life experience. Part of why the autonomous vehicle problem is
 such a difficult one is that individual human beings can drive a long
 time without having an accident.
 
@@ -1198,16 +1203,22 @@ according to FAA guidelines \cite[p. 39--40]{NRCAutonomy}. But
 these approaches are not scaling to more complex systems, and new
 validation approaches are required to account for the impacts of human
 operators or supervisors on system behavior \cite[p.
-  40]{NRCAutonomy}. The NRC panel is not alone in recognizing these
+  40]{NRCAutonomy}. While
+the NRC panel is concerned about validation of existing aeronautical
+control systems, automated vehicles may contain 10 times as much code
+as modern, highly-computerized aircraft (100 million lines versus 5 to
+10 million for the F-35 Joint Strike Fighter)
+\cite{http://mobile.reuters.com/article/idUSKBN0MN1E820150327?irpc=932}.
+The NRC panel is not alone in recognizing these 
 issues: the Defense Science Board in their task force report \emph{The
   Role of Autonomy in DoD Systems} attempts to address the importance
 of the larger environment in which automated systems operate, and
 within which they can produce ``unintended operational
 consequences'' \cite[p. 2]{DSB}. They warn of \emph{brittle}
 platforms, and emphasize the importance of developing ways to predict
-and understand the resilience of systems\cite[p. 7, 11]{DSB}
+and understand the resilience of systems \cite[p. 7, 11]{DSB}.
 
-%%TODO: Amount of code required comparatively with cars and planes, guy says
+%%TODO (DONE): Amount of code required comparatively with cars and planes, guy says
 %%fully automated is possible but for ethical considerations:
 %%http://mobile.reuters.com/article/idUSKBN0MN1E820150327?irpc=932
 %%And mention further problems with nondeterministic systems!
@@ -1283,7 +1294,14 @@ transport vehicles (essentially, driverless taxis). There is
   fuel-efficient. The social, environmental, and urban planning
 implications are at least worth considering in passing before moving
 on to consider alternate models for how these technologies could be
-developed. 
+developed.\footnote{Critique of automated vehicle systems on these
+  grounds is not new, and Marcia D. Lowe of the Worldwatch
+    Institute wrote in 1993, in response to
+the US push for automated highways, that ``Even more astonishing [than
+  the level of spending] is
+the total lack of organized opposition to the idea, despite evidence
+that smart cars and highways may well exacerbate the very problems
+they are supposed to solve''\cite{???-novakNationalAutomated}.}
 
 In my discussions with a fellow researcher who has been studying the
 development of self-driving vehicles, it became clear that the
