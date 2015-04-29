@@ -893,7 +893,9 @@ emulate human learning,\footnote{Speaking at the CAST Symposium at
   MIT, September 26, 2014, Poggio noted that their approach is
   actually stepping away from ``Big Data'' and AI approaches applied
   by Google, among others.} other researchers bootstrap their machines
-with more fully-formed models. Ours is the age of
+with more fully-formed models. 
+
+Ours is the age of
 statistical, probabilistic AI, lead in the robotics space by Sebastian
 Thrun, Wolfram Burgard, and Dieter Fox with their book
 \emph{Probabilistic Robotics}.\footnote{The book begins with a nod to
@@ -905,7 +907,69 @@ organized around a variety of algorithms based on Bayes rule,
 distinguishes itself from prior model-based (logical) or ``reactive
 behavior-based'' (subsumption) approaches by dealing gracefully with
 uncertainties in both the world model and sensor inputs \cite[p.
-  9]{thrunProb}. But despite that probabilistic robotics fundamentally
+  9]{thrunProb}. 
+
+Localization has been a fundamental issue for robotics since the
+beginning of the field. In order to figure out how to act, a robot
+needs to know where it is; and in general, robotic environments can be
+expected to change rapidly with motion, and to vary significantly from
+place-to-place \cite[p. 4]{SLAMbook}. Motions cannot, for the most part,
+be pre-planned:  they must continually be reevaluated in new and
+emerging situations, as the robot moves through the environment. As a
+key part of this puzzle, the robot must be able to determine its own
+relationship to some target location it needs to get to: this
+``target-robot relation'' is an ``unavoidable''\footnote{It is
+  possible to create robots that navigate without any modeling of the
+environment, as Fern\'{a}ndez-Madrigal et al.\ point out. However, this
+severely limits the range of behavior that is possible. Without
+reference to the environment, errors slowly accrue, and a system that
+navigates in a known space without localization will find itself
+getting further and further off-track.} component of successful
+navigation \cite[p. 5]{SLAMbook}. This relation can be expressed
+in different forms---either quantitative representations such as maps,
+or logical, prepositional statements---and these representations carry
+their own techniques of interpretation. 
+
+But there is more to navigation than pure localization. While
+localization is the usage of known elements in the environment to
+estimate a robot's position, those elements themselves must be known
+in order to perform this process. Mapping is the complementary
+process, the estimation of ``\emph{unknown} spatial relations that
+exist between environment elements'' in order to allow for subsequent
+navigation \cite[p. 5]{SLAMbook}. We face a somewhat tricky
+precedence problem:  in order to build maps with
+autonomous systems, the systems must know where they are; in order to know
+where they are, they must have maps to measure
+against \cite[p. 6]{SLAMbook}.
+
+Consider the history of AI we already reviewed.
+Localization was part of the cause of the poor performance of the
+robot Shakey: world modeling through a symbolic approach was slow,
+which was rendered even more problematic by the relative lack of
+computing power at the time \cite[Afterword]{mccorduck}.
+Though one way to determine robot position in the world is through
+simultaneous localization and mapping (SLAM)---a serious research area in
+robotics, as it is ideal for regions that are impractical to map
+beforehand, such as ones that are always changing---it is easier to localize by comparing
+measurements to a known map. However, that implies that the map is
+pre-made, and therefore sets limits on the rate at which the
+environment can change and still allow the robot to operate. By
+contrast, Brook's subsumption architecture involved an
+attempt to avoid the localization problem by pure sensory response to
+the environment; but building a robot that exhibits complex and
+predictable behaviors in complex environments through this approach
+is exceedingly difficult, as evidenced by Brooks's shift to hybrid
+modeling approaches. But new sensors providing new kinds of data, and
+new algorithms and techniques to cope with uncertainty---such as those
+of probabilistic robotics \cite{thrunProb}---have allowed
+significant progress in the field. Today, localization and
+mapping problems alone are both considered ``satisfactorily solved in practical
+situations''---though SLAM techniques
+are still somewhat less reliable or developed---given sufficient
+computational resources and environmental data \cite[p.
+  5-6]{SLAMbook}.
+
+But despite that probabilistic robotics fundamentally
 underlies the major automated vehicle innovations reported by the
 popular press, it is rarely, if ever, mentioned. What receives attention in the
 self-driving car narrative is a different gloss on the probabilistic

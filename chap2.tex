@@ -105,17 +105,13 @@ recalled as a source of inspiration due to the role of flying cars,
 which trigger similar visions of wild 
 futures made possible through technology \cite{JetsonsAge}. 
 
-%TODO how do we dedup this?
+%TODO how do we dedup this? (I think this is done)
 
 Many, indeed most, articles seem ignorant of the actual research
 history that inspires and is inspired by successive generations of
-science and design fictions. Some articles, especially from more
-scholarly establishments, bring up 
-the pioneering work done by Mercedes and Ernst
-Dickmanns in Germany in the 1990s \cite{HCRIDriverless}. But few connect
-autonomous vehicles today as part of a long research history going
-back to the 1960s, and an even longer set of engineering dreams going
-back at least to the 1920s. Such narratives would as
+science and design fictions. 
+
+Such narratives would as
 valid, in their own way, as connections to science fiction, but I
 suggest that some of the ``newsworthy'' shock value of the technology would be lost
 by linking it to a deep history of research and effort. Connecting it
@@ -126,34 +122,7 @@ to express a sense of impatience and technological inevitability: ``Isn't
 it about time?'' This hype-mindset fits the business
 goals of many news outlets interested primarily in page-views.
 
-The few historically-specific 
-dreams that do filter through into the narratives of autonomous
-technology \cite{CBSPetersen} 
-include the 1939 World's Fair, discussed
-in the introduction, at which auto companies
-previewed a city of the future. Its centerpiece, GM's Futurama
-exhibit, presented a bird's-eye view of a future city with multi-lane elevated
-expressways filled with largely automated vehicles. GM's Firebird concepts
-from the 1950s\footnote{Rarely mentioned are other contemporary research
-  initiatives, such as the work of
-  Vladimir Zworykin at RCA. His 
-  concept, inspired by ``railroad block signals,'' used circuits
-  embedded in the road to magnetically sense vehicle speed and
-  location. GM's working test system based on their ``Unicontrol''
-  joystick instead located much of the sensing and control within the car
-itself \cite[p. 8]{wetmore}. But this work too is not often
-remembered.} are also occasionally remembered due to their publicity
-and 
-subsequent cultural presence, \cite{walshVs} despite that the vehicles actually
-contained no autonomous technology \cite[p. 7]{wetmore}. They were
-themselves engineering fictions. DARPA's investments in automated
-driving are recalled more frequently, but largely stripped of their
-military valences and instead seen as the start of a vibrant civilian
-automated car project \cite{economistSR}.
-
-These historical moments are powerful because in their projections into the
-popular discourse, they cease to answer to logic and
-sense. They draw upon emotions, hopes, and aspirations. Driverless cars
+Driverless cars
 are in part works of theater, objects of technological spectacle which
 are not yet truly real, despite their existence as physical objects
 which can be photographed and experienced.\footnote{And in this way
@@ -620,65 +589,11 @@ in a particular cultural context that we know to drive on roads but
 not on sidewalks, and how to tell the difference. But we do not have
 this luxury in training machines. %%TODO2 consider this last sentence
 
-Localization has been a fundamental issue for robotics since the
-beginning of the field. In order to figure out how to act, a robot
-needs to know where it is; and in general, robotic environments can be
-expected to change rapidly with motion, and to vary significantly from
-place-to-place \cite[p. 4]{SLAMbook}. Motions cannot, for the most part,
-be pre-planned:  they must continually be reevaluated in new and
-emerging situations, as the robot moves through the environment. As a
-key part of this puzzle, the robot must be able to determine its own
-relationship to some target location it needs to get to: this
-``target-robot relation'' is an ``unavoidable''\footnote{It is
-  possible to create robots that navigate without any modeling of the
-environment, as Fern\'{a}ndez-Madrigal et al.\ point out. However, this
-severely limits the range of behavior that is possible. Without
-reference to the environment, errors slowly accrue, and a system that
-navigates in a known space without localization will find itself
-getting further and further off-track.} component of successful
-navigation \cite[p. 5]{SLAMbook}. This relation can be expressed
-in different forms---either quantitative representations such as maps,
-or logical, prepositional statements---and these representations carry
-their own techniques of interpretation. 
-
-But there is more to navigation than pure localization. While
-localization is the usage of known elements in the environment to
-estimate a robot's position, those elements themselves must be known
-in order to perform this process. Mapping is the complementary
-process, the estimation of ``\emph{unknown} spatial relations that
-exist between environment elements'' in order to allow for subsequent
-navigation \cite[p. 5]{SLAMbook}. We face a somewhat tricky
-precedence problem:  in order to build maps with
-autonomous systems, the systems must know where they are; in order to know
-where they are, they must have maps to measure
-against \cite[p. 6]{SLAMbook}.
-
-Consider the history of AI we already reviewed.
-Localization was part of the cause of the poor performance of the
-robot Shakey: world modeling through a symbolic approach was slow,
-which was rendered even more problematic by the relative lack of
-computing power at the time \cite[Afterword]{mccorduck}.
-Though one way to determine robot position in the world is through
-simultaneous localization and mapping (SLAM)---a serious research area in
-robotics, as it is ideal for regions that are impractical to map
-beforehand, such as ones that are always changing---it is easier to localize by comparing
-measurements to a known map. However, that implies that the map is
-pre-made, and therefore sets limits on the rate at which the
-environment can change and still allow the robot to operate. By
-contrast, Brook's subsumption architecture involved an
-attempt to avoid the localization problem by pure sensory response to
-the environment; but building a robot that exhibits complex and
-predictable behaviors in complex environments through this approach
-is exceedingly difficult, as evidenced by Brooks's shift to hybrid
-modeling approaches. But new sensors providing new kinds of data, and
-new algorithms and techniques to cope with uncertainty---such as those
-of probabilistic robotics \cite{thrunProb}---have allowed
-significant progress in the field. Today, localization and
-mapping problems alone are both considered ``satisfactorily solved in practical
-situations''---though SLAM techniques
-are still somewhat less reliable or developed---given sufficient
-computational resources and environmental data \cite[p.
-  5-6]{SLAMbook}.
+Building on decades of mapping and localization work, self-driving
+vehicles are applying new guidance technologies, probabilistic
+algorithms rather than naive feedback control. We should consider what
+kinds of information are necessary for these operations, and how that
+information gets to the vehicles in question.
 
 %%Fernández-Madrigal, Juan-Antonio, and José Luis Blanco Claraco.
 %%2013. Simultaneous Localization and Mapping for Mobile Robots :
@@ -706,7 +621,10 @@ special sensor arrays, like the LIDAR Google uses for their autonomous
 vehicles, which drive a route and collect data that can be used to
 reconstruct the model used for future drives.\footnote{Nhai Cao
   (Global Product Line Manager at TomTom), presentation at The Road
-  Ahead Forum on Future Cities 2014, Cambridge, MA, MIT, November 21, 2014.} 
+  Ahead Forum on Future Cities 2014, Cambridge, MA, MIT, November 21,
+  2014.} And like maps applications on smartphones and computers,
+those maps would need to be downloaded to the automated car before or
+during a trip, via a wireless data connection.
 
 Google's vehicle does not operate in a SLAM mode.
 Pre-made maps inform the vehicle where stoplights, signs,
