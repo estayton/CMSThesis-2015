@@ -31,6 +31,9 @@
 %Starr \& Bowker, standards? resonant??
 
 
+% STAGE DIRECTION: role of visions and imagination in tech; but what
+% about when those visions are not deeply rooted in the history?
+
 Technologies, with rare exceptions,\footnote{One could argue that
   vulcanized rubber for example, as an accidental discovery, does not
   fit this pattern.} are imagined before they are made, through design
@@ -79,16 +82,10 @@ its depiction of aspirational (or cautionary) futures.
 
 %%COnsider citing the Suchman article itself in Kirby
 
-But science fiction is also a perennial source of popular metaphors and ideas
-about technological change, in part perhaps because the visions are so
-compelling, but also because they are so easily available. A few
-articles about automated vehicles remember the history, from the 1939
-World's Fair \cite{CBSPetersen} to the Firebird concept cars
-\cite{walshVs} to Dickmanns's work in the 
-1990s \cite{HCRIDriverless} and DARPA's investments in automated
-driving \cite{economistSR}---the latter largely stripped of its
- military valences. But these few historical moments, design fictions
- from the past, are often outweighed by connections to science fiction.
+ %% But these few historical moments, design fictions
+ %% from the past, are often outweighed by connections to science
+ %% fiction.
+
 %% Some articles, especially from more
 %% scholarly establishments, bring up 
 %% the pioneering work done by Mercedes and Ernst
@@ -130,6 +127,9 @@ driving \cite{economistSR}---the latter largely stripped of its
 %% of actual engineering and scientific developments mixed with the
 %% imagination---s
 
+But science fiction is also a perennial source of popular metaphors and ideas
+about technological change, in part perhaps because the visions are so
+compelling, but also because they are so easily available. 
 Science-fiction images represent easily-digestible
 cultural reference 
 points for technological stories in the popular press. From Asimov to
@@ -152,7 +152,11 @@ not all so contemporary. \emph{The Jetsons}, though
 the show did not actually foreground driverless vehicles, also gets
 recalled as a source of inspiration due to the role of flying cars,
 which trigger similar visions of wild 
-futures made possible through technology \cite{JetsonsAge}. 
+futures made possible through technology \cite{JetsonsAge}. However, many
+worlds that look lovely in science fictions or design fictions represent places 
+we may not actually wish to live, and these portrayals can afford to
+avoid issues of reliability and human interaction that we cannot avoid
+in the real world. 
 
 %TODO how do we dedup this? (I think this is done)
 
@@ -1096,6 +1100,21 @@ human-authored heuristics and statistical predictions. They will not
 fundamental to how we understand our relationships to such
 complicated technological systems.
 
+%% PICK UP HERE
+
+%% Here, I consider ethical codes specifically,
+%% since they interact with functionalist approaches.
+
+%% Even bugs, though unintentional, are part of
+%% the program.
+%% (even an ethical system trained via machine-learning
+%% techniques is fundamentally tied to its programming, though its
+%% behaviors were not strictly ``written'' by its human programmers, but
+%% are instead shaped by their selection of training situations and
+%% responses; and the choice to use these techniques in the first place
+%% comes with a certain risk, that a system
+%% might learn the ``wrong'' ethical behaviors, for example)
+
 %%ETHICS
 Robot ethics is an issue of growing importance to society at
 large---given the rapidly-expanding uses of robotics for labor, military,
@@ -1107,8 +1126,7 @@ responsibility (when accidents happen, who is liable?), ethical codes
 (how, and with what ethical frameworks, can robots be programmed to
 operate ``ethically''?), and social impact
 (how do we weigh potential for robots to eliminate
-jobs?) \cite{robotEthics}. Here, I consider ethical codes specifically,
-since they interact with functionalist approaches. The question of
+jobs?) \cite{robotEthics}. The question of
 driverless car ethics has spurred quite a volume of news articles,
 with varying command of the questions
 involved.\footnote{One article discusses a notable
@@ -1116,25 +1134,16 @@ involved.\footnote{One article discusses a notable
   cars to be flexible enough in their 
 engineering to be able to make ethical judgements that aren't
 necessarily written into their programming,'' a statement whose
-meaning is difficult to parse \cite{jessicaDavies}. Such statements
+meaning is difficult to parse \cite{jessicaDavies}. This
 presumably 
-refer to judgments that are not explicitly defined by programmers, but
-instead reliant on some kind of more general ethical calculus. A
-program that does things that are not in its programming at all,
-however, is incoherent. Even bugs, though unintentional, are part of
-the program. This sort of phrasing is unfortunate, as it
+refers to judgments reliant on some kind of more general ethical
+calculus. A
+program that does things that are not in its programming at all is
+incoherent---even machine-learning systems are shaped and programmed,
+though their rules are not explicitly written. This sort of phrasing is unfortunate, as it 
 risks being read as a robot somehow operating ``outside of its
 program,'' making ad-hoc ethical decisions based on criteria of its
-own invention (even an ethical system trained via machine-learning
-techniques is fundamentally tied to its programming, though its
-behaviors were not strictly ``written'' by its human programmers, but
-are instead shaped by their selection of training situations and
-responses; and the choice to use these techniques in the first place
-comes with a certain risk, that a system
-might learn the ``wrong'' ethical behaviors, for example). Such
-behavior is impossible for anything but a sentient
-AI, and focus on it distracts from the real issues
-at hand.} Lin himself has been successful in urging a dialogue
+own invention.} Lin himself has been successful in urging a dialogue
 within various autonomous vehicle research groups about the ethics of
 their products, as well as getting media recognition of this push for
 self-conscious development \cite{timeEthics}. However, many articles
@@ -1142,16 +1151,17 @@ elide fundamental distinctions in the situations being discussed,
 distinctions which should be foremost in our minds when we consider
 the stakes of developing autonomous machines.
 
-A focus on machines behaving ethically is at risk of making errors
-similar to the conflation of machine and human vision, knowing, or 
-understanding. Ethical behavior is not necessarily strictly defined by
-any one ethical code:  ethics and ``ethics'' are not identical. When we
+%% A focus on machines behaving ethically is at risk of making errors
+%% similar to the conflation of machine and human vision, knowing, or 
+%% understanding. Ethical behavior is not necessarily strictly defined by
+%% any one ethical code:  ethics and ``ethics'' are not identical.
+When we
 speak of robotic cars ``making decisions'' of what to do in a crisis
 situation, we implicitly accept the idea that such decisions are
 really being made by the program. Discussing whether or not those
 behaviors are ethical risks suggesting that our robots have all the
 capabilities---of sensing, knowing, and processing---necessary to
-carry out, \emph{in toto}, what we consider to be ethics \emph{qua} itself. At this
+carry out, \emph{in toto}, what we consider to be ``ethics.'' At this
 stage in AI development, however, what we are truly discussing is not
 the potential ethical robot cars but an \emph{ethical calculus} for
 autonomous vehicles. Such a calculus would be a quantification of
@@ -1206,40 +1216,50 @@ laws---and enact an ethics impervious to scrutiny.\footnote{Digital
 %%with this feeling of competence
 %%Personal exceptionalism: ``we think we're good drivers''
 
+%% Conventional stories of human drivers paint us as
+%% plainly terrible, prone to road rage and drowsiness, and generally tending
+%% to do anything except pay attention to the road.\footnote{Numerous popular
+%%   articles take this position, some based more in fact, and others
+%%   more in rhetoric. But human fallibility is often mistaken for humans
+%%   being useless in 
+%%   all situations, a misconception we will return to in chapter
+%%   \ref{chap:3}.} However, the statistics tell
+%% a slightly different story. Official statistics show that the number of
+%% motor vehicle accidents remained in the range of 10--11 million
+%% per year for most of the late 2000s. The death rate has
+%% decreased overall in this time, settling somewhere below 1.5 deaths
+%% per 100 million vehicle miles, presumably due to a combination of
+%% better safety features (especially since 1990) and other
+%% factors \cite{censusDeaths}.
+
+%%  around 1.5 deaths per 100 million vehicle
+%% miles, or about
+%% which, from the point of view of
+%% the individual driver, stands to aid our personal exceptionalism,
+%% thinking we are better drivers than we are. The
+
 The primary driving force in the current self-driving car
 narrative is safety; specifically, the poor safety record of human
 drivers and the potential for machines to do much better, free from
-human frailties of distraction and fatigue. How bad are human
-drivers, really? Conventional stories of human drivers paint us as
-plainly terrible, prone to road rage and drowsiness, and generally tending
-to do anything except pay attention to the road.\footnote{Numerous popular
-  articles take this position, some based more in fact, and others
-  more in rhetoric. But human fallibility is often mistaken for humans
-  being useless in 
-  all situations, a misconception we will return to in chapter
-  \ref{chap:3}.} However, the statistics tell
-a slightly different story. Official statistics show that the number of
-motor vehicle accidents remained in the range of 10--11 million
-per year for most of the late 2000s. The death rate has
-decreased overall in this time, settling somewhere below 1.5 deaths
-per 100 million vehicle miles, presumably due to a combination of
-better safety features (especially since 1990) and other
-factors \cite{censusDeaths}. The total number of vehicle-related deaths is much
-lower, at a still significant 35,000 deaths per year. But this alone
-does not tell the story. At around 1.5 deaths per 100 million vehicle
-miles, or about 1 death per 67 million miles, humans seem relatively
-competent in a statistical sense---which, from the point of view of
-the individual driver, stands to aid our personal exceptionalism,
-thinking we are better drivers than we are. The average American, who might
+human frailties of distraction and fatigue. The total number of vehicle-related deaths is
+roughly 35,000 deaths per year in the US \cite{censusDeaths}, but this alone 
+does not tell the story: at around 1 death per 67 million miles, humans seem relatively
+competent in an absolute sense---by comparison, the average American might
 drive 1 million miles\footnote{This is a conservative estimate,
   extrapolating from an average yearly mileage of between 13,000 and
-  15,000 miles \cite{fhwa}.} is unlikely to be
-involved in a fatal crash in his or her lifetime. Looking at non-fatal
+  15,000 miles \cite{fhwa}.} in his or her lifetime.\footnote{Looking at non-fatal
 accidents as well, humans get involved in about one accident per
 286,000 vehicle miles, still large on the scale of a driver's overall
-life experience. Part of why the autonomous vehicle problem is
+life experience, which aids our personal exceptionalism.} Part of why
+the autonomous vehicle problem is 
 such a difficult one is that individual human beings can drive a long
-time without having an accident.
+time without having an accident. \footnote{This statistic seems warranted given recent NHTSA crash
+  data \cite{NHTSAcrash}. Around 93 percent of crashes with ``critical
+  reasons'' involve driver error as one critical reason for the crash.
+  But 30 percent involve a roadway factor, and 12 percent involve some
+vehicle-related reason. There may be many reasons for a crash, and
+estimating when the human is solely or primarily responsible for a
+crash is not trivial.}
 
 Theoretically, computers can do better. But especially careful human
 drivers can also clearly beat the human average. How safe do
@@ -1253,9 +1273,7 @@ Such questions have real impact when it comes to how devices are
 designed and when they become commercially viable---and are at least
 partly ethical questions. The autonomous
 vehicle enterprise seems to call for using such projected statistics
-to define policy. One narrative is that undue caution in the
-rollout of autonomous vehicles will directly ``cost'' lives, since
-people are killed by human drivers every day \cite{driverlessfuture}. However,
+to define policy. But
 people are also accustomed to the current automobile death rate, and
 any autonomous vehicle crashes are likely to attract deep
 scrutiny\footnote{As Jim Womack pointed out to me, there is no good side
@@ -1269,18 +1287,13 @@ required, the additional risks of supervision would also need to be
 accounted for\footnote{This is dealt with more thoroughly in chapter
 \ref{chap:3}.}---including the potential for risk homeostasis
 \cite{Wilde}, the tendency to
-behave less cautiously in situations that appear to be more safe.
-
-These are questions of policy, but also questions of human acceptance.
-This ideology posits lowering accident rates above all else, leaving
-no space for human squeamishness about technology and responsibility. 
-The statistical argument suggests that the death rate is all that
-matters, but humans are notoriously bad at understanding and
-responding to statistics.\footnote{And any possible framework for
+behave less cautiously in situations that appear to be more safe. And
+any possible framework for 
   quantitatively measuring and regulating improvement (e.g. number of deaths,
   monetary cost, etc.) hides all manner of assumptions and comes with
   potentially unforeseen consequences: the best decisions by some
-  metrics will be non-optimal in others.}
+  metrics will be non-optimal in others. These are questions of
+  policy, but also questions of human acceptance. 
 
 Just how safe these vehicles are expected to be has become a point of
 public contention. A 2015 whitepaper by Sivak and Schoettle of the
@@ -1330,17 +1343,19 @@ lobbying to count simulated virtual tests as road-test miles
 \cite{harrisVirtual}),
 and third-party oversight is not yet possible.}
 
-%(Phillip E. Ross, ``Has Robocar Safety Been Hyped?'' 20 Jan 2015: http://spectrum.ieee.org/cars-that-think/transportation/safety/has-robocar-safety-been-hyped)
+%(Phillip E. Ross, ``Has Robocar Safety Been Hyped?'' 20 Jan 2015:
+%http://spectrum.ieee.org/cars-that-think/transportation/safety/has-robocar-safety-been-hyped)
+
+%% airplane autopilots have a more developed history than automotive
+%% autodriving, aided by the lower complexity of the air environment,
+%% with simple mechanical autopilots available as early as
+%% 1912 \cite[p. 16]{NRCAutonomy}
 
 In both cases, measurements and predictions of reliability and risk
 are key to the development of autonomous vehicles. The aviation and
 defense spaces are in some ways ahead of commercial ground vehicle
 research in terms of engineering automated systems, in part because
-they have already been forced to confront these issues in earnest:
-airplane autopilots have a more developed history than automotive
-autodriving, aided by the lower complexity of the air environment,
-with simple mechanical autopilots available as early as
-1912 \cite[p. 16]{NRCAutonomy}. The \emph{Autonomy Research for
+they have already been forced to confront these issues in earnest. The \emph{Autonomy Research for
   Civil Aviation} report by the National Research Council pays
 significant attention to the fact that ``the lack of generally
 accepted design, implementation, and test practices for
@@ -1389,6 +1404,34 @@ in importance.
 
 %Include NITRD report, if available? http://scenic.princeton.edu/NITRD-Workshop/index.html 
 
+
+%% The CAST working group has had to account for these issues in their
+%% recommendations about airplane safety since 1998. Part of their charter---to
+%% reduce the accident rate by 80 percent \cite[p. 28]{PARCCAST}---is
+%% motivated not so much by the rate itself but predictions about its
+%% most visible effects:  if air traffic were to continue to increase
+%% with industry predictions but to maintain the 1997 rate of 1.5 major
+%% crashes per 1 million departures, we would see one fatal crash per
+%% week by 2005, and one per day by 2025.\footnote{See
+%%   \cite{predictmorecrashes},
+%%   for example. This point was made to me by David Mindell, discussion
+%%   with the author, November 12, 2014.}
+%% This frequency of accidents was judged to be intolerable to
+%% airline customers, even though the overall accident rate would be no
+%% larger than its ``very safe'' \cite[p. 129]{PARCCAST} starting
+%% value.\footnote{By comparison, the CAST website describes: ``The
+%%   enhancements made over the past decade have made history in
+%%   commercial aviation - by making it the safest it has ever been.
+%%   Today, fatal accidents are reduced to only one in 22.8 million
+%%   flights, an absolutely remarkable achievement'' \cite{cast-safety.org}.} Though
+%% aircraft would be as safe as they 
+%% had ever been, people, on seeing the sheer number and scale of
+%% accidents, would be unlikely to choose to fly. While the issues facing
+%% aircraft and trust are not precisely the same as those for cars, this
+%% example shows that actual safety rates are only
+%% one component of interest when considering how consumers react to
+%% modes of transportation.
+
 However, when it comes to public adoption of automated cars,
 risk assessment is only part of the story. Does it make us feel better---more
 comfortable, more likely to get into autonomous taxis and spend our
@@ -1405,38 +1448,17 @@ cars. While this may have to do with a number of factors,
 including that aircraft do not remain on the ground during operation,
 it also represents a situation in which passengers give over their
 agency to pilots performing a job they do not understand and could not
-take over in an emergency.
-
-%SIMILAR ISSUES WITH TRAINS?\cite{??}
-
-The CAST working group has had to account for these issues in their
-recommendations about airplane safety since 1998. Part of their charter---to
-reduce the accident rate by 80 percent \cite[p. 28]{PARCCAST}---is
-motivated not so much by the rate itself but predictions about its
-most visible effects:  if air traffic were to continue to increase
+take over in an emergency. Perceived safety---due to accident scale,
+publicity, trust, or other factors---may be very different than actual
+safety.\footnote{The CAST working group has had to account for these
+  issues in their attempt to accident rate by 80 percent \cite[p.
+    28]{PARCCAST}.
+If air traffic were to continue to increase
 with industry predictions but to maintain the 1997 rate of 1.5 major
 crashes per 1 million departures, we would see one fatal crash per
-week by 2005, and one per day by 2025.\footnote{See
-  \cite{predictmorecrashes},
-  for example. This point was made to me by David Mindell, discussion
-  with the author, November 12, 2014.}
+week by 2005, and one per day by 2025.\cite{predictmorecrashes},
 This frequency of accidents was judged to be intolerable to
-airline customers, even though the overall accident rate would be no
-larger than its ``very safe'' \cite[p. 129]{PARCCAST} starting
-value.\footnote{By comparison, the CAST website describes: ``The
-  enhancements made over the past decade have made history in
-  commercial aviation - by making it the safest it has ever been.
-  Today, fatal accidents are reduced to only one in 22.8 million
-  flights, an absolutely remarkable achievement'' \cite{cast-safety.org}.} Though
-aircraft would be as safe as they 
-had ever been, people, on seeing the sheer number and scale of
-accidents, would be unlikely to choose to fly. While the issues facing
-aircraft and trust are not precisely the same as those for cars, this
-example shows that actual safety rates are only
-one component of interest when considering how consumers react to
-modes of transportation. Perceived safety---due to accident scale,
-publicity, trust, or other factors---may be very different. But
-while research into how to get human beings to trust robotic drivers
+airline customers.} But while research into how to get human beings to trust robotic drivers
 is being done \cite{rossTrust}, the voices pushing for autonomous cars sooner
 rather than later would suggest that the statistics are all that
 matters (and indeed, would tend to fabricate those statistics out of
@@ -1446,55 +1468,6 @@ mere predictions).
 \section{Planning, Policy, Cities}
 
 %%%CUt this down and integrate with the other content
-One particular strain of ideas speaks of the
-social benefits that would accrue if and when cars could be automated.
-Daniela Rus of MIT's CSAIL speaks of ``data-driven mobility'' and the
-idea of using the affordances of automated vehicles to improve traffic
-patterns.\footnote{Speaking at The Road Ahead Conference, hosted by
-  the MIT SENSEable City Lab, Cambridge MA, November 21, 2014.} Taking
-data from phones, road cameras, satellites, and other 
-sources already provides the potential of forecasting congestion, from
-this perspective,
-provided we ``put it all in the cloud'' so that it can be collated and
-queried at scale. Researchers at MIT and Stanford, as part of the
-SMART\footnote{Singapore-MIT Alliance for Research and Technology} initiative, have
-performed mathematical modeling work and found that a
-significantly smaller number of cars could supply all the mobility
-needs of Singapore if they were automated and could respond to
-demand.\footnote{Specifically, their models suggest that 300,000
-  vehicles could serve 
-all mobility needs during peak times with waits of less than 15
-minutes, and even a fleet of 200,000 vehicles could reduce wait times
-to about 3 minutes during off-peak hours \cite{frazzoliSingapore}. This
-compares to 779,890 passenger vehicles actually owned in Singapore,
-according to 2011 numbers.}
-
-Along similar
-lines, Christian Zulberti of the ENEL Foundation\footnote{A non-profit
-  energy and sustainable innovation research group.} envisions using
-autonomous vehicles to remove traffic lights in
-cities.\footnote{Speaking at The Road Ahead Conference, hosted by
-  the MIT SENSEable City Lab, Cambridge MA, November 21, 2014.} And Paolo
-Santi of the MIT SENSEable City lab talks of replacing traffic lights
-with a slot-based system,\footnote{Each vehicle would request a slot to pass through the
-intersection, and would be instructed to proceed according to the
-orchestrations of a central control system---a fruition of
-Vladimir Zworykin's work at RCA from the 1950s.} using cars that can communicate with each
-other and with infrastructure to double the capacity of the
-roadway.\footnote{Speaking at The Road Ahead Conference, hosted by
-  the MIT SENSEable City Lab, Cambridge MA, November 21, 2014.}  Singapore is engaging in
-controlled vehicle tests to work on just such ideas, to improve
-efficiency with vehicle-to-vehicle communications and predictive traffic
-patterns.\footnote{Lam Wee Shan, speaking at The Road Ahead Conference, hosted by
-  the MIT SENSEable City Lab, Cambridge MA, November 21, 2014.
-  Singapore seems to have a unique position in shaping this research,
-  due to its small size, high population density, existing vehicle
-  restrictions, and willingness to 
-  leverage itself as a technology test-bed.} As we
-might expect, these
-design concepts and stories have telling connections to each other, and
-to a web of other fictions, meshing well with the automated vehicle
-infrastructures envisioned by science fictions such as \emph{Minority Report}.
 
 %% Returning to reality, however, these concepts assume particular
 %% communicative competencies. While 
@@ -1505,21 +1478,6 @@ infrastructures envisioned by science fictions such as \emph{Minority Report}.
 %% vehicle-to-infrastructure communication channels to send and receive
 %% data and instructions. Several of these ideas also seem to present
 %% particularly classed views of who driverless technology would serve.
-%% An intersection that requires an electronic device to request a slot
-%% to cross will not gracefully tolerate the poor, or anyone who
-%% does not own a smart car or smart phone, whatever his or her age,
-%% race, class, or situation. Utopian visions of doubled capacity, when
-%% described (as this was) as halving the wait-time to get through an
-%% intersection, forget the complex dynamics of human behavior and our
-%% tendency toward homeostasis of inconvenience: city planning has found
-%% time and time again over the last 50 years that increasing the
-%% capacity of roadways does not result in less congestion, only more
-%% people driving \cite[p. 219]{marshallFuture}. One researcher I talked
-%% to put the problem in terms of Jevon's paradox: at some point,
-%% efficiency improvements will saturate, ``so the only true mechanism
-%% [of reducing congestion],
-%% at least the one that's been proven, through research, is pricing, is
-%% through taxation.''
 
 %% Nevertheless, these
 %% sorts of envisioned futures support a get-out-of-the-way rhetoric. As
@@ -1530,15 +1488,15 @@ infrastructures envisioned by science fictions such as \emph{Minority Report}.
 %% getting in the way of progress is either a luddite or a fearmonger who
 %% does not understand the technology. 
 
-Another prominent design fiction regarding autonomous vehicles focuses
-on personal mobility, especially for the elderly or disabled. Ryan
-Chin, who has worked on urban mobility systems as part of the Smart Cities
-initiative, suggests that in a world with an aging population (and
-especially in the United States given our often lacking public
-transportation infrastructure) personal mobility for a growing
-population unable to drive themselves should be one of the primary
-goals of future development.\footnote{Discussion with the author,
-  August 20, 2014.} %% Mobility, as an aspect of personal agency, is very important both
+%% Another prominent design fiction regarding autonomous vehicles focuses
+%% on personal mobility, especially for the elderly or disabled. Ryan
+%% Chin, who has worked on urban mobility systems as part of the Smart Cities
+%% initiative, suggests that in a world with an aging population (and
+%% especially in the United States given our often lacking public
+%% transportation infrastructure) personal mobility for a growing
+%% population unable to drive themselves should be one of the primary
+%% goals of future development.\footnote{Discussion with the author,
+%%   August 20, 2014.} Mobility, as an aspect of personal agency, is very important both
 %% for one's ability to live and provide for oneself, as well as for
 %% fostering independence and feelings of self-worth. As a side benefit,
 %% one researcher noted, providing automated mobility solutions should
@@ -1553,7 +1511,7 @@ Besides being presented as steps toward road safety, driverless cars
 also become part of the rhetoric of personal mobility, ``public''
 transportation, and urban planning. Potential or imagined
 benefits of these vehicles include empowerment for the blind or
-elderly (as discussed in chapter \ref{chap:1}), reduction in
+elderly, reduction in
 traffic congestion, elimination of parking problems, and
 persistent access to a dense network of hireable point-to-point
 transport vehicles (essentially, driverless taxis). There is
@@ -1612,7 +1570,39 @@ today use altered---and very conservative---driving techniques in
 order to increase their fuel efficiency \cite{orourkeHypermile}. As discussed in
 chapter \ref{chap:1}, researchers envision using V2V communications to
 share road information between vehicles, reduce gaps between cars, and
-thereby increase throughput and efficiency of the road system. But
+thereby increase throughput and efficiency of the road
+system.\footnote{Daniela Rus of MIT's CSAIL speaks of ``data-driven
+  mobility,'' using
+the affordances of automated vehicles to improve traffic
+patterns by collecting transit data ``in the cloud'' so it can be
+queried at scale. Speaking at The Road Ahead Conference, hosted by
+  the MIT SENSEable City Lab, Cambridge MA, November 21, 2014.} Singapore is engaging in
+controlled vehicle tests to work on just such ideas, to improve
+efficiency with vehicle-to-vehicle communications and predictive traffic
+patterns.\footnote{Lam Wee Shan, speaking at The Road Ahead Conference, hosted by
+  the MIT SENSEable City Lab, Cambridge MA, November 21, 2014.
+  Singapore seems to have a unique position in shaping this research,
+  due to its small size, high population density, existing vehicle
+  restrictions, and willingness to 
+  leverage itself as a technology test-bed.}
+SMART\footnote{Singapore-MIT Alliance for Research and Technology}
+research suggests a
+significantly smaller number of cars\footnote{Their modeling suggest that 300,000
+  vehicles could serve 
+all mobility needs during peak times with waits of less than 15
+minutes, and even 200,000 vehicles could reduce wait times
+to about 3 minutes during off-peak hours \cite{frazzoliSingapore}. This
+compares to 779,890 passenger vehicles actually owned in Singapore,
+according to 2011 numbers.} could supply all the mobility
+needs of Singapore if they were automated and could respond to
+demand. And Paolo
+Santi of the MIT SENSEable City lab suggests replacing traffic lights
+with a slot-based system,\footnote{Each vehicle would request a slot to pass through the
+intersection, and would be instructed to proceed according to the
+orchestrations of a central control system---a fruition of
+Vladimir Zworykin's work at RCA from the 1950s.} to double the capacity of the
+roadway.\footnote{Speaking at The Road Ahead Conference, hosted by
+  the MIT SENSEable City Lab, Cambridge MA, November 21, 2014.} But
 these proposals involve numerous potential pitfalls. While coordinated
 fleets of vehicles could increase the throughput of roads by 2 to 20
 times \cite[p. 229]{adamsBrewerRoadways},\footnote{Adams and Brewer
@@ -1624,9 +1614,17 @@ throughputs of buses or subway trains, which can be 100 times
 greater \cite[p. 222]{loweCars}.\footnote{Specifically, Lowe describes that
   per-hour capacity for 
   a rail line can be as high as 70,000 people, compared with 30,000 for buses
-and just 8,000 for private cars.} Much depends on actual usage.\footnote{Subject to
-homeostasis of inconvenience and the Jevons paradox, as mentioned in
-chapter \ref{chap:1}.} If a factor of 10
+and just 8,000 for private cars.} Much depends on actual usage.
+Utopian visions of increaased capacity forget the complex dynamics of human behavior and our
+tendency toward homeostasis of inconvenience: city planning has found
+time and time again over the last 50 years that increasing the
+capacity of roadways does not result in less congestion, only more
+people driving \cite[p. 219]{marshallFuture}.\footnote{One researcher I talked
+to put the problem in terms of Jevon's paradox: at some point,
+efficiency improvements will saturate, ``so the only true mechanism
+[of reducing congestion],
+at least the one that's been proven, through research, is pricing, is
+through taxation.''} If a factor of 10
 increase in highway throughput were possible, but caused a factor of
 10 increase in overall miles driven, congestion would not be
 ameliorated, and significantly more environmental impact might result. Any
@@ -1641,16 +1639,36 @@ embrace industrialization and its mistakes'' \cite[p.
   227]{adamsBrewerRoadways}.} And therefore it is
 the transportation system, not automated vehicles alone, that must be remodeled.
 
-Fleets of fully automated vehicles could reasonably be expected to increase
-efficiency and decrease reluctance to take trips---making them
-less inconvenient by allowing the driver to perform other tasks---in
-which case vehicle usage would be expected to increase. This result is actually
+%% One particular strain of ideas speaks of the
+%% social benefits that would accrue if and when cars could be automated.
+% Taking
+%% data from phones, road cameras, satellites, and other 
+%% sources already provides the potential of forecasting congestion, from
+%% this perspective,
+%% provided we ``put it all in the cloud'' so that it can be collated and
+%% queried at scale. Researchers at MIT and Stanford, as part of the
+
+
+%% Along similar
+%% lines, Christian Zulberti of the ENEL Foundation\footnote{A non-profit
+%%   energy and sustainable innovation research group.} envisions using
+%% autonomous vehicles to remove traffic lights in
+%% cities.\footnote{Speaking at The Road Ahead Conference, hosted by
+%%   the MIT SENSEable City Lab, Cambridge MA, November 21, 2014.}  As we
+%% might expect, these
+%% design concepts and stories have telling connections to each other, and
+%% to a web of other fictions, meshing well with the automated vehicle
+%% infrastructures envisioned by science fictions such as \emph{Minority Report}.
+
+%% Fleets of fully automated vehicles could reasonably be expected to increase
+%% efficiency and decrease reluctance to take trips---making them
+%% less inconvenient by allowing the driver to perform other tasks---in
+%% which case vehicle usage would be expected to increase. This result is
+Increases in use are
 implicit in the visions of those who would support fleets of
 driverless taxis to move people around cities:  these concepts are
 explicitly oriented toward providing for needs that are presently
-underserved, and so presenting automated vehicles as a solution to
-city transit problems implies greater usage of such vehicles to meet
-those needs. Just as increases in the use of cars to commute have
+underserved. Just as increases in the use of cars to commute have
 decreased the quality of urban spaces, what is to stop cities of
 automated vehicles from
 being even more unfriendly to
@@ -1670,9 +1688,14 @@ habits need to be broken---like the rules of the AASHTO ``Green
 Book,'' which despite criticism are often taken almost as natural 
 law \cite[p. 181, 183]{swopeTrenton}---and new ones built to replace them. 
 
-However, we should be aware that these utopian visions of driverless
-cities, however contingent, 
-are not universal. Looking more closely, one informant described to me, the visions
+%% However, we should be aware that these utopian visions of driverless
+%% cities, however contingent, 
+%% are not universal.
+These utopian visions are not universal: an intersection that requires
+an electronic device to request a slot 
+to cross will not gracefully tolerate the poor, or anyone who
+does not own a smart car or smart phone, whatever his or her age,
+race, class, or situation.  Looking more closely, one informant described to me, the visions
 of driverless car developers
 often have a strong male bias. They see businessmen
 taking driverless cabs to work, and students getting drunk and, unable
@@ -1716,14 +1739,13 @@ improve, rather than erode, equitable access to transportation.
 %%be possible but is not the intended mode of operation
 
 What gives us confidence in these visions? Why don't they seem
-outlandish, like some of the works of science-fiction with which they
-share this chapter? Some of this has to do with their manner of
+outlandish, like some of the works of science-fiction that began this
+chapter? Some of this has to do with their manner of 
 presentation, lent the gravitas of ``science'' by emanating from
 scientists rather than from the
 illusionary powers of Hollywood. But many of these designed dreams are
-overly optimistic, or not sufficiently thoughtful about the risks involved.
-
-When the
+overly optimistic, or not sufficiently thoughtful about the risks
+involved. When the
 expected user is the commuting, upper-middle-class, working father or
 the privileged college boy (and the opposers of the technology are
 branded by some, as we saw, as ``soccer moms''), we risk developing
@@ -1735,6 +1757,12 @@ all developers in this space, it is not a vision we can afford.
 
 \section{Conclusion}
 
+% STAGE DIRECTION: examined the vision, examined why it matters; need
+% a fresh lens however, following the example of the urban planning
+% section in trying to tackle large-scale things: must look beyond the
+% individual. What are other structures/models for thinking about
+% automation and what affect do they have on our conclusions.
+
 This chapter has investigated six different perspectives on the
 social, cultural, and informational contexts of the autonomous
 vehicle:  the technologies of vision and of mapping involved
@@ -1743,8 +1771,9 @@ data it collects, the statistics with which it is motivated, the
 ethics and epistemologies with which it is designed, and the civic
 ends to which it might be mobilized. While in chapter \ref{chap:1} I
 illuminated the historical background behind the dominant narrative of
-the self-driving vehicle, here I sought to illuminate the
-consequences of this vision. If we accept this narrative, these design
+the self-driving vehicle, here I sought to illuminate future visions
+and their
+consequences. If we accept this narrative, these design
 fictions, for the automotive future, what comes along for the ride? We
 have seen that the automated vehicle so envisioned exists at the
 nexus of a number of deep, important questions about our relationships

@@ -26,35 +26,48 @@
 %%TODO (DONE): p 110: high performance racing pushing things? put in a little bit
 %%about F1 etc in the conclusion
 
+%% Self-driving operation is considered---often via a
+%% speculative or ideological basis---either good or not-good compared to
+%% current vehicles with driver-assistance technologies; it is not generally
+%% perceived as the upper bound on a spectrum of automation
+%% approaches.\footnote{And as we will see in this chapter, even
+%%   so-called ``full'' autonomy would not, in practice, be so simply
+%%   disconnected from human oversight.}
+
+% STAGE DIRECTION: rethinking the terms of what we have been talking
+% about; we'll see that this narrative was always implicit but was
+% being talked about as a failure not a strength
 
 Most automated vehicle narratives---and all those we have investigated
 so far---rest on two primary, interlocking assumptions. First, the nature of the
 ideal human-machine interaction for vehicle control is assumed to be
 known. Second, an inevitable progression toward not only greater
 autonomy but complete autonomy is assumed as the
-starting point of these arguments. Rarely if ever does the question of
+starting point of these arguments.\footnote{Google's claim is that only complete
+vehicle automation can entirely address road safety issues, but Urmson
+goes further to say that the incremental approach will 
+never achieve the necessary full automation: ``That's like me saying
+if I work really hard at jumping, one day I will be able to fly''
+\cite{friedGoogle}.
+While layers of assistive technologies cannot be expected to simply become
+driverless without high-level control and coordination, this perspective wrongly
+assumes that driverless vehicles, ``completely'' automated, are the
+only reasonable end goal.} Rarely if ever does the question of
 how much autonomy or supervision to provide to the automated system
 enter the discussion as an engineering parameter over which designers
 have control, and which should be responsive to larger goals. Instead,
 advanced driver-assistance technologies and fully-self-driving
 operation with no need for human supervision are recognized as
 technologically connected, but perceived as fundamentally dichotomous
-approaches. Self-driving operation is considered---often via a
-speculative or ideological basis---either good or not-good compared to
-current vehicles with driver-assistance technologies; it is not generally
-perceived as the upper bound on a spectrum of automation
-approaches.\footnote{And as we will see in this chapter, even
+approaches. And through all this,
+fully-automated\footnote{And as we will see in this chapter, even
   so-called ``full'' autonomy would not, in practice, be so simply
-  disconnected from human oversight.} And through all this,
-fully-automated operation is assumed to be the ultimate end goal, in a
-realm of complete technological possibility: the ideal human-machine
-interaction is, in a sense, no human-machine interaction. As I have
-outlined, this perspective comes from particular roots (automation
-history, artificial intelligence, science fiction), but is not the
-only way to envision automated systems. Let us look at
-other examples of automated technologies (in space, underwater, and in
-the air) to see how previous sets of designers and users have
-negotiated compromises of automation, autonomy, and human-control.
+  disconnected from human oversight.} operation is assumed to be the
+ultimate end goal: the ideal human-machine
+interaction is, in a sense, no human-machine interaction. This
+perspective comes from particular roots in automation history, but is
+by no means the only way to read this history or to envision automated
+systems. 
 
 %%CUT Given these underlying
 %%similarities in terms of human-machine interaction,
@@ -119,8 +132,8 @@ are difficult to come by. Test drivers are, expectedly, required to
 %%shrouded in secrecy
 
 However, in May of 2012,
-Google actually tested one of these vehicles in Nevada, on public
-roads, in the only government test yet conducted in the United States.
+Google tested one of these vehicles on public
+roads in Nevada, in the only government test yet conducted in the United States.
 The documentation of this test---which occurred with engineers Chris
 Urmson (the project lead) and Anthony Levandowski in the front
 seats---exposes fractures in the traditional perspectives on vehicle
@@ -140,7 +153,8 @@ advanced. Instead, it is evidence that real operations are more
 nuanced than narratives of them tend to allow for, involving mixes of
 attention and control that change over time and varying road situations.
 
-This operational mode, then, is more properly a human supervisory mode
+This operational mode, then, is more properly a human supervisory, or
+joint human-machine, mode
 than an autonomous one. The study of HSC is by no means new, but
 perhaps because it does not interact with human fears of obsolescense,
 loss of agency, or robot apocalypse the way AI does---it doesn't stand
@@ -154,38 +168,45 @@ as the self-driving vehicle narrative is organized around the ultimate
 goal of fully autonomous robot cars. Supervisory control, however,
 admits different goals and possibilities.
 
-The core text of the supervisory control literature is Thomas
+%% Though work on such systems had been occurring
+%% at the MIT Man-Machine Systems Laboratory---among other places---for
+%% the previous 30 years, this book represents the first time many of the
+%% concepts that were ``maturing'' over those years of dissertations were
+%% brought together into one source \cite[p. xix]{sheridan}.
+
+%% Later human factors or \emph{ergonomics}
+%% work continued to probe such questions, though m
+%%  Though control researchers
+%% interested in the behaviors of humans in interactions with highly
+%% automated systems were already pursuing similar work, 
+
+Thomas
 Sheridan's \emph{Telerobotics, Automation, and Human Supervisory
-  Control} from 1992. Though work on such systems had been occurring
-at the MIT Man-Machine Systems Laboratory---among other places---for
-the previous 30 years, this book represents the first time many of the
-concepts that were ``maturing'' over those years of dissertations were
-brought together into one source \cite[p. xix]{sheridan}. Despite its
-age, the book remains a great introduction to the field\footnote{And in fact, Sheridan is almost prescient in his
+  Control} comes out of previous work at the MIT Man-Machine Systems
+Laboratory, and is a core text in the field. Despite its
+age it remains a great introduction\footnote{And in fact, Sheridan is almost prescient in his
   identification of the vehicle automation technologies (Advanced
   Vehicle Control Systems, or AVCS) that would
   make it to market: all of the ones he lists we see today, and the
   last (like automatic lane keeping) are really only just now becoming
   available. Many of these technologies were in development at the
   time, as Sheridan's book came out during the middle of the Eureka
-  PROMETHEUS project.} as well as a
-much-needed counterpoint to other tendencies in the field of
-automation. Human supervisory control history in fact
-shares touch-points with the history of automation in its popular
-form, but comes more out of theories of management and human factors
+  PROMETHEUS project.} and a
+much-needed counterpoint to na\"{i}ve ideas about automation.\footnote{Human
+supervisory control history in fact 
+shares touch-points with the history of automation, coming out of
+theories of management and human factors 
 engineering. Frederick Winslow Taylor is identified as a key player in
-the history, less for his ``dehumanizing'' approach to the worker than
+this history, less for his ``dehumanizing'' approach to the worker than
 as
 his intent to generate ``a new interest in the sensorimotor aspects of
 human performance''---in other words, the way that human capabilities
 interact with the tools they use to accomplish the tasks they are
-set \cite[p. 7]{sheridan}. Later human factors or \emph{ergonomics}
-work continued to probe such questions, though many supervisory
-control systems had already entered relatively common use, including
+set \cite[p. 7]{sheridan}.} Many systems involving supervisory
+control had already entered relatively common use (including
 aircraft autopilots, automatic elevators, and even, perhaps arguably,
-washers and dryers \cite[p. 8]{sheridan}. Though control researchers
-interested in the behaviors of humans in interactions with highly
-automated systems were already pursuing similar work, supervisory
+washers and dryers \cite[p. 8]{sheridan}) before the field was
+constituted:  supervisory
 control, according to Sheridan, truly came into its own as part of
 research on the teleoperation\footnote{\emph{Teleoperation} means the
   extension of an operator's sensing and control capacity to a remote
@@ -197,19 +218,31 @@ apparent the great benefit of having the remotely-operated system
 include its own internal control loop to allow it to perform simple
 delegated tasks \cite[p. 9]{sheridan}.
 
-As Sheridan describes, the concept of
-supervisory control comes from
-the idea of human supervision within management structures:  in an idealized
-case, a human
-supervisor instructs her subordinates, who carry out tasks, summarize
-results, and report them back to the supervisor who decides what
-further actions are required; the supervisor may
-exercise various amounts of monitoring or direct control over the
-actions of her subordinates, based on their skill and her trust in
-their abilities. Replacing the human subordinates with computerized
-components completes the basic analogy to supervisory control as it is
-used here. Sheridan's definition of supervisory control in its
-strictest sense is that
+%% As Sheridan describes, the concept of
+%% supervisory control comes from
+%% the idea of human supervision within management structures:  in an idealized
+%% case, a human
+%% supervisor instructs her subordinates, who carry out tasks, summarize
+%% results, and report them back to the supervisor who decides what
+%% further actions are required; the supervisor may
+%% exercise various amounts of monitoring or direct control over the
+%% actions of her subordinates, based on their skill and her trust in
+%% their abilities. Replacing the human subordinates with computerized
+%% components completes the basic analogy to supervisory control as it is
+%% used here.
+
+%% \footnote{Why is this
+%%   AI-focused view so prominent? I would argue it is because it
+%%   captures the public imagination, via science-fiction, and is
+%%   rhetorically more impressive. As a way to market and drum-up
+%%   excitement and investment, autonomy simply sounds more interesting
+%%   than ``supervision,'' while companies can walk-back their actual
+%%   products toward more comfortable, HSC applications. Additionally, I
+%%   would speculate that the relatively low, marginal position of human
+%%   factors in engineering culture is related.} 
+
+Coming out of an idealized picture of supervision and delegation
+within management structures, supervisory control occurs when
 \begin{quote}one or more human operators are intermittently
   programming and continually receiving information from a computer
   that itself closes an autonomous control loop through artificial
@@ -233,15 +266,7 @@ may assume direct control of the entire system or certain variables
 within the system at various points \cite[p. 3]{sheridan}.} is
 emblematic of the entire HSC 
 project, and represents its fundamental ideological difference from
-the AI-focused perspective on automated systems.\footnote{Why is this
-  AI-focused view so prominent? I would argue it is because it
-  captures the public imagination, via science-fiction, and is
-  rhetorically more impressive. As a way to market and drum-up
-  excitement and investment, autonomy simply sounds more interesting
-  than ``supervision,'' while companies can walk-back their actual
-  products toward more comfortable, HSC applications. Additionally, I
-  would speculate that the relatively low, marginal position of human
-  factors in engineering culture is related.} This is neither a
+the AI-focused perspective on automated systems. This is neither a
 weakness nor an unwillingness to be sufficiently bold, but a
 well-considered engineering strategy. Sheridan identifes seven
 motivations to develop supervisory control, of which
@@ -264,23 +289,27 @@ here in their entirety:
 (6) to provide a ``fail-soft'' capability when failure in the
   operator's direct control would prove catastrophic \cite[p. 12]{sheridan}.
 \end{quote}
+%%  as it is a
+%% tricky problem to get right. Human operators respond differently under
+%% laboratory test conditions than they do under the stress of actual
+%% operations, a fact that troubled X-15 designers attempting to tune
+%% their fly-by-wire controls
+
+%%  Though
+%% improvements have been made in this area, and modeling operator
+%% responses is a topic of great interest especially in aeronautical and
+%% astronautical design, human operators continue to be
+%% unpredictable.}
 
 Though supervisory control, as well as human factors engineering by proxy, is
 interested in mathematically modeling the human operator in her
 engagement with the control system---itself a fraught project in
 several ways\footnote{People rarely behave as ideal mathematical
-  functions. The black-boxing of the operator into a stimulus-response
-system is something HF and HSC continue to struggle with, as it is a
-tricky problem to get right. Human operators respond differently under
-laboratory test conditions than they do under the stress of actual
-operations, a fact that troubled X-15 designers attempting to tune
-their fly-by-wire controls \cite[p. 54]{DM}. Though
-improvements have been made in this area, and modeling operator
-responses is a topic of great interest especially in aeronautical and
-astronautical design, human operators continue to be
-unpredictable.}---the specifics of such modeling are not necessary to
-understand the supervisory control concept or the doors it opens in
-understanding the operations of ``self-driving'' vehicles. To provide
+  functions, responding differently in test conditions and real life.
+  The black-boxing of the operator into a stimulus-response 
+system was an issue on the X-15 \cite[p. 54]{DM} and continues to be
+problematic.}---the specifics of such modeling are not necessary to 
+understand the concept or its application to ``self-driving'' vehicles. To provide
 a specific example of supervisory control, consider the following
 situation: a highly-automated vehicle is set up to operate in a
 supervised manner. The vehicle is capable of navigating traffic on its
@@ -329,8 +358,7 @@ to drowsiness) or an
 operator's failure to control, the vehicle will attempt to behave
 safely (5 and 6). While actually designing and engineering such a
 system is by no means as simple as sketching it briefly as I have, it
-should be clear that a vehicle of this description is not only
-potentially very useful, but is at least as plausible as a fully
+should be clear that a vehicle of this description is at least as plausible as a fully
 autonomous robotic car. It presents unique problems of human
 interaction and attention which cannot go unremarked upon, but it also
 presents unique opportunities for blended 
@@ -339,6 +367,9 @@ vision, mapping, or automated sensing, but may do much to address
 human discomfort with automation systems and concern with being
 outside of the control loop of their automated vehicle.
 
+%% is not only
+%% potentially very useful, but
+%TODO return here
 
 Issues with attention have always been implicit within the discussion,
 since inattention is precisely the human quality that makes
@@ -347,24 +378,61 @@ self-driving vehicles most necessary, at least rhetorically. %% But human
 %% us about the limits of human attention, and indeed such human factors
 %% research is the source of the NHTSA's claim that users of
 %% higher-levels of automation will not, and will not be expected to,
-%% monitor its operation. An often-used justification
-%% for entirely eliminating the human from the vehicle control loop is
-%% related to this tendency not to monitor the automation system:
+%% monitor its operation. 
 Experience shows that human operators who become reliant on the
 automation to perform a task are ill-equipped to take that task back
 in a crisis situation, and task hand-over is likely to be
-catastrophic \cite{AF447} \cite{Chowpaper}. %% A transportation systems
+catastrophic \cite{AF447} \cite{Chowpaper}. An often-used justification
+for entirely eliminating the human from the vehicle control loop is
+related to this tendency not to monitor or be cognitively involved
+with an operating automation system.\footnote{Larsson suggests a less perfect
+  automation system might be better 
+  by some metrics, as experience with it is empirically related to
+  greater awareness of its weaknesses, and an expectation of having to
+take control intermittently \cite{larsson}. Notably, this paper and
+others like it are representative of human factors or ergonomics
+research.} Therefore, companies like Google seems to dream
+of minimizing the interface as much as possible, rather than more
+broadly considering what sort of interface makes sense \cite{markoffNext}.
+While the interface/UX-first approach of tech companies entering this
+space seems as if it
+would put interaction at the center, their focus on simplicity often
+presupposes a certain kind of highly automated operation.
+So though supervisory control is
+implicit in much popular writing about autonomous systems,
+it is not generally acknowledged as an important and
+developed field.\footnote{Human supervisory control is not even that well
+considered in many engineering fields; even today, the human factors
+engineer is often low in status within the engineering hierarchy, and
+is too often brought in at the last minute to design an interface for
+an already specified device rather than actually
+being involved in 
+device design from the beginning, as effective joint-cognitive systems
+engineering
+requires. David Mindell,
+  discussion with the author, September 8, 2014.} %% While the related
+%% discipline of interaction design or 
+%% user-experience design is gaining in importance in the information
+%% technology sector,\footnote{This I can speak to personally, through my
+%%   involvement with programming communities building web and mobile
+%%   applications. Demand for UI/UX designers has increased dramatically,
+%% following the success of design-first product development by IT
+%% companies, most notably Apple.} this too often (though not always)
+%% addresses the interface at a surface-level, without consideration of deeper
+%% dynamics of human and joint cognitive processes.
+
+
+
+%% It may be
+%% that this kind of engineering work gains greater recognition with the
+%% entry of Google, Apple, Tesla, and other high-technology companies
+%% into the autonomous vehicle space, but 
+
+%% A transportation systems
 %% researcher I spoke to 
 %% even cited this as the key reason he felt that highway-only
 %% self-driving systems would not work, and that companies would have to
 %% design for full automation everywhere.
-\footnote{Some researchers,
-  however, do suggest the opposite: Larsson suggests a less perfect
-  system might be better 
-  by some metrics, as experience with it is empirically related to
-  greater awareness of its weaknesses, and an expectation of having to
-take control intermittently \cite{larsson}. Notably, this paper and
-others like it are representative of human factors or ergonomics research.}
 
 %% The AF447 crash brings a number of human supervisory control questions to
 %% the fore. What is the proper role of pilots? And how quickly can they
@@ -376,38 +444,6 @@ others like it are representative of human factors or ergonomics research.}
 %% eliminate the use of autopilots. Most likely, the correct answer is
 %% somewhere in between.
 
-
- While supervisory control is
-implicit in much popular writing about autonomous systems,
-it is not generally acknowledged as an important and
-developed field. Human supervisory control is not even that well
-considered in many engineering fields; even today, the human factors
-engineer is often low in status within the engineering hierarchy, and
-is too often brought in at the last minute to design an interface for
-an already specified device,\footnote{This subtlety of the politics
-  within engineering communities themselves was not something I was
-  previously aware of, but was made clear to me by David Mindell.
-  Discussion with the author, September 8, 2014.} rather than actually
-being involved in 
-device design from the beginning, as effective joint-cognitive systems
-engineering
-requires. While the related discipline of interaction design or
-user-experience design is gaining in importance in the information
-technology sector,\footnote{This I can speak to personally, through my
-  involvement with programming communities building web and mobile
-  applications. Demand for UI/UX designers has increased dramatically,
-following the success of design-first product development by IT
-companies, most notably Apple.} this too often (though not always)
-addresses the interface at a surface-level, without consideration of deeper
-dynamics of human and joint cognitive processes. It may be
-that this kind of engineering work gains greater recognition with the
-entry of Google, Apple, Tesla, and other high-technology companies
-into the autonomous vehicle space, but so far Google seems to dream
-of minimizing the interface as much as possible, rather than more
-broadly considering what sort of interface makes sense \cite{markoffNext}.
-While the interface/UX-first approach of tech companies seems as if it
-would put interaction at the center, the focus on simplicity
-presupposes a certain kind of highly automated operation.
 %%Wrap up: Actual use all over industry (Sheridan 10-11), and implicit
 %in much popular writing, 
 %just not generally acknowledged as an important field in all its complexity
@@ -418,15 +454,26 @@ presupposes a certain kind of highly automated operation.
 
 \section{Cognitive Networks, Networked Subjectivities}
 
+%% In this
+%% pursuit it is worthwhile to expand our
+%% view to encompass other related work.
+%% 's ``How a Cockpit Remembers Its Speeds'' lays out a framework
+%% for understanding the cognitive activities of a human-machine system,
+%% and
+
+%% \footnote{As he identifies,
+%% the outcomes of tasks are not determined by individual components of a
+%% system but by the overall dynamics of the system, and the behaviors of
+%% a complex thinking system cannot be ``inferred from the properties of
+%% individual agents, alone,'' irrespective of the detail to which those
+%% individuals may be studied or modeled \cite[p. 265]{hutchinsCockpit}.}
+
 With our attention on supervisory control, new questions and processes
 come into focus. If the machine is clearly no
 longer the sole component of analysis, what formerly neglected pieces
 must be considered? How do we assess system design or performance, or
-think about the ways these newly expanded devices operate? In this
-pursuit it is worthwhile to expand our
-view to encompass other related work. As Sheridan notes, much study of
-supervisory control has gone on elsewhere under different names, but
-with similar guiding concepts. Coming instead from cognitive
+think about the ways these newly expanded devices operate? As Sheridan notes, much study of
+supervisory control has gone on elsewhere under different names. Coming instead from cognitive
 science,\footnote{And, notably, he responds to the canonical focus of
   cognitive science on the ``mental processes that organize the
   behavior'' of an individual, a position Hutchins cites as having its
@@ -438,24 +485,14 @@ inflected by AI are so different than they would be if told instead
 through the lens of supervisory control.}
 Edwin Hutchins and his anthropological work on group cognition
 processes expands from the traditional focus on the individual agent
-to systems of interacting agents and technologies. As he identifies,
-the outcomes of tasks are not determined by individual components of a
-system but by the overall dynamics of the system, and the behaviors of
-a complex thinking system cannot be ``inferred from the properties of
-individual agents, alone,'' irrespective of the detail to which those
-individuals may be studied or modeled \cite[p. 265]{hutchinsCockpit}.
-Hutchins's ``How a Cockpit Remembers Its Speeds'' lays out a framework
-for understanding the cognitive activities of a human-machine system,
-and uses the example of an airline cockpit to show how the cognitive
+to systems of interacting agents and technologies.
+Hutchins uses the example of an airline cockpit \cite{hutchinsCockpit} to show how the cognitive
 properties of a system as a whole may be very different than those of
-individual human actors within that system.\footnote{This is also true
-for systems that do not actually contain ``automation'' technologies
-as part of their make-up. The speed bugs discussed in ``How a Cockpit
+individual human actors within that system.\footnote{The speed bugs discussed in ``How a Cockpit
 Remembers Its Speeds''---which note on the airspeed indicator
 important speeds at which the 
 flight characteristics of the aircraft need to be altered to maintain
-safe operations---are rudimentary in terms of other forms of
-cockpit automation, but the issues they present do not disappear with
+safe operations---are rudimentary, but the issues they present do not disappear with
 increased automation. Hutchins and Klausen co-wrote another
 article in 1995 titled ``Distributed Cognition in an Airline
 Cockpit,'' \cite{hutchinsKlausen} which focuses on the
@@ -466,28 +503,36 @@ technological actants, is primarily focused on the joint capabilities
 of the human crew, and presents fundamentally related cognitive
 systems issues.} Studying the humans alone,
 or the automation alone, does not suffice to explain the overall
-behavior of a joint human-machine cognitive system.\footnote{It is
-  worth noting here that these are not the remarks of a maverick or a
-  ``mere'' anthropologist working on his own. The research involved
-  was supported by a grant from the NASA Ames Research Center, as part
-  of the Aviation Safety/Automation Program.}
+behavior of a joint human-machine cognitive system.
 
-Hutchins is very particular about the point that the speed bugs and
-other cockpit devices function as more than just memory aids for the
-pilots. They do not na\"{\i}vely increase pilot memory. Instead, they
+%% about the point that the speed bugs and
+%% other cockpit devices function as more than just memory aids for the
+%% pilots. They
+%% : specifically, changing a task that
+%% requires memory and comparison to a readout to a simpler task of
+%% ``judgments of spatial proximity'' of the needle to the speed
+%% bugs
+
+%% I introduce this material here because
+%% Hutchins, by looking at cognitive behaviors within this particular
+%% setting,
+
+%% Hutchins identifies a new unit of analysis:
+%% the cockpit as a whole.
+
+Hutchins is very particular that speed bugs do not na\"{\i}vely
+increase pilot memory. Instead, they 
 are information processing tools, responsible for changing the form of
 information, giving it a new representation and altering the
-interaction with that information: specifically, changing a task that
-requires memory and comparison to a readout to a simpler task of
-``judgments of spatial proximity'' of the needle to the speed
-bugs \cite[p. 282]{hutchinsCockpit}. The whole system can be said to
+interaction with that information \cite[p. 282]{hutchinsCockpit}. The whole system can be said to
 have a ``memory'' that is distinct from the pilot's memory: the
 ``\emph{cockpit system} remembers speeds'' by virtue of the pilots
 within that system judging a needle on the airspeed indicator against
 the position of the bug \cite[p.
-  283]{hutchinsCockpit}. I introduce this material here because
-Hutchins, by looking at cognitive behaviors within this particular
-setting, identifies a new unit of analysis: the cockpit as a whole.
+  283]{hutchinsCockpit}.\footnote{It is 
+  worth noting here that these are not the remarks of a maverick. The research involved
+  was supported by a grant from the NASA Ames Research Center, as part
+  of the Aviation Safety/Automation Program.}
 Current vehicle automation systems are more complex than the cockpit's
 visual-mechanical aides, but are appropriate subjects of the same kind
 of analysis.\footnote{As an aside, I would argue that if a number of
@@ -497,45 +542,42 @@ because the individual
 is still the unit of analysis. When the unit of analysis is instead
 set at the individual plus his or her immediate technological or biological
 surroundings, much greater differences in capability become apparent.}
-Automation likewise takes complicated jobs involving spatial
+Complex jobs involving spatial
 processing and reasoning (driving between the lines and avoiding other
-cars), and transforms them through technological interfaces into other
+cars), are likewise transformed through technological interfaces into other
 tasks. It is precisely these changes in task to which we should attend
 if we would like to properly understand (and design) the role of the
-operator within an automated vehicle. But this perspective is not
-represented in the prevailing guides for automated system development.
-While Hutchins's cockpit remembers its speeds through a combination of
-human activity and physical cognitive aids, the NHTSA's ``vehicle''
-may sometimes ``not perform a control function'' \cite[p. 3]{NHTSA} and
-nevertheless remain on the road. The NHTSA's documentation instead
-focuses simplistically on whether the human or the ``vehicle''
-controls a function, rather than addressing what control involves or how it may
-be shared between human and automated systems.
+operator within an automated vehicle. 
+
+%% Specifically,
+%% significant research interest in human factors engineering focuses on
+%% the problem of so-called ironies of automation, whereby
+%% It might
+%% not be clear at first glance how this would be, and it is in part an
+%% interface problem---with how information is presented to the operator,
+%% not with the concept of automation itself. But a
+
+%% ---the system still ``knows'' how to turn, for
+%% example, but instead of the driver turning the wheel, she interacts
+%% with the automation systems in cognitively intense ways. Attending to
+%% the complex internal dynamics of
+%% the joint system---l
 
 A more nuanced view of the cognitive tasks involved in interacting
 with automated systems also goes quite far toward clarifying some
-of the more difficult parts of system automation. Specifically,
-significant research interest in human factors engineering focuses on
-the problem of so-called ironies of automation, whereby increasing
-automation actually 
-increases the load on the operator, rather than decreasing it, and
-leads to increased failure rather than increased
-reliability \cite{parasuramanW}. It might
-not be clear at first glance how this would be, and it is in part an
-interface problem---with how information is presented to the operator,
-not with the concept of automation itself. But a distributed,
+of the more difficult parts of system automation. Ironically, increasing
+automation can
+increase the load on the operator, rather than decreasing it, and
+lead to increased failure rather than increased
+reliability \cite{parasuramanW}. A distributed,
 cognitive attention to automation highlights the problem:  an
 automation system may transform a task from a complex visual task for the
 operator (e.g. driving) to another complex visual task (e.g. monitoring a control
 panel with many displays and lights, and switches to press) while the
 overall processes within and results of the system remain
-fundamentally congruent---the system still ``knows'' how to turn, for
-example, but instead of the driver turning the wheel, she interacts
-with the automation systems in cognitively intense ways. Attending to
-the complex internal dynamics of
-the joint system---looking at which tasks are
+fundamentally congruent. Looking at which tasks are
 allocated where, and what the demand on human perceptual and
-decision-making systems is, at any particular time---improves the
+decision-making systems is at any particular time, improves the
 analysis. As one should expect, 
 people drive largely based on experience and
 instinct, \cite{knaptonDriverless} not logical 
@@ -547,41 +589,46 @@ this can only be done when the designer goes beyond the conception of
 the isolated individual user'' \cite[p. 13]{hutchinsKlausen}.
 Appropriately recognizing interactions is critical to successful design.
 
-Not to belabor the point, however, the perspective I am describing is
-not fundamentally new---simply, its importance is not often
-recognized outside of particular disciplinary
-boundaries.\footnote{This is probably because the issues are
-  somewhat complex, and do not fall into neat dichotomies of
-  human/machine. Again, the relatively marginalized position of
-  human-factors engineering may be part of this.} Supervisory control and 
-joint-cognitive systems approaches are actually in use all over
-industry, even in cases where they are not necessarily cast in
-those terms: from thermostats and elevators to existing autopilot systems.
+%% Not to belabor the point, however, the perspective I am describing is
+%% not fundamentally new---simply, its importance is not often
+%% recognized outside of particular disciplinary
+%% boundaries.\footnote{This is probably because the issues are
+%%   somewhat complex, and do not fall into neat dichotomies of
+%%   human/machine. Again, the relatively marginalized position of
+%%   human-factors engineering may be part of this.} Supervisory control and 
+%% joint-cognitive systems approaches are actually in use all over
+%% industry, even in cases where they are not necessarily cast in
+%% those terms: from thermostats and elevators to existing autopilot systems.
 
 %%TODO2 <??? Describe more from Sheridan 10-11 or run paragraphs together>
+%% This situation is not quite
+%% the same for cars, which are generally not orchestrated at a
+%% system-level in the same fashion (though many current and historical
+%% models of vehicle automation would require this). But in principle,
+%% the roadway presents a related 
+%% information processing situation.
 
-Hutchins and Klausen make it a particular point to highlight that
-human-machine dynamics of information transfer are at the center of
-the appropriate and safe operation of aircraft: ``if we step back and
+
+%% And even when that vehicle system involves computerized
+%% displays, sensors, and people, the same point holds;  at a high-level of oversight, as
+%% one would find represented in an employee monitoring an automated
+%% vehicle fleet remotely 
+%% from an office, the parallelism with aircraft operations returns in
+%% full force.
+
+Complex dynamics of information transfer are critical
+for the safe operation of large-scale systems.\footnote{Hutchins and
+  Klausen state: ``if we step back and 
 look at the entire aviation system and ask how
 it is that aircraft are kept separated from each other, we see that it
 is through the propagation of representational state of descriptions
 of flight paths into the state of the aircraft controls
-themselves'' \cite[p. 14]{hutchinsKlausen}. This situation is not quite
-the same for cars, which are generally not orchestrated at a
-system-level in the same fashion (though many current and historical
-models of vehicle automation would require this). But in principle,
-the roadway presents a related 
-information processing situation. The propagation of a ``plan'' of the
+themselves'' \cite[p. 14]{hutchinsKlausen}.} The propagation of a ``plan'' of each
 vehicle's path on the 
 road into the state of the vehicle's controls keeps vehicles
-physically apart.
-And even when that vehicle system involves computerized
-displays, sensors, and people, the same point holds;  at a high-level of oversight, as
-one would find represented in an employee monitoring an automated
-vehicle fleet remotely 
-from an office, the parallelism with aircraft operations returns in
-full force. There is certainly a difference in the
+physically apart, and many automated vehicle systems involve
+situations explicitly parallel to the safe operation of fleets of
+aircraft. There is a difference in the 
 professionalization of pilots compared with the ``ordinary'' status of an
 everyday driver, and this difference in status and roles
 changes the amount of training we expect operators to have and the
@@ -589,611 +636,58 @@ sorts of interactions that may appeal to them, but there is no
 fundamental reason why supervisory or joint-cognitive
 systems approaches and
 experience are not applicable to automated cars, if appropriately
-moderated for the role and status of the driver. 
-
-\section{Cyborgs}
-
-How we ask and answer such questions depends on our understanding (or
-not) of our own hybridity with technology. This hybridity deserves
-to be more broadly appreciated within the public sphere. 
-In fact, I hold that fostering its appreciation is of paramount
-importance, one of the great challenges for the public understanding
-of technology in the near future. Without an understanding of our
-currently hybrid nature, we risk having to choose between blind ludditism
-and equally blind technophilia. We come to face questions of our own
-obsolescence, and are left with no way out because our way of thinking
-about the world no longer corresponds to the world we see and live in
-on a day-to-day basis. Either humans should drive, or machines should
-drive. The idea that humans drive through machines, or machines drive
-via humans, or that human and machine drive in combination, are
-practically incomprehensible. They seem like failures---and they are
-failures for an ideology of complete technological dominance---when
-indeed they may be the roots of our greatest successes. But once we
-recognize that we \emph{already} drive through machines, and that they
-even already may drive through us---consider blind-spot
-warning lights, which are an automated system designed to affect the
-human and produce a response, but have no individual capacity to drive
-the vehicle---multiple, multifaceted futures of automated vehicle
-development open to us. We are not building robotic
-chauffeurs, but rather designing ourselves, in some fashion, into more
-hybrid, more cyborg, entities.\footnote{To return to science fiction, Phillip K. Dick said in
-a 1972 speech: ``Someday a human being, named perhaps Fred White, may shoot a robot
-named Pete Something-or-Other, which has come out of a General
-Electrics factory, and to his surprise see it weep and bleed. And the
-dying robot may shoot back and, to its surprise, see a wisp of gray
-smoke arise from the electric pump that it supposed was Mr. White's
-beating heart. It would be rather a great moment of truth for both of
-them'' \cite{androidHuman}.
-While ``Pete Something-or-Other'' does not yet exist, ``Fred White''
-is already here. Fully comprehending this is a critical task for the
-maintenance of cogent, productive public conversations---and
-policymaking---about automated vehicles and automated technologies in general.}
-
-%%TODO (DONE) insert cyborg ref briefly
-%While they may permeate Hollywood movies, most people would probably
-%say that they are not yet here. 
-
-The cyborg is publicly understood as an artifact of science
-fiction. But I would argue that we are
-all cyborgs, to a greater or lesser extent, in our interactions with
-everyday technologies and devices---not only those people augmenting
-their bodies with implanted electrodes, or making use of prosthetics
-to replace lost limbs, but everyone who interacts with a computer,
-carries a cellular phone, or drives a car. This idea has received
-serious attention and consideration in philosophical circles, and
-deserves to be revisited here as we consider \emph{why} the hybridity
-of vehicle operation is not widely recognized, and what can be done to
-increase popular appreciation of this operation and the important
-questions it reveals about how we design the future. Our world is
-becoming a ``cyborg planet,'' to an extent many have not yet
-realized \cite[p. 64]{ekbia}.
-
-The idea of the ``cyborg'' was introduced by Manfred Clynes and Nathan
-Kline in 1960 \cite{clyneskline}, as a descriptor for the alteration
-of human beings to 
-cope with the conditions of outer space: they would be self-regulating
-\emph{cybernetic organisms} \cite[p. 66]{ekbia}. While the creation of
-such cyborg astronauts was never attempted outside of the imagination
-of science fiction writers, astronauts were indeed fashioned into
-cyborgs by their existence within suits and spacecraft with which they
-had to interface for their survival, and the cyborg idea has become a
-powerful cultural force.\footnote{As Donna Haraway, one of the most recognized
-philosophers of cyborg culture (and cyborg feminism), describes:
-``Contemporary science 
-fiction is full of cyborgs---creatures simultaneously
-animal and machine, who populate worlds ambiguously natural and
-crafted'' \cite[p. 117]{haraway}.} Meanwhile, cyborg technologies
-abound in real life, from the extreme to the mundane: implants to
-achieve increased sensory range and experience, or to trigger orgasm
-\cite[p. 64]{ekbia}; implants to monitor vital signs; telerobotic
-arms; bots and chatbots; implants to provide neural control of
-vehicles \cite[p. 65]{ekbia}. 
-
-%% ``Modern medicine is also full of
-%% cyborgs, of couplings between organism
-%% and machine''\cite[p. 117]{???-haraway}. Meanwhile, the cyborg has
-%% infiltrated our methods of production and destruction: ``Modern
-%% production seems like a dream of cyborg colonization work, a dream
-%% that makes the nightmare of Taylorism seem idyllic. And modern war is
-%% a cyborg orgy, coded by C3I,
-%% command-control-communication-intelligence, an \$84 billion item in 1984's US
-%% defence budget''\cite[p. 118]{???-haraway}. 
-%% Haraway's view is not altogether pessimistic, as she sees in the cyborg
-%% the potential site of a new epistemology that does not recognize or
-%% repeat Western binaries and cultural subjugation\cite[p.
-%%   118-121]{???-haraway}. But while one can hardly mention cyborgs without
-%% mentioning Haraway, hers is not the vision I find most relevant for
-%% understanding automated vehicles. Instead, I would like to consider
-
-More fundamentally, philosopher Andy
-Clark contends that humans are ``\emph{natural-born}
-cyborgs'' \cite[p. 6]{clarkNBC}. This idea is particularly compelling
-because it need make no distinction between the analog and the
-digital, the material and the virtual. A cyborg nature is not an artifact of the
-present moment, but a fundamental component of human experience. To
-Clark, our ``ability to enter into deep and complex relationships with
-nonbiological constructs, props, and aids'' is what best explains our
-distinctive intelligence \cite[p. 5]{clarkNBC}.\footnote{While Ed
-  Hutchins looks at these tools and stresses the importance of
-  analyzing at a system level, Clark suggests these tools ``are best
-  conceived as proper parts of the computational apparatus that
-  constitutes our minds'' \cite[p. 6]{clarkNBC}. These conflicting views are
-  united in their careful consideration of the properties of nonhuman artifacts,
-  and both have something to add to nuanced examination of automation
-  systems.} This therefore holds 
-not just for cars, or information and computer technologies, but for
-all kinds of technology. Our existence as a technological species is
-not new, and human technological augmentation goes back into
-prehistory. Our engagement with technological tools and
-artifacts---whether the tool is a smartphone, a loom, a wheel, or
-fire---is what makes us, fundamentally, cyborg beings.\footnote{Though Haraway holds that ``By the late 20th
-century, our time, a mythic time, we are all chimeras,
-theorized, and fabricated hybrids of machine and organism; in short,
-we are cyborgs'' \cite[p. 118]{haraway}, I stand with Clark that we
-have long been so. It is only recently however, in part due to the pressure
-that AI places on human-machine dualisms, that this state of being has
-come to be recognized.}
-
-This concept is particularly powerful and valuable because it
-challenges hundreds of years of assumptions about human beings and
-human achievement---even some that are deeply ingrained in the human
-factors engineering work I lean on in chapter \ref{chap:3}. We are
-possessed by the idea that our technologies change, but that the human
-being remains fundamentally the same.\footnote{As Richard Horner put
-  it to the test pilots assembled at the SETP banquet in 1957 (see
-  chapter \ref{chap:3}): ``the
-  one link in the manned system which we have that improves the least
-  in successive generations, is the man himself'' \cite[p.
-    19]{DM}.} However, this assumption rests on a long held 
-dichotomy of human and machine, and the idea that the object of
-interest is the purely biological human. If prosthetics and artificial
-organs teach us anything, however, it should be that these boundaries
-are by no means clear. AI is however heir to a world of such sharp
-boundaries: mind and body, subject
-and object, nature and culture, science and politics. Science, engineering, and broader culture ``embody'' and
-``regenerate'' these divisions \cite[p. 327]{ekbia}, but they are
-fundamentally only true or useful analytical frameworks, so we must
-ask whether they continue to serve us well, or whether they should,
-despite their attractive simplicity, be retired.\footnote{Ekbia,
-  considering the source of ideologies of AI, sees its roots in 
-the teachings of Democritus---carried forward by Hobbes
-and Descartes---and the separation of the atomist world and our
-representations of it \cite[p. 331]{ekbia}. These dualisms are deeply
-engrained in our 
-thought patterns, but fail us when thinking about advanced
-technologies and their impacts because they favor unrealistic---and
-indeed, unreal---totalisms: all human or all machine, fully manual driving or fully
-autonomous driving.} Cognitive
-anthropology starts to break down these 
-divides, with the inspection of a human-machine cognitive system as a
-whole, but there is more to be done. Ekbia asks, what happens if we
-abandon the outmoded question of whether machines can reach our level
-of intelligence or capability, and instead ask how  ``humans and machines
-[are] mutually constituted through discursive practices'' \cite[p.
-  328]{ekbia}?
-
-%% TODO: FIX THIS FOOTNOTE, make it clearer how it fits
-
-The problem facing AI, according to Lucy Suchman,\footnote{Note that
-  Ekbia mobilizes this statement as well in his arguments
-  \cite[p. 331-332]{ekbia}.} ``is less that we attribute agency to
-computational artifacts than that our language for talking about
-agency, whether for persons or artifacts, presupposes a field of
-discrete, self-standing entities'' \cite[p. 263]{SuchmanPlans}.
-Instead, we should be asking how intelligent behavior emerges in
-the interactions of
-humans and machines---involving networked, rather than individual,
-subjectivities---refusing to fix \emph{a priori} the category of 
-the human. Automated vehicles are a product of AI, and are vulnerable
-to the same critique. 
-
-
-
-
-\section{Whither Alternate Narratives?}
-
-While there is a perhaps pleasing sort of narrative arc to the idea
-that complete and total automation is the ultimate end product of
-technological development---restrained only when nasty luddites, backwards lawyers, and
-risk-averse policy makers get in the way of natural progress---this
-simplistic story of automation
-teleology is, as we have seen, not supported by history. While what
-has happened in the 
-past is not destined to repeat, and the regime of ground vehicle
-automation could come to be very different from that of aerospace,
-this history at least needs to be taken seriously as evidence for what
-can and may occur. There are lessons here we cannot afford to forget.
-While it may be just as difficult, or even more difficult, to engineer
-an appropriate joint human-machine system that takes the capabilities
-and desires of people seriously, rather than trying to minimize human
-involvement to the greatest extent possible, that approach might
-result in vehicles that 
-come to be more socially acceptable in certain ways---notably, in
-terms of autonomy and ethics. Furthermore, as I have stated
-repeatedly, complete autonomy is fundamentally a chimera.
-
-%%TODO (DONE) add this paragraph
-%% ``Urmson said Google believes that while technology that assists drivers
-%% can help reduce some accidents, only completely self-driving cars will
-%% fully address safety concerns. One reason, he said, is that the better
-%% the assistive technology gets, the more risks human drivers will
-%% take.''
-%% ``Nor, he said, will today's driver-assist technologies just evolve to
-%% become fully self-driving cars on their own.
-
-%% `That’s like me saying if I work really hard at jumping, one day I
-%% will be able to fly,' he said.''
-%% --> he is right that driver assistance tech won't just become
-%% driverless, but wrongly assumes driverless is the only reasonable end goal.
-
-Narratives that base themselves on firm distinctions between
-``levels'' of automation are partially to blame here. Google's Chris
-Urmson wants to separate incremental or assistive 
-approaches from ``completely'' self-driving cars, in part perhaps to
-hype Google's current work. Google's claim is that only complete
-vehicle automation can entirely address road safety issues, citing
-increases in risk-taking behavior likely to accrue in incrementally safer systems.
-But Urmson goes further to say that the incremental approach will
-never achieve the necessary full automation: ``That's like me saying
-if I work really hard at jumping, one day I will be able to fly''
-\cite{friedGoogle}.
-But while layers of assistive technologies cannot be expected to simply become
-driverless without high-level control and coordination, this perspective wrongly
-assumes that driverless vehicles, ``completely'' automated, are the
-only reasonable end goal. 
-
-%% 3) situate the moonshot approach (which may actually be easier in some
-%% senses but less socially acceptable) and the mixed approach in a way
-%% that does not support a teleology of autonomous vehicle development
-%% (think Sheridan's graph of telerobotics, not the SAE's 5 stages) (4 p)
-%% --in historical context of previous systems that are wholly or
-%% partially autonomous (4 p)
-
-%%Defense Science board report (DSB)
-These levels formulations, and their assumptions, are not without
-broader criticism. The Defense Science Board, in their report
-\emph{The Role of 
-Autonomy in DoD Systems}, describes the proliferation of attempts at
-automation taxonomies as developing out of Sheridan's work, the very
-book cited previously as the bible for human supervisory control \cite[p. 23]{DSB}.
-However, the DSB takes a far more nuanced position than many do,
-perhaps due to many years worth of accumulated experience within the
-military in terms of how to understand and apply autonomy in practical
-systems. The DSB
-identifies that these levels formulations are ``often incorrectly
-interpreted as implying that autonomy is simply a delegation of a
-complete task to a computer, that a vehicle operates at a single level
-of autonomy and that these levels are discrete and represent scaffolds
-of increasing difficulty'' \cite[p. 23-24]{DSB}, all interpretations
-made by both the 
-NHTSA and SAE taxonomies that may be expected to guide self-driving
-vehicle research and policy, and the very interpretations I have been
-attempting to critique. Instead, autonomy in practice generally
-involves subtasks, and novel mixes of human and computational effort,
-not the wholesale transfer of a complete task or process. Levels
-formulations lose sight of the fact that autonomy and control are
-already fractured and contingent:  what ``level'' is my vehicle
-operating in when I drive an automatic transmission in semi-manual
-mode, or engage cruise control, or allow a turn signal stalk to
-automatically return to neutral after a turn of the wheel is detected,
-or stand on the brake pedal to engage ABS in an attempt to bring the
-vehicle to a stop as quickly as I have requested. These currently
-everyday situations already defy levels, and represent overlapping, shifting
-delegations of authority that may change on a second-by-second basis.
-I also claim, to add to their critique, that the
-levels seem to suggest scaffolds of increasing \emph{desirability},
-which, as we have seen in air and space flight, is a matter of perspective.
-
-In addition, the DSB highlights two main negative consequences of the popularity of
-levels of autonomy: that it ``deflects focus from the fact that all
-autonomous systems are joint human-machine cognitive systems'' and
-that it ``reinforces fears about unbounded autonomy'' while obscuring
-the fact that no systems are fully autonomous \cite[p. 24]{DSB}. Humans are always
-involved somewhere along the line, in the programming, production,
-and use of automated systems, though it makes sense that the military,
-focused as it is on 
-human command hierarchies, would find it especially important to make
-this apparent. Even so-called ``full autonomy'' is not likely to be so
-simply \emph{full}. At the very least, a human-rated\footnote{This is
-  a term of art in engineering: a human-rated (or man-rated) system
-  must meet stricter safety standards than one that is unmanned.}
-system will need to have 
-a stop or abort button. And having such an option implies some human
-oversight, which means a number of additional questions soon arise:
-How much monitoring? When does it happen? And how is it
-regulated or supported by the device? We should recognize that this
-monitoring is a valid and valuable component of vehicle operations,
-rather than discount it as a stopgap measure. New tools and interfaces
-may be necessary to facilitate this process, to allow for the human to
-take on new roles in the human-machine relationship: currently, engineers
-co-piloting Google's driverless vehicles sit with laptops to monitor
-the vehicle telemetry \cite{bilgerAuto}. Data displays
-like this, or like the pretty LIDAR visualizations that get used to
-explain and dramatize sensor data, could  form the core of the
-instrumentation for the automated vehicle. More discussion should be
-happening around the dashboard of the future; in the dominant
-narrative of the driverless vehicle, the dashboard is vestigial, but
-it could be a vibrant space presenting unparalleled new possibilities
-for human-machine interaction.
-
-%%TODO (DONE) insert below And panic issues: find the official report, but
-%%connect ethics and emergency
-%%response; scaffolding a system that helps people is key
-%http://m.nautil.us/issue/23/dominoes/fear-in-the-cockpit
-
-Attention, and how to preserve, regulate, monitor, and transact it,
-must be at the center of vehicle development.\footnote{I must add here
-that attention alone is also not na\"{\i}vely a good thing:
-human attention and supervision can be creative (the manager) or
-menial (the machine-tender). As one would expect from the analogy with
-factory organization, this issue is deeply political. Who gets what
-kind of agency, and exerts what kind of attention, is at the center of
-the human-machine dynamic in automation technology. Not focusing on
-the role of human attention risks that these decisions get made
-by fiat, on the basis of other factors.} And the parameters of
-these interactions are in part defined by the end goal. Much popular
-discussion centers around texting as a key motivator of the need for
-automated cars. But as 
-David Mindell describes, ``wanting to text is different
-from needing a fully automated vehicle,''\footnote{David Mindell,
-  discussion with the author, September 8, 2014} and it seems quite possible
-to create a vehicle that will allow distractions on the order of the
-time span of writing and sending a text even if it is not feasible, or
-not culturally acceptable, to build one that is fully
-automated.\footnote{Recent AAA research on teen accidents shows
-  distraction to be a factor in 58\% of crashes, and that drivers were
-not paying attention to the road for an average of 4.1 out of the
-final 6 seconds before the crash \cite{greenDistraction}. This
-suggests that a system able to 
-maintain control of the vehicle for times on the order of 10 seconds,
-and stop it safely if necessary, could do a lot to address this kind
-of distraction---that is assuming, of course, that risk homeostasis
-can be mitigated.} While
-the latter means that long periods of time might go by without human
-monitoring (perhaps minutes or even hours, depending on system
-design), the former merely requires an operator to be able to be 
-distracted on the order of 10 seconds without causing a crash. These
-are, at their core, very different engineering situations. And though
-people do panic in crisis situations such as the TransAsia Airways
-Flight 235 crash in which panicked pilots throttled back the wrong
-engine \cite{wiseFear},
-it may be more appropriate and more useful to consider systems 
-that scaffold and support human capacity and attention, rather than
-attempting to eliminate it altogether. In
-all this, we should avoid the clich\'{e}d question ``People: sinners
-or saints?'' which seems so popular in media discussions: it represents
-a ``false position'' that does not adequately reflect the complex
-nature of operating automated
-systems \cite[p. 1]{woodshollnagel}. As operators, we are
-sources of both success and failure. But ultimately, as Woods and
-Hollnagel point out, all cognitive systems are finite and will
-therefore also have errors, lapses, and
-failures \cite[p. 1--2]{woodshollnagel}. Success in automation is not
-a given that the human presence degrades,\footnote{And it is not fair
-  to say that increasing automation necessarily decreases the
-  importance of the human. The NRC (National
-  Research Council) report on aviation, claims the following: 
-``For example, antilock braking systems and airbag systems on cars are
-fully automatic, deciding on their own when to act. However, fully
-automatic systems as well as fully
-autonomous systems depend on humans to define and limit the scope of
-their authority and the range of possible actions. Movement along the
-continuum typically does not eliminate or diminish the importance
-of the humans to the operations of the system, but it does change
-their role. In fact, the human's role
-becomes more rather than less important when moving toward the
-autonomous end of the spectrum
-because it is so important to assure that the systems are
-properly designed, tested, deployed, and monitored to ensure the
-aircraft's continued airworthiness'' \cite[p. 14-15]{NRCAutonomy}}
-but something to be  
-achieved through careful engineering of automated components and their
-human interactions. The PARC/CAST Flight Deck Automation Working Group
-found that human pilots are actively involved in mitigating risk from
-other system components, and states that ``an exclusive focus on pilot
-errors will not take into account the positive actions and decisions
-that pilots do on a frequent basis'' \cite[p. 30]{PARCCAST}. 
-
-We should return here to the myth of the ``personless'' factory or the
-self-teaching computer program: the ``autonomous'' vehicle is a
-similar sort of myth; always a 
-product of people, responsible to people, and involving people,
-however far in the margins of our vision. Writing this off as
-anomaly or failure, and focusing on ``autonomy'' or ``self-driving,''
-obscures real complexities of operation that encounters with the world
-will inevitably involve. The important questions are when and how 
-people are
-involved, and this should be empirically not ideologically
-driven.\footnote{Of course, beliefs and ideologies are always involved
-  in decision-making, but we should at least air them for all to see,
-  and weigh them carefully, rather than blindly follow a dominant
-  idea of the uses of technology.}
-Perhaps there is hope in this altered narrative to ameliorate some of
-the issues facing automated vehicles today. 
-
-It seems highly unlikely that a supervisory control perspective will
-fix the potential contribution of automated vehicles to the
-surveillance state:  data gathering technologies will still be
-available, and comprehensive mapping may still be necessary for
-operations, though human supervision might reduce
-reliance on remote processing of data in the short term, and thereby
-improve privacy. In 
-any case, the potential still exists to use hardware 
-and software to try to restrain and control people's actions and
-movements. Supervisory control will also certainly not fix the
-reliance on projections of risk for decision-making about vehicles:
-while reducing certain risks, this approach may increase others, and
-any estimates of such risk will still be estimates only, derived from
-models that may be incomplete.
-
-However, human supervisory control stands to alter the dynamics of use
-and therefore change the sort of urban planning necessary to account
-for these vehicles, as well as the environmental effects of their use.
-Systems designed with supervision in mind may operate in a different
-way than those designed primarily with autonomy\footnote{This is a
-  tricky distinction. In this case
-  I mean autonomy over long timescales, and, as major companies seem
-  to be working on, autonomy from the human in the vehicle. Even an
-  ``autonomous'' car will be supervised at some level, but the
-  question here is on what timescale the human is involved in
-  monitoring vehicle actions. The ``autonomous'' model really means very
-  long timescale supervision, such as from a remote data center. In
-  the supervisory control case I am considering here, though such
-  supervision could come remotely, it would be more frequent and more
-  deeply involved in the vehicle's actions---a military UAV operator
-  would be one example of this.} in mind. Operational
-differences will change the behaviors favored by these systems:  Can
-they operate on their own and drive to remote parking garages? Or be
-sent to pick up children from school? How much attention is required
-to operate the vehicle, and if that attention comes from the human
-within the vehicle, how will that affect how likely people are to
-drive rather than take other forms of transport that could reduce,
-rather than increase, road congestion? 
-
-Where supervisory control considerations come to totally change
-the landscape is in the field of ethics. The ethical operation of
-vehicles involving computer code will always depend to an extent on
-that code, and the previous discussion about programmatic ethics still
-holds. But what changes here is that the vehicle is no longer free to
-operate based only on its programmed ethics for long periods of time.
-Instead, the human operator is involved in decision-making processes
-at a much more granular level. Will some emergency situations likely
-be handled in a largely automated fashion, just as today's pedestrian
-detection systems can perform an emergency stop to avoid pedestrians a
-driver does not see? Almost certainly. But these issues, though
-perhaps ethically tricky, are much closer to situations we are already
-working through. Ironically, one positive effect of the autonomous vehicle
-might be to estrange us from vehicle operations, and thereby draw us
-to consider more seriously the ethics programmed into software
-systems, but the effect in the dominant narrative seems to be drawing a
-clear distinction between current and future automation systems:  in
-the NHTSA's policy document, current automation systems like ABS,
-traction control, and stability control can override the human, but
-``driverless'' systems must have overrides that can be used at any
-time \cite[p. 13]{NHTSA}. This distinction is artificial. However,
-consistent human involvement in vehicle operations seems to open new
-doors for human acceptance, by putting these systems closer to what we
-already know. What we should do is consider carefully why we feel that
-ABS and traction control can be allowed to override human inputs, and
-what separates them from systems that should not be allowed to do so, and
-keep this in mind as we continue to develop more complex automation systems.
-
-Additionally, supervisory control presents the possibility for a
-renegotiation of car 
-culture and its troubled relationship with the automated vehicle. In
-my interviews and research work at conferences, I noted especially the
-contradictions within common characterizations of human
-drivers and their future. One interviewee basically asserted that
-humans are bad drivers and that perhaps we should ``all have our
-licenses taken away,'' but later stated that ``car nuts'' should
-welcome self-driving cars because they will free up the roads for
-enthusiast use. This combination does not make sense. The
-question of whether people will be allowed to drive also loomed large
-in industry conferences, with further comments that do not hold
-together: computer scientist Daniela Rus stated at an MIT
-conference, in response to
-concerns about being 
-forced to use automated vehicles, that people will still be able to
-drive normally, sharing the roads with automated vehicles in the near
-term. She is most likely correct, but this 
-does little to allay fears in the face of the statistic that prompted
-the question: that 90 percent of accidents are caused by human
-error.\footnote{This statistic seems warranted given recent NHTSA crash
-  data \cite{NHTSAcrash}. Around 93 percent of crashes with ``critical
-  reasons'' involve driver error as one critical reason for the crash.
-  But 30 percent involve a roadway factor, and 12 percent involve some
-vehicle-related reason. There may be many reasons for a crash, and
-estimating when the human is solely or primarily responsible for a
-crash is not trivial.} While
-human driving is not going away in the near future, the idea that
-autonomous vehicles will free up the roads for people who want to
-drive manually seems more like a platitude than a thought-through
-design strategy. 
-
-%% TODO2 \footnote{FIND ESTIMATES OF rate AND COMMENT ON ACCURACY}
-
-These questions of use and licensing are deeply embedded in the idea
-of progress. ``Does the potential for greater safety imply we should be
-taking human licenses away?'' is a question that only makes
-sense with a particular vision of autonomy, one that does not involve
-human supervision. Perhaps a better question is what sort of licensing
-and training is necessary, or should be necessary, to operate new
-kinds of vehicles, which must be defined by the roles that the human
-operator must perform. There is certainly a difference in the intended
-operators of vehicles between this situation and historical models,
-since airliners are piloted by professionals
-and cars are generally considered to be driven by non-professionals.
-Nevertheless, people are licensed to drive, and there is no reason to
-say that new types of training may not be necessary or good;
-or even that some continuing education would not be a positive
-influence on traffic safety, on balance, even with present
-technologies. But with further human involvement in driving, there is
-the possibility of a
-middle-ground in the hybrid narrative:  future cars, using increasing
-amounts of automated safety technologies,
-may be vulnerable to the same critiques as the Nissan GT-R. But these
-vehicles could still provide a role for the human and a place for
-enthusiasts who want to be involved in vehicle operations.
-
-\section{Conclusion}
-
-In the end, whether an operator is in a vehicle trying to monitor that it
-is on the right path and not about to hit an undetected
-obstacle; or is waiting
-for a car to arrive, wanting to ensure that it is en route
-and not in an accident; or is working as a system-technician at a
-multinational corporation administering a fleet of automated vehicles,
-attempting to ensure they are not being 
-hijacked or stolen, the operator functions as a supervisory
-controller, enmeshed in a complex network of human and machine
-systems. Not recognizing this as such does not make it not so:  it 
-only means we are 
-likely to neglect the most important parts of the system design---in
-terms of its adoption and long-term use---by blindly following a
-narrative based on a warped view of history. And we are likely to
-ignore new skills and competencies that may be important for
-operation (or even vital to operation), or which may be valuable in other ways, for
-human reasons. Cars---and transportation systems as a whole---are
-designed to serve human needs, and must ultimately answer to society's
-ideas about those
-needs, even those that might seem to some to be mere ethical squeamishness.
-
-
-
-
-
+moderated for the role and status of the driver. However, levels of
+automation formulations generally used to 
+talk about automated vehicles do not attend to this concept field in
+sufficient detail.
 
 
 \section{Engineering Standards and Policy Documents}
 
-%% I may be able to do this drawing on the other subsections
-%%as a CONCLUSION, wrapping up the other three things
-%%and what is LOST/OVERLOOKED; the ability to deal with nuance and
-%%REAL ACTIVITY
-%%other part of an analysis of this kind of stuff: did it for a
-%%reason; what is the work that it does (reactionary thing in some
-%%cases; pushes for a particular image of what this can be)
-%%--visions of human; SAE history of thinking as engineers; people as
-%%predictable black-boxed inputs and outputs
+%%Defense Science board report (DSB)
 
-%%maybe split into different sub-headers with context like NHTSA:
-%%Agency Trying to Catch Up or w/e
+%% A number of levels-of-autonomy or
+%% levels-of-automation taxonomies have been developed to guide
+%% researchers and public agencies toward an appropriate understanding of
+%% how automation research will progress. 
+%% While they vary in terms of how
+%% prescriptive or descriptive they are, t
 
-While some of the conventional driverless car narrative comes from
-poor understanding of the technology and history, some also comes
-straight from contemporary sources, the engineering standards and
+The engineering standards and
 policy documents set up to
-guide the industry's development. A number of levels-of-autonomy or
-levels-of-automation taxonomies have been developed to guide
+guide the industry's development---particularly levels-of-autonomy
+formulations, which come from a long history of such taxonomies \cite{parasuramanW} \cite{PSWickens} \cite{ALFUS} \cite{SMART}. T\footnote{Perhaps traceable, in a way, to 
+  Sheridan's work \cite[p. 23]{DSB}.}---strongly shape the automated
+vehicles narratives. Developed to guide
 researchers and public agencies toward an appropriate understanding of
-how automation research will progress. While they vary in terms of how
-prescriptive or descriptive they are, these documents are easily taken
+automation, these documents are easily taken
 as evidence for how automated systems must or will develop in
 practice.\footnote{The Society of Automotive Engineers in particular
   made an attempt to avoid prescriptive definitions of autonomy in
   their work. But even a descriptive set of levels contains an
   explicit hierarchy, which can be read as an implicit narrative of
-  progress or roadmap for development.} And, when closely
-interrogated, they present gaps in vision that echo the popular
-narratives of automation and AI, and do not sufficiently heed the
-historical complexities we examined above.
-
-The primary formulations of levels of autonomy for self-driving cars
+  progress or roadmap for development.} The primary formulations of
+levels of autonomy for self-driving cars 
 have been published by the National Highway Traffic Safety
 Administration (NHTSA) and the Society of Automotive Engineers
 (SAE).\footnote{The German Federal Highway Research Institute, BASt,
  has also produced a taxonomy that predates the SAE's work, and
  influenced it in key ways.}
 These reports exhibit some resonances and contradictions in how these
-organizations represent autonomous vehicles and their human drivers.
-Viewed in the larger context of the discourse on levels of automation
-in general, these speak to different ideas of who the ``driver'' will be
-in automated systems. However, both make particular assumptions about
+organizations represent autonomous vehicles and their human
+drivers---and speak to different ideas of who the ``driver'' will be
+in automated systems. However, both make assumptions about
 the way autonomy is or will be implemented that may not ultimately be
 valid and certainly foreclose on alternative ways in
-which systems could be designed. These documents represent an important
-vector for the traditional autonomous vehicle narrative, and are
-therefore worthy of deeper scrutiny.
+which systems could be designed. When closely
+interrogated, they do not sufficiently heed the
+complexities of joint human-machine systems operation.
+%% These documents represent an important
+%% vector for the traditional autonomous vehicle narrative, and are
+%% therefore worthy of deeper scrutiny. present gaps in vision that echo the popular
+%% narratives of automation and AI, and
+
+
 
 \subsection{NHTSA: Reacting to the Industry Narrative}
 
@@ -1204,18 +698,14 @@ parallels the general narrative tendencies we have already examined in
 automation and AI history. 
 The agency identifies three ``distinct but related streams of
 technological change'': 
-
 \begin{quote}
 (1) in vehicle crash avoidance systems that provide warnings and/or
 limited automated control of safety functions; (2) V2V communications
 that support various crash avoidance applications; and (3)
-self-driving vehicles \cite[p. 3]{NHTSA}.
-\end{quote}
-
+self-driving vehicles \cite[p. 3]{NHTSA}.\end{quote}
 Though the agency positions these technologies ``as part of a
 continuum of vehicle control automation'' \cite[p. 3]{NHTSA}, aligning
-themselves with Thomas Sheridan, whose
-work forms a fundamental part of chapter \ref{chap:3}, this belies
+themselves with Sheridan, this belies
 their three-part dissection of the technological landscape and their
 following 5-level taxonomy. They correctly recognize that today's
 ``crash avoidance and mitigation technologies'' are the ``building blocks
@@ -1229,32 +719,34 @@ technologies that are remotely monitored. Like the mythical personless
 factory, the driverless vehicle can only exist by dismissing its new forms
 of labor. 
 
+%% , which has
+%% potentially great implications for safety and the driver's awareness,
+
 According to the NHTSA definition, automated
 vehicles are those in which ``aspects of a safety-critical control
 function (e.g., steering, throttle, or braking) occur without direct
 driver input'' \cite[p. 3]{NHTSA}. Therefore, this definition excludes warning
 systems that nevertheless still use ``automation'' in varying degrees,
-drawing a suspect line between monitoring and action. Though there is
-a difference between systems that only provide information and systems
-that directly affect the mechanical state of the vehicle, making that
+drawing a suspect line between monitoring and action. Though systems
+that only provide information and systems 
+that directly affect the mechanical state of the vehicle do differ, making that
 distinction part of the definition of ``automation'' perpetuates an
 inaccurate view that automation is only meaningful or important to
 consider when it affects a physical mechanism. Information automation
-(road condition warnings, traffic notifications, etc.), which has
-potentially great implications for safety and the driver's awareness,
+(road condition warnings, traffic notifications, etc.)
 is written out of the NHTSA's definition. But information automation
 is one of the historically dominant modes of automotive automation,
-even in the eyes of the NHTSA, and has been on the research agenda for
-decades \cite[p. 11]{wetmore}.
+even in the eyes of the NHTSA \cite[p. 11]{wetmore}, and has important
+safety implications.
 
-Their definition also excludes non safety-critical ``control
-functions.'' The agency is likely attempting to make this distinction
+The agency's definition also excludes non safety-critical ``control
+functions.''\footnote{The agency is likely attempting to make this distinction
 so that cars with currently banal automatic technologies like
 automatic transmissions do 
 not count as ``automated vehicles,'' but this is the wrong footing on
-which to rest a definition of automation, as it neglects both the
+which to rest a definition of automation.} This neglects both the
 vital roles automation plays both in tertiary components as well as
-the delicate dance of human and automated control that happens even in
+the delicate dance of human and automated control that happens in
 current vehicles. Automated wipers and hazard
 lights may well be ``safety critical'' in at least some situations.
 The state of the transmission 
@@ -1277,14 +769,16 @@ of ``automated vehicles,'' the NHTSA has hobbled their terminology,
 and limited its usefulness to make sense of the broad spectrum of automation
 approaches that are actually being used in existing vehicles.
 
-The agency does not view the human-machine system as a whole, focusing
-on, by labeling as ``automation,'' only those processes that are
-mechanical in result and are arbitrarily considered to be
-``safety-critical'' as opposed to ``secondary.'' Even if one does not
-wish to include 
-the driver as part of the ``vehicle,'' real-world vehicle tasks, or
-control functions, are more complicated than simply turning the
-steering wheel; but the NHTSA's levels of autonomy only compound these
+%% The agency does not view the human-machine system as a whole, focusing
+%% on, by labeling as ``automation,'' only those processes that are
+%% mechanical in result and are arbitrarily considered to be
+%% ``safety-critical'' as opposed to ``secondary.'' Even if one does not
+%% wish to include 
+%% the driver as part of the ``vehicle,'' real-world vehicle tasks, or
+%% control functions, are more complicated than simply turning the
+%% steering wheel; but t
+
+The NHTSA's levels of autonomy only compound these
 issues with simplistic distinctions that do not account for the
 majority of ways these systems could be engineered. Level 0, or
 ``no-automation,'' represents 
@@ -1303,14 +797,12 @@ systems.\footnote{For example, see systems like Bosch's comprehensive
 The report is even confused on the number of control functions, though
 it ultimately means that both steering and brakes/throttle cannot be
 automated at the same time in a level 1 system: 
-
 \begin{quote}
 there is no combination of vehicle control systems working in unison
 that enables the driver to be disengaged from physically operating the
 vehicle by having his or her hands off the steering wheel AND feet off
 the pedals at the same time \cite[p. 4]{NHTSA}.
 \end{quote}
-
 This continues the agency's curious focus on the physical state of the
 driver's body, repeated in level 2 automation to make the distinction
 that now the operator can be ``disengaged from physically operating the
@@ -1334,9 +826,13 @@ bodily input---like GM's abandoned ``Unicontrol'' \cite[p. 8]{wetmore}---or cont
 for amputees.) Though this stipulation attempts to address what the
 human driver is actually doing, it is insufficiently granular to
 account for the various types of mental and physical effort exerted:
-from using control stalks to monitoring for vehicles to consulting a
-GPS or mentally planning a route to monitoring and adjusting an
-automation system via steering-wheel based controls. But the
+from using control stalks, to monitoring for vehicles, to consulting a
+GPS or mentally planning a route, to monitoring and adjusting an
+automation system via steering-wheel based controls.While Hutchins's
+cockpit remembers its speeds through a combination of 
+human activity and physical cognitive aids, the NHTSA's ``vehicle''
+may sometimes ``not perform a control function'' \cite[p. 3]{NHTSA} and
+nevertheless remain on the road. But the
 preoccupation with the body results from the NHTSA's charter: the
 human is a safety liability, something to be protected. The operations
 of hands and feet represent readily visible and na\"{\i}ve distinctions
@@ -1456,15 +952,19 @@ both longitudinal and lateral driving tasks) which makes it difficult
 to account for complex hybrid systems in which some tasks may be
 highly automated and others not.
 
+
+% NEED TO TALK ATTENTION BEFORE THIS
+%% \footnote{Attention and task hand-over are
+%%   known issues in aircraft automation, as prolonged inattention leaves
+%%   pilots ill-positioned to regain control of systems when necessary
+%%   (see for example the events leading up to the Air France 447
+%%   crash). This will be a particular focus in chapter \ref{chap:3}}
+
 The primary distinction for the SAE report is whether the ``human driver'' or ``automated
 driving system'' monitors the driving environment \cite[p. 5]{SAE}. The report deals
 appropriately with human psychology, stating specifically that higher
 levels of automation are based on the expectation that the human need
-not ``and therefore will not''\footnote{Attention and task hand-over are
-  known issues in aircraft automation, as prolonged inattention leaves
-  pilots ill-positioned to regain control of systems when necessary
-  (see for example the events leading up to the Air France 447
-  crash). This will be a particular focus in chapter \ref{chap:3}} continuously
+not ``and therefore will not'' continuously
 monitor the environment \cite[p. 9]{SAE}. But their 
 picture is still binary, and organized around monolithic tasks, rather
 than considering the moment-to-moment 
@@ -1525,46 +1025,126 @@ types of level 4 automation) definitionally require Strategical effort
 (route selection is implicit within GPS navigation), which is not
 separately mentioned as a system capacity in the document.
 
+%% reinforces the
+%% blindness to complex hybrid human-machine systems, and
+
 Despite their differences, these taxonomies are united in lending
 credence to the teleological narrative of automation:  further
 technological development implies ``higher levels'' of automation, which
 imply a decreasing role for human beings. (How different these
 taxonomies might appear if structured or numbered differently!)
 The tendency, endemic to these taxonomies, to predicate work on
-jumping to the flashy upper tiers of automation reinforces the
-blindness to complex hybrid human-machine systems, and results from
+jumping to the flashy upper tiers of automation results from
 preconceptions about the value of level 5 autonomy and the
-intermediate stages by which it will be achieved. The SAE's taxonomy
-is part of a long tradition of levels of automation formulations in
-engineering that make these kinds of implicit assumptions in various
-ways \cite{parasuramanW} \cite{PSWickens} \cite{ALFUS} \cite{SMART}. Their
+intermediate stages by which it will be achieved. The SAE's 
 greater facility with the technologies involved seems likely to have
 contributed to their ability to achieve a somewhat more nuanced view
-of vehicle automation than the NHTSA. The
+of vehicle automation than the NHTSA. But the
 technology-first perspective that shapes these sorts of formulations
-likewise comes from a deep history of engineering practice, and a
+comes from a deep history of engineering practice, and a 
 tendency to treat the user as a black-boxed entity, another signal
 processor with defined inputs and outputs, subject to mathematical
 modeling---a set of qualities that is highly useful for engineering
 work, as it is amenable to descriptive standards and interface
-specifications. Such a perspective tends to diminish the attention
-paid to
-the subtleties of human action and interaction, which engineering,
-though it may try to minimize, cannot afford to ignore completely.
+specifications. 
 
-While supporting the dominant, teleological narrative of automation's
-progress, both
+%% Such a perspective tends to diminish the attention
+%% paid to
+%% the subtleties of human action and interaction, which engineering,
+%% though it may try to minimize, cannot afford to ignore completely.
+
+%% Instead, autonomy in practice generally
+%% involves subtasks, and novel mixes of human and computational effort,
+%% not the wholesale transfer of a complete task or process.
+
+Both
 taxonomies ignore the external labor involved in that automation:
 human action displaced in space and time. Where do remotely monitored
 systems fit? What about human preparatory work that allows for
 automated systems to operate? These are questions with serious
-implications, to which we will
-return in chapters \ref{chap:3} and the conclusion. They are not
+implications that are not
 answered by either of these autonomy formulations, but should be
 addressed by any document that attempts to describe, normalize, or
 regulate automated vehicle operations. 
 
-\section{Conclusion}
+It should be noted that levels formulations, and their assumptions, are not without
+existing criticism. The Defense Science Board, in their report
+\emph{The Role of 
+Autonomy in DoD Systems} identifies that these levels formulations are
+``often incorrectly 
+interpreted as implying that autonomy is simply a delegation of a
+complete task to a computer, that a vehicle operates at a single level
+of autonomy and that these levels are discrete and represent scaffolds
+of increasing difficulty'' \cite[p. 23-24]{DSB}, all interpretations
+made by both the 
+NHTSA and SAE taxonomies, ones I have been
+attempting to critique. Autonomy also ``deflects focus from the fact that all
+autonomous systems are joint human-machine cognitive systems'' and
+``reinforces fears about unbounded autonomy'' while obscuring
+the fact that no systems are fully autonomous \cite[p. 24]{DSB}. Humans are always
+involved somewhere along the line, in the programming, production,
+and use of automated systems.\footnote{It makes sense that the
+  military, with significant automation experience, as well as
+a culture of
+human command hierarchies, would find it especially important to make
+this apparent.} These levels
+formulations lose sight of the fact that autonomy and control are
+already fractured and contingent:  what ``level'' is my vehicle
+operating in when I drive an automatic transmission in semi-manual
+mode, or engage cruise control, or allow a turn signal stalk to
+automatically return to neutral after a turn of the wheel is detected,
+or stand on the brake pedal to engage ABS in an attempt to bring the
+vehicle to a stop as quickly as I have requested. These currently
+everyday situations already defy levels, and represent overlapping, shifting
+delegations of authority that may change on a second-by-second basis.
+I also claim, to add to their critique, that the
+levels seem to suggest scaffolds of increasing \emph{desirability},
+which, as we have seen in historical examples in factories, air, and
+space, is a matter of perspective. 
+
+%% `That’s like me saying if I work really hard at jumping, one day I
+%% will be able to fly,' he said.''
+%% --> he is right that driver assistance tech won't just become
+%% driverless, but wrongly assumes driverless is the only reasonable end goal.
+
+%% Narratives that base themselves on firm distinctions between
+%% ``levels'' of automation are partially to blame here. Google's Chris
+%% Urmson wants to separate incremental or assistive 
+%% approaches from ``completely'' self-driving cars, in part perhaps to
+%% hype Google's current work. 
+
+%% 3) situate the moonshot approach (which may actually be easier in some
+%% senses but less socially acceptable) and the mixed approach in a way
+%% that does not support a teleology of autonomous vehicle development
+%% (think Sheridan's graph of telerobotics, not the SAE's 5 stages) (4 p)
+%% --in historical context of previous systems that are wholly or
+%% partially autonomous (4 p)
+
+
+%% I may be able to do this drawing on the other subsections
+%%as a CONCLUSION, wrapping up the other three things
+%%and what is LOST/OVERLOOKED; the ability to deal with nuance and
+%%REAL ACTIVITY
+%%other part of an analysis of this kind of stuff: did it for a
+%%reason; what is the work that it does (reactionary thing in some
+%%cases; pushes for a particular image of what this can be)
+%%--visions of human; SAE history of thinking as engineers; people as
+%%predictable black-boxed inputs and outputs
+
+%%maybe split into different sub-headers with context like NHTSA:
+%%Agency Trying to Catch Up or w/e
+
+%% But this perspective is not
+%% represented in the prevailing guides for automated system development.
+%%  The NHTSA's documentation instead
+%% focuses simplistically on whether the human or the ``vehicle''
+%% controls a function, rather than addressing what control involves or how it may
+%% be shared between human and automated systems.
+
+% STAGE DIRECTION: role of these docs (as below); but when examined in
+% the new light of a broader view that takes seriously human and
+% machine, they are clearly lacking; where do we go from here? how do
+% we more broadly reshape narratives around hybrid views of the human?
 
 In a sense, these autonomy
 formulations pull together the three previous strands of this
@@ -1577,5 +1157,322 @@ human-machine labor relationships evidenced by their historical
 antecedents; and (3) they represent models for the
 continued development of cutting-edge AI technologies, which perpetuate
 the vision of an unbroken chain of development toward
-ever-more-intelligent artifices. 
+(chimerical) ``full'' autonomy. 
+
+
+\section{Alternative Futures}
+
+%% While what
+%% has happened in the 
+%% past is not destined to repeat, and the regime of ground vehicle
+%% automation could come to be very different from that of aerospace,
+%% this history at least needs to be taken seriously as evidence for what
+%% can and may occur. There are lessons here we cannot afford to forget.
+
+%% While there is a perhaps pleasing sort of narrative arc to the idea
+%% that complete and total automation is the ultimate end product of
+%% technological development---restrained only when nasty luddites, backwards lawyers, and
+%% risk-averse policy makers get in the way of natural progress---this
+%% simplistic story of automation
+%% teleology is not supported by history. 
+%% Furthermore, complete autonomy is
+%% fundamentally a chimera, supported neither by history nor a close look
+%% at the operations of actual devices.
+
+%%TODO (DONE) add this paragraph
+%% ``Urmson said Google believes that while technology that assists drivers
+%% can help reduce some accidents, only completely self-driving cars will
+%% fully address safety concerns. One reason, he said, is that the better
+%% the assistive technology gets, the more risks human drivers will
+%% take.''
+%% ``Nor, he said, will today's driver-assist technologies just evolve to
+%% become fully self-driving cars on their own.
+
+``Full autonomy'' will not be so
+simply \emph{full}: at the very least, a human-rated\footnote{This is
+  a term of art in engineering: a human-rated (or man-rated) system
+  must meet stricter safety standards than one that is unmanned.}
+system will need to have 
+a stop or abort button. And having such an option implies some human
+oversight, which means a number of additional questions soon arise:
+How much monitoring? When does it happen? And how is it
+regulated or supported by the device? New tools and interfaces
+may be necessary to facilitate this process, to allow for the human to
+take on new roles in the human-machine relationship: currently, engineers
+co-piloting Google's driverless vehicles sit with laptops to monitor
+the vehicle telemetry \cite{bilgerAuto}. Data displays
+like this, or like the pretty LIDAR visualizations that get used to
+explain and dramatize sensor data, could  form the core of the
+instrumentation for the automated vehicle. More discussion should be
+happening around the dashboard of the future; in the dominant
+narrative of the driverless vehicle, the dashboard is vestigial, but
+it could be a vibrant space presenting unparalleled new possibilities
+for human-machine interaction.
+
+While it may be just as difficult, or even more difficult, to engineer
+an appropriate joint human-machine system that takes the capabilities
+and desires of people seriously, rather than trying to minimize human
+involvement to the greatest extent possible, that approach might
+result in vehicles that 
+come to be more socially acceptable in certain ways---notably, in
+terms of autonomy and ethics. These ideas present distinct possible
+futures worth investigating.
+
+%%TODO (DONE) insert below And panic issues: find the official report, but
+%%connect ethics and emergency
+%%response; scaffolding a system that helps people is key
+%http://m.nautil.us/issue/23/dominoes/fear-in-the-cockpit
+
+%% While
+%% the latter means that long periods of time might go by without human
+%% monitoring (perhaps minutes or even hours, depending on system
+%% design), the former merely requires an operator to be able to be 
+%% distracted on the order of 10 seconds without causing a crash.
+
+%% ``For example, antilock braking systems and airbag systems on cars are
+%% fully automatic, deciding on their own when to act. However, fully
+%% automatic systems as well as fully
+%% autonomous systems depend on humans to define and limit the scope of
+%% their authority and the range of possible actions. Movement along the
+%% continuum typically does not eliminate or diminish the importance
+%% of the humans to the operations of the system, but it does change
+%% their role. In fact, the human's role
+%% becomes more rather than less important when moving toward the
+%% autonomous end of the spectrum
+%% because it is so important to assure that the systems are
+%% properly designed, tested, deployed, and monitored to ensure the
+%% aircraft's continued airworthiness''
+
+Attention, and how to preserve, regulate, monitor, and transact it,
+must be at the center of vehicle development.\footnote{I must add here
+that attention alone is also not na\"{\i}vely a good thing. Who gets what
+kind of agency, and exerts what kind of attention (creative or menial), is at the center of
+the human-machine dynamic in automation technology. Not focusing on
+the role of human attention risks that these decisions get made
+by fiat, on the basis of other factors.} And the parameters of
+these interactions are in part defined by the end goal. Much popular
+discussion centers around texting as a key motivator of the need for
+automated cars. But as 
+David Mindell describes, ``wanting to text is different
+from needing a fully automated vehicle,''\footnote{David Mindell,
+  discussion with the author, September 8, 2014} and it seems quite possible
+to create a vehicle that will allow distractions on the order of the
+time span of writing and sending a text even if it is not feasible, or
+not culturally acceptable, to build one that is fully
+automated.\footnote{Recent AAA research on teen accidents shows
+  distraction to be a factor in 58\% of crashes, and that drivers were
+not paying attention to the road for an average of 4.1 out of the
+final 6 seconds before the crash \cite{greenDistraction}. This
+suggests that a system able to 
+maintain control of the vehicle for times on the order of 10 seconds,
+and stop it safely if necessary, could do a lot to address this kind
+of distraction.} Entirely different time-scales of automated operation
+are involved, and represent different engineering
+situations.\footnote{Time scale of human involvement is a good way to
+  think about autonomy: greater autonomy means longer time scales
+  between human interventions.} While
+people do panic in crisis situations \cite{wiseFear},
+it may be more appropriate and more useful to consider systems 
+that scaffold and support human capacity and attention, rather than
+attempting to eliminate it altogether. In
+all this, we should avoid the clich\'{e}d question ``People: sinners
+or saints?'' which seems so popular in media discussions: it represents
+a ``false position'' that does not adequately reflect the complex
+nature of operating automated
+systems \cite[p. 1]{woodshollnagel}\footnote{Ultimately, as Woods and
+Hollnagel point out, all cognitive systems are finite and will
+therefore also have errors, lapses, and
+failures \cite[p. 1--2]{woodshollnagel}.} Success in automation is not
+a given that the human presence degrades,\footnote{For example:
+``fully
+automatic systems [e.g. airbags, ABS] as well as fully
+autonomous systems depend on humans to define and limit the scope of
+their authority and the range of possible actions . . . the human's role
+becomes more rather than less important when moving toward the
+autonomous end of the spectrum
+because it is so important to assure that the systems are
+properly designed, tested, deployed, and monitored'' \cite[p. 14-15]{NRCAutonomy}.}
+but something to be  
+achieved through careful engineering of automated components and their
+human interactions.\footnote{For example, the PARC/CAST Flight Deck Automation Working Group
+found that human pilots are actively involved in mitigating risk from
+other system components, and states that ``an exclusive focus on pilot
+errors will not take into account the positive actions and decisions
+that pilots do on a frequent basis'' \cite[p. 30]{PARCCAST}.}
+
+It seems highly unlikely that a supervisory control perspective will
+fix the potential contribution of automated vehicles to the
+surveillance state:  data gathering technologies will still be
+available, and comprehensive mapping may still be necessary for
+operations, though human supervision might reduce
+reliance on remote processing of data in the short term, and thereby
+improve privacy. In 
+any case, the potential still exists to use hardware 
+and software to try to restrain and control people's actions and
+movements. Supervisory control will also certainly not fix the
+reliance on projections of risk for decision-making about vehicles:
+while reducing certain risks, this approach may increase others, and
+any estimates of such risk will still be estimates only, derived from
+models that may be incomplete.
+
+%% \footnote{This is a
+%%   tricky distinction. In this case
+%%   I mean autonomy over long timescales, and, as major companies seem
+%%   to be working on, autonomy from the human in the vehicle. Even an
+%%   ``autonomous'' car will be supervised at some level, but the
+%%   question here is on what timescale the human is involved in
+%%   monitoring vehicle actions. The ``autonomous'' model really means very
+%%   long timescale supervision, such as from a remote data center. In
+%%   the supervisory control case I am considering here, though such
+%%   supervision could come remotely, it would be more frequent and more
+%%   deeply involved in the vehicle's actions---a military UAV operator
+%%   would be one example of this.}
+
+However, human supervisory control stands to alter the dynamics of use
+and therefore change the sort of urban planning necessary to account
+for these vehicles, as well as the environmental effects of their use.
+Systems designed with supervision in mind may operate in a different
+way than those designed primarily with autonomy in mind. Operational
+differences will change the behaviors favored by these systems:  Can
+they operate on their own and drive to remote parking garages? Or be
+sent to pick up children from school? How much attention is required
+to operate the vehicle, and if that attention comes from the human
+within the vehicle, how will that affect how likely people are to
+drive rather than take other forms of transport that could reduce,
+rather than increase, road congestion? 
+
+At the most radical and teleological, we are
+facing not a system of autonomous robots but fleets of telerobotic
+vehicles with closed-loop control systems providing limited autonomy,
+that are supervised by remote operators within the datacenters of
+multinational IT corporations.\footnote{I have encountered few
+  companies who seem to be honest about this supervisory arrangement,
+  but the founder and CEO of the mini-cab app company Kabbee envisions
+just such a thing: ``There's no reason why a taxi driver couldn't have
+something like three screens in front of him . . . and sit in a studio
+directing three or four or five cars through the roads of London where
+they are driverless cars with a human controlling the GPS''
+\cite{forbesDawson}.
+Whether the appropriate number is 5 or 5000 cars, this vision seems
+plausible, and bears similarities to current Predator UAV operations.
+It also sounds quite a bit like GM's `Autoline' concept from 1964,
+mentioned in the introduction.}
+
+But even this, though it presents certain advantages, is by no means
+our obvious future. Such a networked system worsens issues of privacy
+and data security. Longer time periods of unsupervised operation, and
+more limited involvement of the people within the vehicle, require
+automation technologies with greater reliability and situational
+capability, in order to reduce the risk of catastrophe for
+operators---whether that catastrophe is measured by personal death or
+system failure leading to financial ruin. Even Tesla Motors, bullish
+about its forthcoming ``autopilot'' technology, admits the limitations
+of current automated systems: automated driving will not be available
+in residential neighborhoods because Tesla does not believe it is safe
+enough \cite{slashgearDaviesT}. Human beings are not solely
+sources of failure to be engineered out of systems, but are also
+successful operators and risk-mitigators, who are capable of
+performing complex and difficult tasks. And it would be wrong to
+categorize human involvement as purely a temporary requirement, until
+computers are sufficiently advanced:  it
+may be that whatever the ultimate capabilities of machines, we may
+find it socially unacceptable to surrender certain areas of operation
+completely to computers.
+
+%% :  in
+%% the NHTSA's policy document, current automation systems like ABS,
+%% traction control, and stability control can override the human, but
+%% ``driverless'' systems must have overrides that can be used at any
+%% time \cite[p. 13]{NHTSA}.
+
+Where supervisory control considerations come to totally change
+the landscape is in the field of ethics. The ethical operation of
+vehicles involving computer code will always depend to an extent on
+that code, and the previous discussion about programmatic ethics still
+holds. But what changes here is that the vehicle is no longer free to
+operate based only on its programmed ethics for long periods of time.
+Instead, the human operator is involved in decision-making processes
+at a much more granular level. Will some emergency situations likely
+be handled in a largely automated fashion, just as today's pedestrian
+detection systems can perform an emergency stop to avoid pedestrians a
+driver does not see? Almost certainly. But these issues, though
+perhaps ethically tricky, are much closer to situations we are already
+working through. Ironically, one positive effect of the autonomous vehicle
+might be to estrange us from vehicle operations, and thereby draw us
+to consider more seriously the ethics programmed into more ordinary software
+systems, but the effect in the dominant narrative seems to be drawing a
+clear distinction between current and future automation systems. This
+distinction, evident in the NHTSA's taxonomy, is artificial. However, 
+consistent human involvement in vehicle operations seems to open new
+doors for human acceptance. What the agency should do is consider carefully why it feels that
+ABS and traction control can be allowed to override human inputs, and
+what separates them from systems that should not be allowed to do so.
+%% , and
+%% keep this in mind as we continue to develop more complex automation systems.
+
+Additionally, supervisory control presents the possibility for a
+renegotiation of car 
+culture and its troubled relationship with the automated vehicle. In
+my interviews and research work at conferences, I noted especially the
+contradictions within common characterizations of human
+drivers and their future. One interviewee basically asserted that
+humans are bad drivers and that perhaps we should ``all have our
+licenses taken away,'' but later stated that ``car nuts'' should
+welcome self-driving cars because they will free up the roads for
+enthusiast use. This combination does not make sense. The
+question of whether people will be allowed to drive also looms large
+in industry conferences, with similarly unhelpful
+responses.\footnote{Computer scientist Daniela Rus stated at an MIT 
+conference that people will still be able to
+drive normally, sharing the roads with automated vehicles in the near
+term. This is correct, but does little to allay fears for the far future.} While
+human driving is not going away in the near future, the idea that
+autonomous vehicles will free up the roads for people who want to
+drive manually seems more like a platitude than a thought-through
+design strategy. These questions of use and licensing are deeply embedded in the idea
+of progress. ``Does the potential for greater safety imply we should be
+taking human licenses away?'' is a question that only makes
+sense with a particular vision of autonomy, one that does not involve
+human supervision. Perhaps a better question is what sort of licensing
+and training is necessary, or should be necessary, to operate new
+kinds of vehicles, which must be defined by the roles that the human
+operator must perform. People are already licensed to drive, and there is no reason to
+say that new types of training may not be necessary or good.\footnote{
+Some continuing education could even be a positive
+influence on current traffic safety.} With continued human
+involvement in driving, there is 
+the possibility of a
+middle-ground in the hybrid narrative:  future cars, using increasing
+amounts of automated safety technologies,
+may be vulnerable to the same critiques as the computerized Nissan GT-R. But these
+vehicles could still provide a role for the human and a place for
+enthusiasts who want to be involved in vehicle operations.
+
+\section{Conclusion}
+
+In the end, whether an operator is in a vehicle trying to monitor that it
+is on the right path and not about to hit an undetected
+obstacle; or is waiting
+for a car to arrive, wanting to ensure that it is en route
+and not in an accident; or is working as a system-technician at a
+multinational corporation administering a fleet of automated vehicles,
+attempting to ensure they are not being 
+hijacked or stolen, the operator functions as a supervisory
+controller, enmeshed in a complex network of human and machine
+systems. Not recognizing this as such does not make it not so:  it 
+only means we are 
+likely to neglect the most important parts of the system design---in
+terms of its adoption and long-term use---by blindly following a
+narrative based on a warped view of history. And we are likely to
+ignore new skills and competencies that may be important for
+operation (or even vital to operation), or which may be valuable in other ways, for
+human reasons. Cars---and transportation systems as a whole---are
+designed to serve human needs, and must ultimately answer to society's
+ideas about those
+needs, even those that might seem to some to be mere ethical squeamishness.
+
+
+
+
+
 
